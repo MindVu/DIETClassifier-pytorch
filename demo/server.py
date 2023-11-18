@@ -10,7 +10,7 @@ sys.path.append(os.getcwd())
 
 from src.models.wrapper import DIETClassifierWrapper
 
-CONFIG_FILE = "src/config.yml"
+CONFIG_FILE = "src/config.yaml"
 
 wrapper = DIETClassifierWrapper(CONFIG_FILE)
 

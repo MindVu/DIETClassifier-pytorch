@@ -94,7 +94,7 @@ if __name__ == "__main__":
     from src.data_reader.data_reader import make_dataframe
     from transformers import AutoTokenizer
 
-    files = ["dataset/nlu_QnA_converted.yml", "dataset/nlu_QnA_converted.yml"]
+    files = ["dataset/nlu_QnA_converted.yaml", "dataset/nlu_QnA_converted.yaml"]
     tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
 
     df, entities_list, intents_list, synonym_dict = make_dataframe(files)

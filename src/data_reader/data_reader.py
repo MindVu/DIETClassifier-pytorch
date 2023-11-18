@@ -91,7 +91,7 @@ def make_dataframe(files: List[str]) -> Tuple[pd.DataFrame, List[str], List[str]
 
 def read_from_yaml(file: str) -> List[Dict[str, str]]:
     """
-    Read data from .yml file
+    Read data from .yaml file
 
     :param file: file location (this data file need to follow the rasa nlu annotation format)
     :return: list(dict(text, any))
@@ -206,7 +206,7 @@ if __name__ == '__main__':
 
     sys.path.append(os.getcwd())
 
-    files = ["dataset/nlu_QnA_converted.yml", "dataset/nlu_QnA_converted.yml"]
+    files = ["dataset/nlu_QnA_converted.yaml", "dataset/nlu_QnA_converted.yaml"]
 
     df, entities_list, intents_list, synonym_dict = make_dataframe(files)
     print(df.head(20))

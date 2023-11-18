@@ -65,7 +65,7 @@ if __name__ == '__main__':
 
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
-    files = ["dataset/nlu_QnA_converted.yml", "dataset/nlu_QnA_converted.yml"]
+    files = ["dataset/nlu_QnA_converted.yaml", "dataset/nlu_QnA_converted.yaml"]
     tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
 
     df, entities_list, intents_list, synonym_dict = make_dataframe(files)

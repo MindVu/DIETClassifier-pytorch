@@ -22,7 +22,7 @@ class DIETClassifierWrapper:
         """
         Create wrapper with configuration.
 
-        :param config: config in dictionary format or path to config file (.yml)
+        :param config: config in dictionary format or path to config file (.yaml)
         """
         if isinstance(config, str):
             try:
@@ -185,7 +185,7 @@ class DIETClassifierWrapper:
         self.model.save_pretrained(directory)
         self.tokenizer.save_pretrained(directory)
 
-        config_file_path = "config.yml" if not self.config_file_path else self.config_file_path
+        config_file_path = "config.yaml" if not self.config_file_path else self.config_file_path
 
         try:
             f = open(config_file_path, "w")
@@ -204,7 +204,7 @@ class DIETClassifierWrapper:
         if not path.exists(dataset_folder):
             raise ValueError(f"Folder {dataset_folder} is not exists")
 
-        files_list = [path.join(dataset_folder, f) for f in listdir(dataset_folder) if path.isfile(path.join(dataset_folder, f)) and f.endswith(".yml")]
+        files_list = [path.join(dataset_folder, f) for f in listdir(dataset_folder) if path.isfile(path.join(dataset_folder, f)) and f.endswith(".yaml")]
 
         df, _, _, synonym_dict = make_dataframe(files=files_list)
 
@@ -231,7 +231,7 @@ class DIETClassifierWrapper:
 
 
 if __name__ == "__main__":
-    config_file = "src/config.yml"
+    config_file = "src/config.yaml"
 
     wrapper = DIETClassifierWrapper(config=config_file)
 
