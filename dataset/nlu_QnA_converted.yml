@@ -1,215 +1,2171 @@
 version: "2.0"
 nlu:
-- intent: WorkTimesBreaches
-  examples: |
-    - What is late in and early out?
-    - what is late-in?
-    - what is late-in and early-out?
-    - what is early-out?
-    - What is early out?
-    - How about coming late to work?
-    - Late in?
-    - late-in?
-    - early out?
-    - early-out?
-- intent: WorkingTimeBreachDiscipline
-  examples: |
-    - What if I have late-in record?
-    - What if I have early-out record?
-    - What if I late-in
-    - What if I late in
-    - What if I come late
-    - What if I early-out
-    - What if I early out
-    - What if I come home early
-    - How many time can I early-out
-    - How many time can I late-in
-    - How many time can I early-out and late-in
-    - How many time can I late in
-- intent: HolidaysOff
-  examples: |
-    - How many holidays a year
-    - Can I get information about holidays
-    - Do we have holidays?
-    - What is the time for new year vacation
-    - How about lunar new year vacation
-    - lunar new year
-    - new year vacation
-    - Hung king day
-    - holiday
-    - vacation
-    - I want to know about holiday of years
-    - How many holiday in a year
-- intent: AnnualLeaveApplicationProcess
-  examples: |
-    - How about annual leave?
-    - annual leave?
-    - annual leave process
-    - How about annual leave process
-    - How about annual leave application process
-- intent: SetWorkingType
-  examples: |
-    - I work on [office hours](working_type)
-    - I work on [office hour]{"entity": "working_type", "value": "office hours"}
-    - I'm working on [office hours](working_type)
-    - I'm working on [office hour]{"entity": "working_type", "value": "office hours"}
-    - I work on [shift](working_type)
-    - I'm working on [shift](working_type)
-    - I am working on [office hours](working_type)
-    - I am working on [office hour]{"entity": "working_type", "value": "office hours"}
-    - on [shift](working_type)
-    - on [office hours](working_type)
-    - [shift](working_type)
-    - [office hours](working_type)
-    - oh, I work on [office hours](working_type)
-    - how about working on [shift](working_type)
-    - today
-- intent: TemporarySetWorkingType
-  examples: |
-    - How about [office hours](working_type)
-    - How about [office hour]{"entity": "working_type", "value": "office hours"}
-    - How about [shift](working_type)
-    - What if I work on [office hours](working_type)
-    - What if I work on [office hour]{"entity": "working_type", "value": "office hours"}
-    - What if I work on [shift](working_type)
-    - how about work on [shift](working_type)
-    - how about [office hours](working_type)
-    - how about [shift](working_type)
-- intent: WorkingHours
-  examples: |
-    - What are average working hours per day?
-    - Average working hours per day?
-    - What are average woring hours per week?
-    - Average working hours per week?
-    - What are average woring hours per month?
-    - Average working hours per month?
-    - How about working time?
-    - Working time?
-    - What is office-working time?
-    - Can you tell me about working time?
-    - I want to know about working hours
-    - About working hours
-    - Working time in day
-    - working hours
-    - how about [office](working_type) working hours
-    - how about [office hours](working_type) working time ?
-    - How about working hours
-    - about working hours
-    - how about working hours
-    - so, what is the average working hours
-- intent: WorkingDay
-  examples: |
-    - How many work day per week?
-    - About off day of week?
-    - off day?
-    - Working day of week?
-- intent: BreakTime
-  examples: |
-    - What is break time?
-    - Do we have break time?
-    - How about break time?
-    - When do we have lunch
-    - When can I break
-    - Break time?
-    - Can I sleep?
-    - how about break time ?
-    - When do I have break time
-    - about break time
-    - When do we have break time
-    - how about break time
-- intent: Pregnant
-  examples: |
-    - Working time for pregnant employee?
-    - I'm pregnant?
-    - Will this change when I'm pregnant
-    - but I am pregnant
-    - How about pregnant employee
-    - Working time for pregnant employees
-    - pregnant
-    - pregnant policy
-    - Do this thing change when I'm pregnant
-    - I'm pregnant
-- intent: AttendanceRecord
-  examples: |
-    - How about attendence record?
-    - About checking attendence?
-    - How to check attendence?
-    - How can I check attendence?
-    - I mean check attendace
-    - I want to know about attendance record
-    - About attendance recorded
-    - How to check attendance
-- intent: SelectShiftType
-  examples: |
-    - [day shift](shift_type)
-    - [afternoon shift](shift_type)
-    - [night shift](shift_type)
-    - [night shift](shift_type) please
-    - [afternoon shift](shift_type) please
-- intent: LaborContract
-  examples: |
-    - how about labor contract
-    - labor contract
-    - time for definite labor contract
-    - time for indefinite labor contract
-    - Time for indefinite labor contract
-- intent: Recruitment
-  examples: |
-    - How about recruitment policy
-    - recruitment process
-- intent: SickLeave
-  examples: |
-    - How about sick leave
-    - Sick leave
-    - How many day of sick leave
-    - What if I got a cold
-    - Will I get paid for sick leave
-    - How to get paid for sick leave
-- intent: UnpaidLeave
-  examples: |
-    - How many unpaid leave can I get
-    - Can I leave after using all of my annual leave day
-    - Unpaid leave
-    - How about unpaid leave
-    - unpaid leave please
-    - Can I leave after using all of my annual leave day
-    - Can I leave after using all of my annual leave day
-- intent: PaidLeaveForFamilyEvent
-  examples: |
-    - Can I leave for family events
-    - Did I get paid for my family events
-    - Will I get paid for my family events
-    - Will I get paid for Marriage
-    - Will I get paid for the dead of family member
-    - Can I leave for my Marriage
-    - Can I get paid for family event off
-- intent: UnusedAnnualLeave
-  examples: |
-    - What can I do with my unused annual leave day
-    - What can I do with my unused day
-    - Can I exchange my annual leave day
-    - How can I use my unused annual leave day
-    - what can I do with my unused annual leave day
-    - What can I do with my unused annual leave
-- intent: RegulatedAnnualLeave
-  examples: |
-    - How many annual leave for employee?
-    - How about number of annual leave day?
-    - How many off day I have each year?
-    - Annual leave day in year
-    - Annual leave days
-    - how many annual leave day each year
-    - how many annual leave
-    - how about annual leave day
-    - How many annual leave I have
-- synonym: office hours
-  examples: |
-    - office hour
-    - office
-- intent: rating
-  examples: |
-    - [1](number)
-    - [2](number)
-    - [3](number)
-    - [4](number)
-    - [5](number)
+  - intent: kiểm tra tình trạng thiết bị
+    examples: |
+      - mình thấy[đèn ốp trần](device) hơi chập chờn, hãy [kiểm tra](command) nó
+      - hãy [kiểm tra](command) vào lúc [17 giờ](time at) nhé
+      - hãy [kiểm tra](command) tình trạng của cái [máy tính để bàn của khang](device)
+      - hãy [kiểm tra](command) giúp tôi cái [máy tính để bàn của khang](device)
+      - hình như thằng bạn tôi đang làm gì rất mờ ám, [kiểm tra](command) giúp tôi cái [máy tính để bàn của khang](device) với
+      - [kiểm tra](command) hộ anh cái [đèn huỳnh quang](device) với nhá, ở ngoài [hiên](location) ý
+      - em ơi, [kiểm tra](command) cho anh cái [đèn ốp trần](device) với
+      - [kiểm tra](command) cho mình cái [bóng treo tường số 16](device)
+      - [kiểm tra](command) hộ mình cái [bóng treo tường số 16](device) xem làm sao nhé
+      - em [kiểm tra](command) giúp anh cái [máy tính để bàn của khang](device) nhé
+      - bạn ơi [kiểm tra](command) cho mình cái [bóng treo tường số 16](device) với
+      - em ơi [kiểm tra](command) cho anh cái [máy tính để bàn của khang](device) với
+      - [kiểm tra](command) giúp mình vào [15 giờ 3 phút](time at) nhé
+      - [kiểm tra](command) giúp mình cái [máy sưởi](device) với
+      - em ơi [kiểm tra](command) cái [đèn trần](device) giúp anh với
+      - em ơi [kiểm tra](command) cho anh cái [máy mát xa số 8](device) nhá, để anh chuẩn bị dùng
+      - sao đèn không sáng nhỉ, [kiểm tra](command) giúp tôi cái [đèn ốp trần](device) với
+      - bạn có thể [kiểm tra](command) giúp tôi cái [máy mát xa số 8](device) nhé
+      - em [kiểm tra](command) giúp anh cái [laptop](device) với nó có vấn đề rồi
+      - hãy [kiểm tra](command) [máy sưởi](device) có còn đang hoạt động hay không
+      - em ơi [kiểm tra](command) [đèn ốp trần](device)
+      - [kiểm tra](command) hộ tôi cái [đèn huỳnh quang](device) ở [hiên](location) với
+      - [kiểm tra](command) cho anh cái [bóng treo tường số 16](device)
+      - cái [đèn trần](device) bị hỏng sao ấy em [kiểm tra](command) nó giúp anh
+      - cái [đèn huỳnh quang](device) ở [hiên](location) bị hỏng rồi bạn giúp mình [kiểm tra](command) nó đi
+      - cái [máy sưởi](device) hình như bị hỏng rồi [kiểm tra](command) giúp mình đi trợ lý
+      - [kiểm tra](command) cho mình [đèn treo tường](device)
+      - cái [máy mát xa số 8](device) hình như bị hỏng rồi [kiểm tra](command) giúp mình đi
+      - [kiểm tra](command) giúp tôi cái [đèn trần](device) với bạn ơi
+      - [kiểm tra](command) cho mình cái [máy mát xa số 8](device)!
+      - sao chị thấy cái [máy sưởi](device) nó không ấm thế? em ơi [kiểm tra](command) hộ chị với
+      - trợ lý ơi cái [bóng treo tường số 16](device) có vấn đề gì ý bạn [kiểm tra](command) giúp mình với nhé
+      - [kiểm tra](command) cho tôi cái [máy mát xa số 8](device)
+      - [kiểm tra](command) giúp chị cái [máy mát xa số 8](device) đi em ơi
+      - bạn có thể giúp mình [kiểm tra](command) cái [laptop](device) được không
+      - [kiểm tra](command) [đèn ốp trần](device) giúp anh với
+      - tiếng ở đâu thế nhỉ, [kiểm tra](command) anh [máy tính để bàn của khang](device) nhá
+      - em ơi cái [đèn trần](device) nó hơi chập chờn cho nên em [kiểm tra](command) hộ anh nhé
+      - đèn khu này bị hỏng rồi, [kiểm tra](command) cho mình [bóng treo tường số 16](device) nhé
+      - [kiểm tra](command) giúp anh cái [đèn trần](device) em ơi
+      - [kiểm tra](command) giúp mình cái [máy mát xa số 8](device) nha
+      - lát nữa em [kiểm tra](command) nhá, lúc [11 giờ 22 phút](time at) [kiểm tra](command) giúp mình, cái [bóng](device) ở [đầu hè](location) ấy 
+      - này, [kiểm tra](command) giúp tôi cái [máy mát xa số 8](device) với
+      - em [kiểm tra](command) cho anh cái [máy sưởi](device) nhá
+      - [đèn trần](device) bị sao ấy [kiểm tra](command) đi em
+      - em ơi, [kiểm tra](command) hộ anh cái [laptop](device) với
+      - [kiểm tra](command) cái [bóng treo tường số 16](device) hộ mình nhớ nó bị làm sao ý
+      - [kiểm tra](command) hộ tớ vào lúc [5 giờ 29 phút](time at) nhớ
+      - em [kiểm tra](command) cho anh cái [đèn ốp trần](device) nhé, anh thấy nó cứ chập chờn chập chờn
+      - [kiểm tra](command) cho mình cái [bóng treo tường số 16](device) nha
+      - hôm nay lạnh thế [kiểm tra](command) cho chị cái [máy sưởi](device) đi
+      - em ơi [kiểm tra](command) cho anh cái [máy tính để bàn của khang](device) nhá
+      - [kiểm tra](command) cho anh lúc [11 giờ 22 phút](time at) em nhé
+      - [kiểm tra](command) cho anh cái [đèn ốp trần](device) với
+      - [máy tính để bàn của khang](device) hình như bị hỏng rồi bạn [kiểm tra](command) giúp mình đi
+      - hình như cái [máy mát xa số 8](device) có vấn đề rồi [kiểm tra](command) giúp tôi nhé
+      - em ơi [kiểm tra](command) giúp chị cái [laptop](device) với
+      - em ơi [kiểm tra](command) giúp anh cái [máy sưởi](device) với
+      - em ơi [kiểm tra](command) cho anh cái [máy mát xa số 8](device) đi nhé
+      - [kiểm tra](command) cho mình vào lúc [17 giờ 46 phút](time at)
+      - em ơi [kiểm tra](command) cho anh cái [máy sưởi](device) với
+      - trời tối quá. em có thể [kiểm tra](command) cho anh cái [đèn huỳnh quang](device) được không
+      - em ơi, [kiểm tra](command) cho chị cái [bóng treo tường số 16](device)
+      - em ơi sao cái [đèn ốp trần](device) nó cứ chập chờn thế nhỉ [kiểm tra](command) giúp anh với
+      - sao cái [đèn ốp trần](device) nó cứ chập chờn vậy, [kiểm tra](command) giúp anh với
+      - bạn ơi cái [laptop](device) của mình bị hư rồi hay sao ấy, vào [kiểm tra](command) hộ mình với
+      - đúng [19 giờ 57 phút](time at) em [kiểm tra](command) ngay cho anh nhá
+      - có tiếng lạ ở [máy mát xa số 8](device). [kiểm tra](command) cho tôi cái[máy mát xa số 8](device) với
+      - [kiểm tra](command) giúp mình cái [bóng treo tường số 16](device) đi nhé
+      - em ơi [kiểm tra](command) giúp anh cái [đèn treo tường](device) với
+      - [kiểm tra](command) hộ mình cái [đèn huỳnh quang](device) ở ngoài [hiên](location) đi nhé
+      - [kiểm tra](command) ở [bếp số 2](location) cho mình nhé
+      - [kiểm tra](command) cái [bóng treo tường số 16](device)
+      - [kiểm tra](command) cho anh cái [bóng treo tường số 16](device) với
+      - [kiểm tra](command) vào lúc [11 giờ 22 phút](time at) nhé
+      - [kiểm tra](command) lúc [21 giờ 57 phút](time at) đó em
+      - [kiểm tra](command) hộ tôi cái [đèn trần](device)
+      - bạn ơi [kiểm tra](command) cho mình cái [bóng treo tường số 16](device) với
+      - [kiểm tra](command) cái [đèn huỳnh quang](device) giùm anh với
+      - em ơi [kiểm tra](command) giúp chị cái [máy tính để bàn của khang](device) với
+      - này trợ lý ảo hãy [kiểm tra](command) giúp tôi cái [laptop](device) đã tắt hay chưa
+      - [kiểm tra](command) [máy mát xa số 8](device)
+      - [kiểm tra](command) cái [đèn trần](device)
+      - em ơi [kiểm tra](command) cái [đèn ốp trần](device) cho anh với
+      - [kiểm tra](command) [đèn trần](device) giúp tôi
+      - máy tính, [kiểm tra](command) lại [bóng treo tường số 16](device) xem có vấn đề gi không
+      - [đèn trần](device) bị làm sao ấy [kiểm tra](command) đi em
+      - em ơi [kiểm tra](command) cái [đèn ốp trần](device) giúp chị với hình như nó bị hỏng rồi
+      - em ơi [kiểm tra](command) cho anh cái [đèn trần](device) hình như bị hỏng rồi
+      - [bóng treo tường số 16](device) bị sao ấy [kiểm tra](command) đi em
+      - [kiểm tra](command) giúp mình [máy mát xa số 8](device) nhé
+      - em [kiểm tra](command) hộ anh cái [bóng treo tường số 16](device) nhé
+      - [kiểm tra](command) ở [nhà giữ đồ trường sa](location) cho anh em nhé
+      - [kiểm tra](command) lúc [19 giờ 57 phút](time at) cho anh
+      - [kiểm tra](command) lúc[17 giờ 46 phút](time at) nhá
+      - em ơi [kiểm tra](command) [máy mát xa số 8](device)
+      - alo, [kiểm tra](command) cái này hộ anh cái
+      - [kiểm tra](command) cho anh cái [đèn ốp trần](device)
+      - [kiểm tra](command) giúp mình cái [đèn trần](device) với
+      - [kiểm tra](command) lúc [17 giờ](time at) nhé
+      - bạn ơi, [kiểm tra](command) giúp mình cái [máy mát xa số 8](device) với
+      - [kiểm tra](command) giúp mình vào lúc [21 giờ 57 phút](time at) với
+      - bạn ơi bạn [kiểm tra](command) giúp mình cái [đèn ốp trần](device) được không ạ
+      - bạn ơi [kiểm tra](command) cho mình cái [máy mát xa số 8](device)với
+      - [kiểm tra](command) giúp mình cái [đèn ốp trần](device)
+      - bạn [kiểm tra](command) [lúc 11 giờ 15 phút](time at)
+      - lúc [2 giờ rưỡi](time at) [xem](command) thử cho anh cái [máy lạnh](device) nó hoạt động như nào nhé
+      - [xem](command) cho anh xem [máy rửa bát](device) có còn hoạt động không nhỉ
+      - [xem](command) giúp tôi mấy cái [cửa cuốn](device) ở dưới [phòng nghỉ](location) đóng chưa ấy nhở
+      - cái [máy chơi game số 12](device) có còn hoạt động không em nhỉ
+      - bạn trợ lí ơi làm ơn [đánh giá](command) giúp mình cái tình trạng của [máy lạnh](device) lúc [2 giờ rưỡi](time at) nhé
+      - [16 giờ 23](time at) [xem](command) xem cái [máy rửa bát số 20](device) nó đang như nào nhé
+      - cái [bóng huỳnh quang](device) còn sáng không nhỉ
+      - bạn giúp mình check cái [cửa cuốn](device) [xem](command) nó như nào nhé
+      - bạn ơi giúp mình [xác minh](command) cái tình trạng của [đèn bếp số 19](device) ngoài [hành lang](location) nhé
+      - cái [bóng compact](device) ở [nhà xe hoàng sa](location) đã tắt chưa nhỉ
+      - có phải cái [máy nghe nhạc số 14](device) không hoạt động không
+      - em ơi check cho anh [xem](command) cái [máy tính xách tay bên trái](device) còn hoạt động không
+      - cái [máy fax](device) ở [phòng đọc](location) hỏng rồi phải không
+      - bạn trợ lí giúp mình [xem](command) tình trạng của [máy rửa bát số 20](device) vào lúc [16 giờ 23](time at) nhé
+      - em ơi [check](command) giúp anh cái [máy rửa bát số 20](device) còn hoạt động không nhé vào lúc [16 giờ 23](time at)
+      - lúc [2 giờ rưỡi](time at) [xem](command) cho anh xem cái [vòi nước](device) nó còn hoạt động bình thường không
+      - ở [nhà xe phía nam](location) cái [đèn tranh số 8](device) có còn chạy không em nhỉ
+      - em ơi [check](command) giúp anh cái [vòi nước](device) ở ngoài hiên lúc [2 giờ rưỡi](time at) nhé
+      - [xem](command) cho anh cái [laptop](device) còn hoạt động ổn không
+      - [máy nghe nhạc số 14](device) còn hoạt động ok không em
+      - tình trạng [màn cuốn](device) thế nào em
+      - lúc [16 giờ 23](time at) thì [kiểm tra](command) [máy rửa bát số 20](device) nhé
+      - [máy tính xách tay bên trái](device) còn hoạt động ok không
+      - [xem](command) cho mình cái [bóng huỳnh quang](device) còn sáng hay không
+      - [xem](command) giúp mình [màn cuốn](device) đóng chưa ấy nhở
+      - lúc [4 rưỡi](time at) cho mình biết [bóng sợi đốt](device) còn sáng hay không nhớ
+      - cho anh biết cái [đèn tranh số 8](device) ở [nhà xe phía nam](location) còn sáng hay không
+      - [xem](command) giúp anh cái [máy fax](device) ở [phòng đọc](location) tắt chưa nhỉ
+      - cái [bóng huỳnh quang](device) có còn chạy không em
+      - [xem](command) giúp anh cái [đèn treo tường số 10](device) nó có sáng hay không
+      - [xem](command) [máy rửa bát số 20](device) lúc [16 giờ 23](time at) có hoạt động không
+      - cái [máy sưởi số 20](device) có vấn đề gì không nhỉ
+      - tí nữa vào [2 giờ rưỡi](time at) thì [xem](command) cho anh cái [máy lạnh](device) nó có vấn đề gì
+      - [xem](command) giúp anh cái [vòi nước](device) còn chảy hay không vào lúc [2 giờ rưỡi](time at) nhớ
+      - có phải cái [máy chơi game](device) trong [phòng sinh hoạt chung](location) chưa tắt không
+      - tại sao [đèn huỳnh quang](device) ở [sân sau](location) lại tối thế kia có phải có vấn đề gì rồi không
+      - lúc [2 giờ rưỡi](time at) [xem](command) thử cho anh cái [máy lạnh](device) nó hoạt động như nào nhé
+      - [xem](command) cho anh xem [máy rửa bát](device) có còn hoạt động không nhỉ
+      - [xem](command) giúp tôi mấy cái [cửa cuốn](device) ở dưới [phòng nghỉ](location) đóng chưa ấy nhở
+      - cái [máy chơi game số 12](device) có còn hoạt động không em nhỉ
+      - bạn trợ lí ơi làm ơn [đánh giá](command) giúp mình cái tình trạng của [máy lạnh](device) lúc [2 giờ rưỡi](time at) nhé
+      - [16 giờ 23](time at) [xem](command) xem cái [máy rửa bát số 20](device) nó đang như nào nhé
+      - cái [bóng huỳnh quang](device) còn sáng không nhỉ
+      - bạn giúp mình check cái [cửa cuốn](device) [xem](command) nó như nào nhé
+      - bạn ơi giúp mình [xác minh](command) cái tình trạng của [đèn bếp số 19](device) ngoài [hành lang](location) nhé
+      - cái [bóng compact](device) ở [nhà xe hoàng sa](location) đã tắt chưa nhỉ
+      - có phải cái [máy nghe nhạc số 14](device) không hoạt động không
+      - em ơi check cho anh [xem](command) cái [máy tính xách tay bên trái](device) còn hoạt động không
+      - cái [máy fax](device) ở [phòng đọc](location) hỏng rồi phải không
+      - bạn trợ lí giúp mình [xem](command) tình trạng của [máy rửa bát số 20](device) vào lúc [16 giờ 23](time at) nhé
+      - em ơi [check](command) giúp anh cái [máy rửa bát số 20](device) còn hoạt động không nhé vào lúc [16 giờ 23](time at)
+      - lúc [2 giờ rưỡi](time at) [xem](command) cho anh xem cái [vòi nước](device) nó còn hoạt động bình thường không
+      - ở [nhà xe phía nam](location) cái [đèn tranh số 8](device) có còn chạy không em nhỉ
+      - em ơi [check](command) giúp anh cái [vòi nước](device) ở ngoài hiên lúc [2 giờ rưỡi](time at) nhé
+      - [xem](command) cho anh cái [laptop](device) còn hoạt động ổn không
+      - [máy nghe nhạc số 14](device) còn hoạt động ok không em
+      - tình trạng [màn cuốn](device) thế nào em
+      - lúc [16 giờ 23](time at) thì [kiểm tra](command) [máy rửa bát số 20](device) nhé
+      - [máy tính xách tay bên trái](device) còn hoạt động ok không
+      - [xem](command) cho mình cái [bóng huỳnh quang](device) còn sáng hay không
+      - [xem](command) giúp mình [màn cuốn](device) đóng chưa ấy nhở
+      - lúc [4 rưỡi](time at) cho mình biết [bóng sợi đốt](device) còn sáng hay không nhớ
+      - cho anh biết cái [đèn tranh số 8](device) ở [nhà xe phía nam](location) còn sáng hay không
+      - [xem](command) giúp anh cái [máy fax](device) ở [phòng đọc](location) tắt chưa nhỉ
+      - cái [bóng huỳnh quang](device) có còn chạy không em
+      - [xem](command) giúp anh cái [đèn treo tường số 10](device) nó có sáng hay không
+      - [xem](command) [máy rửa bát số 20](device) lúc [16 giờ 23](time at) có hoạt động không
+      - cái [máy sưởi số 20](device) có vấn đề gì không nhỉ
+      - tí nữa vào [2 giờ rưỡi](time at) thì [xem](command) cho anh cái [máy lạnh](device) nó có vấn đề gì
+      - [xem](command) giúp anh cái [vòi nước](device) còn chảy hay không vào lúc [2 giờ rưỡi](time at) nhớ
+      - có phải cái [máy chơi game](device) trong [phòng sinh hoạt chung](location) chưa tắt không
+      - tại sao [đèn huỳnh quang](device) ở [sân sau](location) lại tối thế kia có phải có vấn đề gì rồi không
+  - intent: bật thiết bị
+    examples: |
+      - lạnh thế [bật](command) cái [đèn sưởi](device) giúp mình lên với tầm [45%](target number) nhá
+      - [bật](command) cho anh lên [97%](target number) trong vòng [16 tiếng 46 phút](duration) nhé
+      - [bật](command) cho mình cái [máy fax của hân](device) với để ở trong [phòng sách](location) ấy nhá
+      - [bật](command) lúc [11 giờ 31 phút](time at) nhớ, trong [22 tiếng 45 phút](duration)
+      - [bật](command) lúc [16 giờ 3 phút](time at) đi
+      - giúp anh [bật](command) [máy fax của hân](device) ở ngoài [phòng sách](location) nha
+      - em ơi [bật](command) giúp chị cái [bóng sợi đốt](device) ở [đầu hè](location) với
+      - [bật](command) cho chị ở [phòng chung của em bé](location)
+      - trợ lý ơi, phòng tối quá, [bật](command) cái [bóng huỳnh quang](device) nhá
+      - [bật](command) giúp chị cái [máy fax của hân](device) ở trong [phòng sách](location)
+      - [bật](command) cho anh trong vòng [23 tiếng 21 phút](duration)
+      - chị ơi [bật](command) giúp em cái [máy rửa bát số 11](device) với
+      - [bật](command) cho mình tầm [74%](target number)
+      - [bật](command) lúc [16 giờ 3 phút](time at), trong khoảng [7 tiếng 51 phút](duration) em nhé
+      - em ơi [bật](command) cho chị [bóng huỳnh quang](device) [3%](target number) thôi nhá
+      - em ơi, [bật](command) cho anh cái [đèn bếp](device) với
+      - [bật](command) trong [4 tiếng 3 phút](duration) nhé
+      - tôi đang chuẩn bị làm việc, [bật](command) cho tôi cái[laptop](device)lên nhá
+      - trời tối quá [bật](command) cho anh cái [bóng huỳnh quang](device) với
+      - [bật](command) hộ [16%](target number) công suất trong [15 giờ 27 phút](time at) nhớ
+      - [bật](command) từ giờ nha, giờ là '[1 giờ 20 phút](time at), nhớ [bật](command) ở ngoài '[hành lang](location) trước đó
+      - [bật](command) giúp mình cái [bóng huỳnh quang](device) với chả nhìn thấy gì cả
+      - à [bật](command) cho anh trong vòng [9 tiếng 34 phút](duration) nha em
+      - đồ giặt xong rồi đấy, [bật](command) cho anh cái [đèn sưởi số 3](device)ở [phòng giặt ủi](location)nhá
+      - [bật](command) trong [9 tiếng 34 phút](duration) em nhá
+      - ừm không cần lâu quá đâu [bật](command) cho anh trong vòng [22 tiếng 45 phút](duration) là được rồi
+      - [bật](command) trong vòng [4 giờ 30 phút](duration)
+      - em ơi [bật](command) hộ chị cái [bếp](device) lên để chị nấu cơm nhá
+      - chỗ [cầu thang của quân](location) ế, [bật](command) lên [23%](target number) cho anh
+      - [bật](command) cho tôi cái [bóng sưởi](device) với
+      - ở trong [phòng giặt là của hân](location) nhớ, chắc [bật](command) khoảng [6 giờ 8 phút](time at) hẵng [bật](command) nhé
+      - em ơi [bật](command) hộ anh cái [bóng sợi đốt](device) ở [đầu hè](location) lúc [19 giờ 32 phút](time at) nhá
+      - [bật](command) hộ mình vào lúc [19 giờ 45 phút](time at) nhé
+      - bạn ơi [bật](command) lúc [10 giờ 39 phút](time at) giùm mình
+      - [bật](command) lúc [16 giờ 3 phút](time at), trong [7 tiếng 51 phút](duration) cho anh nhá
+      - [bật](command) giúp anh cái [máy rửa bát số 11](device) với
+      - [bật](command) vào lúc [10 giờ 39 phút](time at) em nhé
+      - em ơi [bật](command) ngay cho anh cái [đèn sưởi số 3](device) nhá lạnh quá
+      - alo em gái yêu ơi, [bật](command) hộ chị cái [đèn sưởi](device) với
+      - ở mức [74%](target number) em nhé [bật](command) từ lúc [22 giờ 28 phút](time at)
+      - [bật](command) giúp mình cái [bóng hắt](device) lên với
+      - [bật](command) vào lúc [11 giờ 31 phút](time at) trong vòng [22 tiếng 45 phút](duration) em nhé
+      - trời lạnh quá [bật](command) giúp tôi cái [đèn sưởi số 3](device) ở [phòng giặt ủi](location) với
+      - em ơi [bật](command) giúp anh cái này được không
+      - xem nào, [bật](command) lúc [9 giờ 40 phút](time at) đi
+      - hãy [bật](command) lúc [1 giờ 20 phút](time at)
+      - trợ lý ơi, cái [máy fax của hân](device) trong [phòng sách](location) đang cần phải dùng, trợ lý [bật](command) nhá
+      - [bật](command) giúp anh cái [đèn bếp](device)
+      - bạn [bật](command) trong [22 tiếng 11 phút](duration) giúp mình nhé
+      - [bật](command) giúp anh [9 tiếng 34 phút](duration) nhé hôm nay anh muốn để nó qua đêm
+      - [bật](command) giúp mình cái [bóng huỳnh quang](device) nhé
+      - [bật](command) lên [16%](target number) cho anh, [bật](command) lúc [15 giờ 27 phút](time at) nhá
+      - chị muốn [bật](command) khoảng [74%](target number)
+      - [bật](command) vào lúc [22 giờ 33 phút](time at)
+      - [bật](command) cho anh cái [đèn bếp](device) với
+      - em ơi [bật](command) giúp anh cái [máy tính](device) nhé anh chuẩn bị học
+      - [bật](command) [bóng hắt](device) lên giúp tôi
+      - [bật](command) cho anh trong vòng [10 tiếng 33 phút](duration) nhé
+      - [bật](command) cho tôi cái [bóng hắt](device)
+      - em [bật](command) cho anh cái [bếp](device) để anh nấu đồ ăn nhớ
+      - ờ em ơi, [bật](command) giúp anh cái [máy fax của hân](device) với
+      - [bật](command) vào lúc [1 giờ 20 phút](time at) nhá
+      - [bật](command) vào [16 giờ 3 phút](time at) trong [7 tiếng 51 phút](duration) nhé
+      - trợ lý ơi [bật](command) giúp mình cái [đèn bếp](device) lên với
+      - bây giờ cũng [15 giờ 27 phút](time at) rồi, cũng sắp tối rồi, anh nhớ trong [phòng giặt ủi](location) em [bật](command) hộ anh [đèn sưởi số 3](device) nhé
+      - [bật](command) cho mình [máy nghe nhạc](device) đi
+      - [bật](command) trong cái [phòng chung của em bé](location) nhớ và [bật](command) lúc [10 giờ 39 phút](time at) nhé
+      - [bật](command) cho chị cái [bóng](device) ở [phòng thờ](location) nhá
+      - [bật](command) cho mình cái [quạt trần số 11](device) lúc [8 giờ 48 phút](time at)
+      - trời hơi tối đấy, em [bật](command) hộ chị cái [đèn bếp](device)
+      - em ơi [bật](command) cho anh cái [đèn sưởi](device) ở mức [45%](target number) nhá
+      - em ơi [bật](command) giúp anh cái [laptop](device) cho anh làm việc với
+      - [bật](command) cho tôi cái [bóng huỳnh quang](device) ở [phòng thờ](location), ở mức [3%](target number) với
+      - em ơi cái [máy fax của hân](device) trong [phòng sách](location) ấy [bật](command) cho anh nhá
+      - [bật](command) ở [phòng giặt ủi](location) ở mức [16%](target number) trong thời gian [15 giờ 27 phút](duration) giúp tôi
+      - [bật](command) ở mức [45%](target number) đến hết ngày mai luôn nhé trong [23 tiếng 21 phút](duration)
+      - à [bật](command) cho mình lúc [11 giờ 31 phút](time at) đêm nhớ
+      - xuống dưới [bật](command) giúp mình cái [bếp](device) với
+      - [bật](command) cho tôi ở mức [16%](target number) trong lúc [15 giờ 27 phút](time at)
+      - [bật](command) ở [cầu thang của quân](location) nhé, mức [23%](target number)
+      - [5 giờ 40 phút](time at) thì [bật](command) cho anh nhé, để [23 độ c](target number) thôi
+      - đến giờ ăn tối rồi, [bật](command) giúp anh cái [đèn bếp](device) nhé
+      - tôi cần làm việc, [bật](command) giúp tôi cái [laptop](device) nhé
+      - [bật](command) cả ngày luôn luôn cho anh, chắc khoảng [11 tiếng 16 phút](duration)
+      - trong [phòng sách](location) [bật](command) giúp anh cái [máy fax của hân](device)
+      - [bật](command) lúc [22 giờ 27 phút](time at) em nhé
+      - chán quá [bật](command) cho anh cái [máy nghe nhạc](device) lên đi
+      - em ơi [bật](command) giúp anh lúc [15 giờ 27 phút](time at) nhé và [bật](command) đến mức [16%](target number) thôi
+      - [bật](command) số [3](target number) nhé
+      - em ơi hãy [bật](command) giúp anh cái [bóng hắt](device) lên nhé
+      - à đúng rồi hãy [bật](command) nó vào lúc [15 giờ 27 phút](time at) nhé
+      - tầm [19 giờ 32 phút](time at) thì [bật](command) cho mình chỗ [đầu hè](location) nhớ
+      - [bật](command) lúc [19 giờ 45 phút](time at) em nhá
+      - [bật](command) cho anh cái [bóng hắt](device) với
+      - [bật](command) giúp chị lên [45%](target number) trong [23 tiếng 21 phút](duration) nhé
+      - [bật](command) ở mức [35%](target number) cho mình nhá
+      - [bật](command) cho anh lúc [11 giờ 31 phút](time at) nhé, với cả trong vòng [22 tiếng 45 phút](duration) đi
+      - [bật](command) giúp anh lên [74%](target number) vào lúc [22 giờ 28 phút](time at) em nhé
+      - [bật](command) cho anh cái [máy rửa bát số 11](device) em nhé
+      - [bật](command) cái ở ngoài [hành lang](location) ấy [bật](command) cho anh vào lúc [1 giờ 20 phút](time at) nhé
+      - tối quá, em ơi [bật](command) cho anh cái [đèn bếp](device) nhé
+      - [bật](command) cho mình cái [máy fax của hân](device) trong [phòng sách](location) nhé
+      - [bật](command) [97%](target number) thôi nhá trong khoảng [16 tiếng 46 phút](duration)
+      - lạnh thế em ơi [bật](command) [đèn sưởi](device) lên cho chị đi
+      - [bật](command) giúp tôi cái [đèn sưởi số 3](device) với
+      - trời tối rồi [bật](command) cho mình cái [bóng sợi đốt](device) ở [đầu hè](location) đi
+      - đến giờ rồi hãy [bật](command) cái [máy tính](device) lên giúp tôi
+      - [bật](command) trong vòng [9 tiếng 34 phút](duration) nhá
+      - [bật](command) cho tôi cái [laptop](device)
+      - mình muốn nghe nhạc [bật](command) giúp mình cái [máy nghe nhạc](device) đi
+      - [bật](command) ở mức [45%](target number) trong vòng [23 tiếng 21 phút](duration) nhé
+      - em [bật](command) giúp anh lên mức [97%](target number) trong [16 tiếng 46 phút](duration) nhé
+      - [bật](command) cho anh lúc [11 giờ 31 phút](time at) trong [22 tiếng 45 phút](duration) em nhá
+      - lát nữa nhớ [bật](command) cho mình cái [máy rửa bát số 11](device) nhá vào lúc [4 giờ 21 phút](time at) ấy
+      - [bật](command) lên tầm [74%](target number) giúp mình nha
+      - [bật](command) cho mình cái [laptop](device) để mình làm nốt báo cáo với
+      - [bật](command) giúp mình cái [đèn bếp](device) với
+      - [bật](command) trong vòng [11 tiếng 51 phút](duration) đi ở ngoài [sân](location) em nhá
+      - [bật](command) hộ tôi cái [bóng hắt](device) nhá
+      - bao giờ đến [19 giờ 32 phút](time at) thì em [bật](command) cho anh cái [bóng sợi đốt](device) nhá
+      - em ơi lạnh quá [bật](command) hộ chị cái [đèn sưởi](device) lên [45%](target number) trong [23 tiếng 21 phút](duration) nhé
+      - [bật](command) hộ tôi cái [bóng sưởi](device)
+      - [bật](command) ở mức [74%](target number) lúc [22 giờ 28 phút](time at) nhé
+      - à mà quên [bật](command) trong [16 tiếng 46 phút](duration)từ bây giờ nhá
+      - [bật](command) giúp anh cái [bóng huỳnh quang](device) nhé trời tối rồi
+      - [bật](command) trong [phòng khách của ông bà](location) nhá
+      - [bật](command) lên [23 độ c](target number) nhé và vào [5 giờ 40 phút](time at)
+      - bạn ơi [bật](command) giúp mình cái [bóng sưởi](device) lên lạnh quá
+      - [bật](command) lên mức [23 độ c](target number) cho anh nhá
+      - [bật](command) giúp mình cái [máy nghe nhạc](device) với
+      - em ơi [bật](command) cho anh cái [laptop](device) với
+      - tôi bây giờ đang rất vui và tâm trạng rất tốt [bật](command) [máy nghe nhạc](device) giúp tôi
+      - em muốn [bật](command) vào mức [97%](target number) và trong [16 tiếng 46 phút](duration) em yêu nhé
+      - em ơi [bật](command) cho anh [bóng huỳnh quang](device)
+      - [bật](command) hộ mình [97%](target number) độ sáng, trong khoảng [16 tiếng 46 phút](duration) nhớ
+      - tôi muốn [bật](command) trong khoảng [23 tiếng 21 phút](duration)
+      - lạnh quá [bật](command) cho anh cái [bóng sưởi](device) với
+      - em ơi chị chuẩn bị nấu ăn, em [bật](command) hộ chị cái [đèn bếp](device) nhé
+      - [bật](command) giúp tôi cái [đèn sưởi số 3](device) ở [phòng giặt ủi](location)
+      - trời tối quá , [bật](command) giúp anh cái [đèn bếp](device) với
+      - [bật](command) cho mình suốt [23 tiếng 21 phút](duration) nhé
+      - [bật](command) lúc [19 giờ 45 phút](time at) em nhá
+      - này trợ lý, [bật](command) cho anh cái [máy fax của hân](device) nhá
+      - [bật](command) vào lúc [14 giờ 31 phút](time at) nhé
+      - [bật](command) khoảng [7 tiếng 51 phút](duration) nhá
+      - [bật](command) hộ anh cái [bóng sợi đốt](device) ở [đầu hè](location)
+      - [bật](command) anh mấy cái [bóng hắt](device) để đánh xe vào nhá
+      - [bật](command) cho mình cái [laptop](device)
+      - [bật](command) từ [11 giờ 31 phút](time at) kéo dài [22 tiếng 45 phút](duration)
+      - làm ơn hãy [bật](command) [bếp](device) lên
+      - [bật](command) lúc [19 giờ 32 phút](time at) nhé
+      - [bật](command) trong [7 tiếng 51 phút](duration) nhá em
+      - bạn ơi [bật](command) cho mình [bóng sưởi](device) nhé
+      - [bật](command) cho anh cái [máy fax của hân](device) để anh in một số thứ cái
+      - em [bật](command) cho anh cái [bóng hắt](device) nhé
+      - [bật](command) trong thời gian [9 tiếng 34 phút](duration) em nhé
+      - làm ơn hãy [bật](command) [bóng sưởi](device) hộ tôi
+      - [bật](command) giúp anh cái [đèn sưởi](device) được không
+      - em ơi, em giúp anh [bật](command) cái [máy tính](device) lên với
+      - [bật](command) cho chị cái [máy nghe nhạc](device)
+      - trời hôm nay lạnh thế nhỉ [bật](command) cho mình cái[bóng sưởi](device)đi bạn
+      - em ơi [bật](command) cho anh cái [bếp](device)với
+      - [bật](command) ở [phòng chung của em bé](location), nhớ là [phòng chung của em bé](location), lúc [10 giờ 39 phút](time at) nhé em
+      - hãy [bật](command) cho tôi cái [laptop](device) ở trên bàn lên nhé
+      - [bật](command) giúp chị cái [bóng huỳnh quang](device) ở [phòng thờ](location) lên với
+      - trời bắt đầu lạnh rồi hãy [bật](command) giúp mình cái [đèn sưởi số 3](device) lên nhé
+      - em ơi, bếp tối quá [bật](command) cho anh cái [đèn bếp](device) với
+      - [khởi động](command) cho anh cái [bếp số 5](device) trong [phòng bếp của vy](location) nhá
+      - để cho tôi cái [điều hòa](device) ở mức [31 độ c](target number) lúc [1 rưỡi](time at)
+      - [khởi động](command) cái [máy tính](device) ở trong [phòng xem phim](location) lên cho tôi
+      - em ơi trời lạnh quá [bật](command) giúp anh cái [bóng sưởi](device) ở ngoài [hiên của bố mẹ](location) lên [57%](target number) nhé.
+      - bạn ơi [mở](command) giúp mình cái [radio](device) nghe cho vui đời được không
+      - bạn trợ lý ơi giúp mình [bật](command) cái [radio](device) lên nhé
+      - bạn ơi giúp mình [khởi động](command) cái [đèn sưởi](device) trong [phòng thờ](location) nhé
+      - giúp mình [bật](command) cái [lò vi sóng](device) trong [bếp](location) lên nhé
+      - [khởi động](command) giúp mình cái máy [điều hòa](device) trong [phòng vệ sinh thổ chu](location) nhé
+      - ai đó [bật](command) giúp mình cái [bóng compact](device) lên nhé
+      - anh muốn [dùng](command) [lò vi sóng](device)
+      - [khởi động](command) [đèn sưởi](device) trong [phòng xem phim](location) ở mức [49%](target number)
+      - giúp mình [khởi động](command) cái [quạt trần số 11](device) nhé
+      - cái [đèn hắt](device) ở [hè trước](location) tắt rồi kìa [bật](command) lên đi
+      - bạn trợ lí ơi giúp mình [khởi động](command) cái [máy tính](device) trong [phòng xem phim](location) nhé
+      - bạn ơi giúp mình [chạy](command) cái [quạt trần số 11](device) nhé
+      - [chạy](command) [quạt trần số 11](device)
+      - cho cái [máy tính](device) [bật](command) lên đi
+      - bạn trợ lí [bật](command) cho mình cái[ bóng sưởi](device) ở[ hè trước](location) nhé
+      - bạn ơi [chạy](command) giúp mình cái [điều hòa](device) ở [31 độ c](target number) vào thời gian là[ 1 rưỡi](time at) nhé
+      - bạn [khởi động](command) giúp tôi cái[quạt trần](device)n nhé
+      - [hè sau](location) tối quá [lên](command) cho anh cái [bóng treo tường](device)
+      - em ơi [chạy](command) giúp anh cái [đèn huỳnh quang](device) nhé
+      - [mở](command) cho anh cái [radio](device) với
+      - trời nóng quá [mở](command) cho anh cái [quạt trần số 11](device) nhé
+      - [bật](command) [radio](device) trong[ phòng thay đồ của long](location) nào
+      - nóng quá [lên](command) cho anh cái [quạt trần số 15](device)
+      - [thắp](command) cho anh cái [bóng compact](device)
+      - cho cái [đèn huỳnh quang](device) sáng lên xem nào
+      - làm ấm  [phòng chung](location) bằng [đèn sưởi](device)
+      - phát sáng cái [đèn sưởi](device) ở [phòng chung](location) lên nhớ, lạnh quá
+      - cho cái [điều hòa](device) hoạt động ở mức [31 độ c](target number) lúc [1 rưỡi](time at) cho tôi nhớ
+      - cho cái [đèn sưởi](device) ở trong [phòng xem phim](location) hoạt động ở mức [49%](target number)
+      - phát cho anh cái [radio](device) ở trong [phòng đọc](location) lên
+      - cho cái [đèn trần](device) hoạt động lên giúp tôi
+      - bạn ơi [bật](command) giúp mình cái [bếp](device) ở trong [phòng bếp của ngọc](location) nhé
+      - tôi cần hoạt động cái [lò vi sóng](device) trong [phòng bếp của khôi](location) ngay bây giờ
+      - em [quay](command) cái [lò vi sóng](device) ở trong [bếp](location) đi
+      - phát cái [radio](device) ở trong [phòng thay đồ của long](location) lên
+      - [thắp](command) sáng cho anh cái [đèn ốp trần](device)
+      - anh cần [đèn hắt trần](device) hoạt động ngay bây giờ
+      - [chỉnh](command) cái [camera của linh](device) hoạt động nhé
+      - [lên](command) [quạt](device) ở mức [3](target number) tại [phòng giặt là hoàng hôn](location)
+      - [quay](command) cái [quạt trần số 15](device) đi
+      - cái [lò sưởi](device) trong [phòng khách của khôi](location) đang chưa chạy em [khởi động](command) lên cho mọi người dùng
+      - [khởi động](command) cho anh cái [bếp số 5](device) trong [phòng bếp của vy](location) nhá
+      - để cho tôi cái [điều hòa](device) ở mức [31 độ c](target number) lúc [1 rưỡi](time at)
+      - [khởi động](command) cái [máy tính](device) ở trong [phòng xem phim](location) lên cho tôi
+      - em ơi trời lạnh quá [bật](command) giúp anh cái [bóng sưởi](device) ở ngoài [hiên của bố mẹ](location) lên [57%](target number) nhé.
+      - bạn ơi [mở](command) giúp mình cái [radio](device) nghe cho vui đời được không
+      - bạn trợ lý ơi giúp mình [bật](command) cái [radio](device) lên nhé
+      - bạn ơi giúp mình [khởi động](command) cái [đèn sưởi](device) trong [phòng thờ](location) nhé
+      - giúp mình [bật](command) cái [lò vi sóng](device) trong [bếp](location) lên nhé
+      - [khởi động](command) giúp mình cái máy [điều hòa](device) trong [phòng vệ sinh thổ chu](location) nhé
+      - ai đó [bật](command) giúp mình cái [bóng compact](device) lên nhé
+      - anh muốn [dùng](command) [lò vi sóng](device)
+      - [khởi động](command) [đèn sưởi](device) trong [phòng xem phim](location) ở mức [49%](target number)
+      - giúp mình [khởi động](command) cái [quạt trần số 11](device) nhé
+      - cái [đèn hắt](device) ở [hè trước](location) tắt rồi kìa [bật](command) lên đi
+      - bạn trợ lí ơi giúp mình [khởi động](command) cái [máy tính](device) trong [phòng xem phim](location) nhé
+      - bạn ơi giúp mình [chạy](command) cái [quạt trần số 11](device) nhé
+      - [chạy](command) [quạt trần số 11](device)
+      - cho cái [máy tính](device) [bật](command) lên đi
+      - bạn trợ lí [bật](command) cho mình cái[ bóng sưởi](device) ở[ hè trước](location) nhé
+      - bạn ơi [chạy](command) giúp mình cái [điều hòa](device) ở [31 độ c](target number) vào thời gian là[ 1 rưỡi](time at) nhé
+      - bạn [khởi động](command) giúp tôi cái[quạt trần](device)n nhé
+      - [hè sau](location) tối quá [lên](command) cho anh cái [bóng treo tường](device)
+      - em ơi [chạy](command) giúp anh cái [đèn huỳnh quang](device) nhé
+      - [mở](command) cho anh cái [radio](device) với
+      - trời nóng quá [mở](command) cho anh cái [quạt trần số 11](device) nhé
+      - [bật](command) [radio](device) trong[ phòng thay đồ của long](location) nào
+      - nóng quá [lên](command) cho anh cái [quạt trần số 15](device)
+      - [thắp](command) cho anh cái [bóng compact](device)
+      - cho cái [đèn huỳnh quang](device) sáng lên xem nào
+      - làm ấm  [phòng chung](location) bằng [đèn sưởi](device)
+      - phát sáng cái [đèn sưởi](device) ở [phòng chung](location) lên nhớ, lạnh quá
+      - cho cái [điều hòa](device) hoạt động ở mức [31 độ c](target number) lúc [1 rưỡi](time at) cho tôi nhớ
+      - cho cái [đèn sưởi](device) ở trong [phòng xem phim](location) hoạt động ở mức [49%](target number)
+      - phát cho anh cái [radio](device) ở trong [phòng đọc](location) lên
+      - cho cái [đèn trần](device) hoạt động lên giúp tôi
+      - bạn ơi [bật](command) giúp mình cái [bếp](device) ở trong [phòng bếp của ngọc](location) nhé
+      - tôi cần hoạt động cái [lò vi sóng](device) trong [phòng bếp của khôi](location) ngay bây giờ
+      - em [quay](command) cái [lò vi sóng](device) ở trong [bếp](location) đi
+      - phát cái [radio](device) ở trong [phòng thay đồ của long](location) lên
+      - [thắp](command) sáng cho anh cái [đèn ốp trần](device)
+      - anh cần [đèn hắt trần](device) hoạt động ngay bây giờ
+      - [chỉnh](command) cái [camera của linh](device) hoạt động nhé
+      - [lên](command) [quạt](device) ở mức [3](target number) tại [phòng giặt là hoàng hôn](location)
+      - [quay](command) cái [quạt trần số 15](device) đi
+      - cái [lò sưởi](device) trong [phòng khách của khôi](location) đang chưa chạy em [khởi động](command) lên cho mọi người dùng
+  - intent: mở thiết bị
+    examples: |
+      - [mở](command) [ti vi của quân](device) lên
+      - [mở](command) [điều hòa số 11](device) đi em ơi
+      - em ơi [mở](command) giúp chị cái [màn cửa số 5](device) với
+      - [mở](command) giúp anh cái [màn cửa số 18](device) với
+      - em ơi [mở](command) chị cái [ti vi bên trái](device) nhé
+      - [mở](command) trong [11 tiếng 16 phút](duration) nhá
+      - tối quá [mở](command) giúp mình cái [cửa cuốn số 14](device)
+      - tí bạn [mở](command) cho tớ cái [quạt trần số 11](device) nhé, vào lúc [8 giờ 48 phút](time at)
+      - em ơi, [mở](command) hộ chị cái [ti vi](device) với 
+      - em ơi, [mở](command) giúp anh cái [ti vi bên trái](device) nhé, anh muốn xem đá bóng
+      - ờ [mở](command) cho anh trong [11 tiếng 16 phút](duration) nhá
+      - [mở](command) cho anh lúc [9 giờ 24 phút](time at) nhá, [mở](command) tầm khoảng [9 tiếng 7 phút](duration) cho anh
+      - ổn thì em [mở](command) lên cho anh cái
+      - [mở](command) giúp mình cái [máy sưởi](device)được không ạ
+      - [mở](command) trong [phòng giặt là của hân](location) ý
+      - em ơi em có thể giúp anh [mở](command) cái [máy sưởi](device) ở [phòng giặt là của hân](location) được không
+      - bạn giúp mình [mở](command) cái [camera số 8](device) nhé
+      - bạn ơi [mở](command) cho mình cái [ti vi bên trái](device) với
+      - bạn [mở](command) giúp mình ở [phòng nghỉ](location) nhé
+      - làm ơn [mở](command) cho tôi cái [camera số 8](device)
+      - [mở](command) tầm[18 tiếng 22 phút](duration) nhá
+      - em ơi [mở](command) cho anh cái [camera số 8](device) với
+      - [mở](command) trong khoảng [2 tiếng 50 phút](duration) đi
+      - bạn [mở](command) cho mình khoảng [9 tiếng 7 phút](duration), vào lúc khoảng [9 giờ 24 phút](time at)
+      - chán quá xem gì bây giờ [mở](command) cho anh cái [ti vi bên trái](device) em nhé
+      - tối quá, hãy [mở](command) giúp tôi cái [cửa cuốn số 14](device) nhé
+      - trợ lý ảo, [mở](command) cái [ti vi bên trái](device) cho mình nha
+      - chán quá [mở](command) [ti vi bên trái](device) đi
+      - ê [mở](command) giúp tôi cái [ti vi](device) với
+      - em ơi, [mở](command) cho anh cái [quạt trần số 11](device) với
+      - em ơi [mở](command) giúp anh cái [ti vi](device)
+      - trợ lý ơi [mở](command) giúp chị cái [ti vi bên trái](device) với
+      - này trợ lý ảo [mở](command) giúp mình cái [camera số 8](device) đi
+      - trợ lý ơi, cứ [6 giờ 8 phút](time at) mỗi ngày [mở](command) hộ mình cái [máy sưởi](device) ở [phòng giặt là của hân](location) nhá
+      - [mở](command) cho anh cái [camera số 8](device) lên đi em
+      - [mở](command) cho anh cái [ti vi bên trái](device) để xem đá bóng với
+      - mãi cũng xong việc [mở](command) cho mình cái [ti vi của quân](device) lên với
+      - [mở](command) ở [phòng giặt là bên trái](location) lúc [10 giờ 19 phút](time at) em nhé
+      - chán nhỉ không có gì làm [mở](command) cho mình cái [ti vi của quân](device) với
+      - em ơi [mở](command) [ti vi của quân](device) giúp chị
+      - mình muốn [mở](command) trong khoảng [7 tiếng 12 phút](duration)
+      - em ơi [mở](command) giúp anh cái [quạt trần số 11](device) nhá
+      - trợ lý ơi, [mở](command) hộ cái [ti vi của quân](device) nhá
+      - em [mở](command) cho anh trong khoảng [8 tiếng 6 phút](duration) nhé rồi tắt nó đi
+      - em [mở](command) cho anh cái [camera số 8](device) với
+      - phòng tối quá, [mở](command) [màn cửa số 5](device) đi
+      - [mở](command) [màn cửa số 18](device) đi
+      - [mở](command) cho mình [phòng giặt là của hân](location) vào thời gian [6 giờ 8 phút](time at) nhé
+      - [mở](command) cho anh vào lúc [9 giờ 24 phút](time at) trong suốt [9 tiếng 7 phút](duration) em nhé
+      - em ơi lúc [6 giờ 8 phút](time at) [mở](command) [máy sưởi](device) giúp chị nhé
+      - [mở](command) lúc [5 giờ 42 phút](time at) nhé
+      - lạnh quá, [mở](command) cho chị cái '[điều hòa số 11](device)' nha
+      - chuyện là anh đang cần do thám cái này. em có thể [mở](command) cho anh [camera số 8](device) được không em
+      - em ơi [mở](command) giúp anh cái [máy sưởi](device) trong [phòng giặt là của hân](location) nhá, vào lúc [6 giờ 8 phút](time at) í
+      - [mở](command) ở [hầm rượu mùa xuân](location) trong thời gian [11 tiếng 44 phút](duration) giúp tôi
+      - em ơi [mở](command) cho anh cái [quạt trần số 11](device)
+      - hãy [mở](command) giúp mình cái [màn cửa số 18](device) ra nhé
+      - [mở](command) giúp anh cái [quạt trần số 11](device) nhé
+      - lát nữa bạn [mở](command) giúp mình cái [quạt trần số 11](device) nhá,[quạt trần số 11](device) bạn[mở](command) giúp [8 giờ 48 phút](time at) giúp mình
+      - vợ anh sắp về [mở](command) [màn cửa số 5](device) đi em
+      - [mở](command) hộ cái [camera số 8](device) lên bạn ơi
+      - chán quá [mở](command) giúp tôi cái [ti vi bên trái](device) với
+      - [mở](command) [quạt trần số 11](device) lên nhé
+      - cậu [mở](command) cho mình trong vòng [18 tiếng 22 phút](duration) nha
+      - [mở](command) trong vòng [11 tiếng 16 phút](duration)
+      - [mở](command) cho anh trong [2 tiếng 50 phút](duration)
+      - em ơi [mở](command) [cửa cuốn số 14](device) nhé
+      - [mở](command) giúp anh cái [màn cửa số 5](device) với
+      - em ơi [mở](command) cho anh cái [ti vi bên trái](device)
+      - cậu ơi lúc [8 giờ 48 phút](time at) [mở](command) [quạt trần số 11](device) giúp mình nhá
+      - xin chào bạn hãy [mở](command) cho mình [máy nghe nhạc](device) nhá
+      - [mở](command) giúp tôi [camera số 8](device)
+      - em ơi anh đang muốn xem ti vi, [mở](command) cho anh cái [ti vi bên trái](device)
+      - hãy [mở](command) [màn cửa số 5](device)
+      - bạn ơi [mở](command) giúp mình cái [camera số 8](device) với
+      - mình muốn [mở](command) lúc [6 giờ 8 phút](time at)
+      - [mở](command) cho tôi [máy nghe nhạc](device)
+      - [mở](command) vào lúc [13 giờ 28 phút](time at) nhá
+      - [mở](command) cho anh cái [màn cửa số 18](device) nhá
+      - bạn [mở](command) ở [phòng giặt là bên trái](location) vào lúc [10 giờ 19 phút](time at) nhé
+      - [mở](command) cho mình cái [màn cửa số 5](device)
+      - [mở](command) hộ mình cái [cửa cuốn số 14](device) với
+      - [mở](command) trong[18 tiếng 22 phút](duration) đi
+      - [mở](command) cho mình cái [camera số 8](device) nhé trợ lý ảo
+      - em ơi em [mở](command) hộ anh cái [camera số 8](device)
+      - [mở](command) giúp tôi cái [camera số 8](device) với
+      - bạn [mở](command) cho mình [cửa cuốn số 14](device) nhé
+      - [mở](command) trong [8 tiếng 6 phút](duration) nhá
+      - hãy [mở](command) [ti vi của quân](device) đi
+      - hãy [mở](command) ở [phòng giặt là bên trái](location) lúc [10 giờ 19 phút](time at)
+      - tình hình là tôi chỉ muốn [mở](command) máy sưởi ở trong [phòng giặt là của hân](location) trong [6 giờ 8 phút](duration)
+      - [mở](command) lúc [13 giờ 28 phút](time at) nhớ
+      - [mở](command) giúp mình cái [màn cửa số 5](device) với
+      - bạn có thể [mở](command) hộ mình cái [cửa cuốn số 14](device) được không
+      - [mở](command) cho chị cái [cửa cuốn số 14](device) cái
+      - em ơi hãy [mở](command) [ti vi bên trái](device) lên
+      - em [mở](command) cho anh cái [máy nghe nhạc](device) lên
+      - chị ơi trời hôm nay buốt quá chị [mở](command) cho em cái [máy sưởi](device) ở trong [phòng giặt là của hân](location), tí nữa [6 giờ 8 phút](time at) em xuống nhé
+      - em ơi [mở](command) cho anh cái [cửa cuốn số 14](device) với
+      - bạn ơi, [mở](command) giúp mình [ti vi của quân](device) lên nhé
+      - vào lúc [8 giờ 48 phút](time at) bạn [mở](command) giúp tôi cái [quạt trần số 11](device)
+      - [mở](command) hộ chị cái [cửa cuốn số 14](device) với
+      - [mở](command) cho anh cái [ti vi bên trái](device) nha em ơi
+      - [mở](command) giúp mình cái [ti vi của quân](device) nhé
+      - tôi cần đi ra ngoài, hãy [mở](command) cái [cửa cuốn số 14](device) giúp tôi với
+      - [mở](command) cho chị cái [ti vi bên trái](device)
+      - bạn [mở](command) giúp mình cái [quạt trần số 11](device) được không
+      - chán quá chả có gì để xem [mở](command) [ti vi](device) lên giúp anh đi em ơi
+      - [mở](command) cho mình cái [máy sưởi](device) ở [phòng giặt là của hân](location) nhé
+      - khi nào tới [6 giờ 8 phút](time at) thì [mở](command) cái [máy sưởi](device) trong [phòng giặt là của hân](location) nhé
+      - [mở](command) giúp anh [cửa cuốn số 14](device) nhé
+      - [mở](command) giúp anh cái [ti vi bên trái](device) lên với
+      - em ơi [mở](command) giúp chị cái [màn cửa số 5](device) cho ánh nắng vào phòng
+      - [mở](command) giúp anh cái [ti vi của quân](device) với
+      - [mở](command) cho anh cái [cửa cuốn số 14](device) nào
+      - em ơi [mở](command) cho anh cái [màn cửa số 5](device) với nhá
+      - [mở](command) trong [7 tiếng 12 phút](duration) nhá
+      - chào bạn [mở](command) cho mình [máy sưởi](device) với trời lạnh quá
+      - em ơi [mở](command) cho anh cái [cửa cuốn số 14](device) để anh đánh xe ra ngoài với
+      - [mở](command) lúc [13 giờ 43 phút](time at) nhá
+      - em ơi [mở](command) cho anh cái [ti vi bên trái](device) lên để anh xem phim nào
+      - [mở](command) giúp anh cái [ti vi](device) cái
+      - [mở](command) vào lúc [5 giờ 42 phút](time at) nhé
+      - anh muốn xem ti vi em [mở](command) giúp anh cái [ti vi của quân](device) nhé
+      - [mở](command) trong [7 tiếng 12 phút](duration) nhé
+      - nó ở [hầm rượu mùa xuân](location) nhá, [mở](command) trong khoảng [11 tiếng 44 phút](duration)
+      - chị iu, [mở](command) tầm [7 tiếng 12 phút](duration) nữa thì tắt cho em nha
+      - em ơi [mở](command) giúp anh cái[ti vi của quân](device) cái
+      - bạn có thể giúp mình [mở](command) cái [quạt trần số 11](device) được không? không phải lúc này, vào khoảng lúc [8 giờ 48 phút](time at) ấy
+      - [mở](command) cho mình đến [8 giờ 48 phút](time at) nhé
+      - [mở](command) cái [ti vi bên trái](device) cho anh với
+      - [mở](command) cho mình suốt [11 tiếng 16 phút](duration) nhá
+      - [mở](command) cho mình vào [19 giờ 32 phút](time at) nhé
+      - [mở](command) [quạt trần số 11](device) vào lúc [8 giờ 48 phút](time at) cho tôi
+      - [mở](command) cho anh cái [quạt trần số 11](device)
+      - [mở](command) giúp anh trong [phòng truyền thống trường sa](location) em nhé
+      - khách ngồi hơi lâu nên là [mở](command)[11 tiếng 16 phút](duration) nhé
+      - [mở](command) cho tôi cái[cửa cuốn số 14](device)
+      - nó ở [phòng giặt là bên trái](location) ý em, [mở](command) cho anh lúc [10 giờ 19 phút](time at) nhá
+      - em ơi vào lúc [6 giờ 8 phút](time at) [mở](command) giúp anh cái [máy sưởi](device) nhé
+      - [mở](command) [màn cửa số 18](device) giúp anh với
+      - [mở](command) giúp mình ở [phòng đọc của khôi](location)
+      - trợ lý ảo, hãy [mở](command) giúp tôi [máy sưởi](device) trong [phòng giặt là của hân](location)
+      - em ơi '[mở](command) cho chị cái '[màn cửa số 5](device)
+      - bạn ơi bạn [mở](command) cái [ti vi bên trái](device) hộ mình với
+      - em [mở](command) giúp anh [camera số 8](device) với
+      - em ơi [mở](command) giúp anh cái [camera số 8](device) nhé
+      - [mở](command) hộ anh trong [11 tiếng 44 phút](duration) nhớ
+      - bạn ơi [mở](command) cho mình cái [cửa cuốn số 14](device) nhé
+      - [mở](command) cho anh lúc [8 giờ 48 phút](time at) nhá
+      - hãy [mở](command) [màn cửa số 5](device) giúp tôi với
+      - bạn ơi [mở](command) hộ mình cái [cửa cuốn số 14](device) với
+      - [mở](command) cho anh trong [11 tiếng 44 phút](duration) nhé
+      - [mở](command) trong [7 tiếng 12 phút](duration) nhớ
+      - [mở](command) cho anh vào[6 giờ 51 phút](time at) nhé
+      - [mở](command) giúp anh cái [màn cửa số 5](device) lên với
+      - a lô trợ lý ơi, [mở](command) giùm mình cái [ti vi bên trái](device) với
+      - [mở](command) [ti vi số 12](device) lên
+      - tôi muốn xem [ti vi](device) ở dưới [phòng truyền thống bình minh](location)
+      - [vặn](command) cho tôi cái [van nước](device) ra đi
+      - [khởi động](command) cái [máy mát xa số 2](device) ở trong [phòng](location) lên nhé, tôi muốn dùng ngay bây giờ
+      - này [chạy](command) cho anh cái [máy rửa bát](device) trong [phòng bếp](location) đi
+      - bạn trợ lý ơi [bật](command) giúp mình cái [ti vi số 12](device) nhé
+      - anh muốn [xem](command) [camera](device) trong [hầm rượu](location)
+      - tôi muốn [bật](command) cái [máy mát xa số 2](device) trong [phòng](location)
+      - [kích hoạt](command) giúp mình cái [máy rửa bát](device) trong [phòng bếp](location) nhé
+      - bắt đầu [chạy](command) cho anh cái [máy mát xa số 17](device) trong [phòng chung](location)
+      - [dùng](command) [máy sưởi](device) trong [nửa tiếng](duration)
+      - anh muốn xem [ti vi số 12](device) [mở](command) lên cho anh
+      - trợ lí ảo giúp mình [mở](command) [máy sưởi](device) trong vòng [nửa tiếng](duration) nhé
+      - em ơi [chạy](command) giúp anh cái [máy mát xa số 13](device) nhé, anh muốn thư giãn một chút vào lúc [13 giờ kém 39](time at) em nhé
+      - bây giờ cái [máy sưởi](device) nó đang chưa [mở](command) cho nó chạy khoảng [nửa tiếng](duration) đi em
+      - em ơi [chạy](command) giúp anh cái [máy nghe nhạc](device) ngoài [phòng sách](location) nhé
+      - [khởi động](command) [camera của vy](device)
+      - hãy [chạy](command) [camera](device) ở trong [hầm rượu](location) để xem nào
+      - [phát](command) nhạc bằng [máy nghe nhạc](device) ở [phòng sách](location) cho anh nhé
+      - [lên](command) cho anh cái [máy lạnh số 18](device) lúc [3 giờ rưỡi](time at) nhé
+      - [khởi động](command) [máy sưởi](device) trong [phòng giặt](location)
+      - [kéo](command) ra cho anh cái [màn cửa](device) [phòng giặt](location) nhé
+      - [kéo](command) mấy cái [màn cửa](device) ở [phòng giặt](location) ra nhớ
+      - hãy [mở](command) cái [máy mát xa số 13](device) vào lúc [13 giờ kém 39](time at)
+      - tôi muốn dùng cái [máy rửa bát](device) ở [phòng bếp](location) ngay bây giờ
+      - [chạy](command) giúp mình cái [máy rửa bát](device) vào lúc [22 giờ 10](time at) nhé
+      - [vặn](command) cái [van nước](device) ra cho tôi
+      - làm ấm  [phòng giặt](location) bằng [máy sưởi](device)
+      - trong [phòng sách](location) có cái [máy nghe nhạc](device) đấy chú [mở](command) lên cho anh tí nhạc nhé
+      - trong [phòng](location) có cái [máy mát xa số 2](device) đấy chú [mở](command) anh dùng
+      - [phòng truyền thống bình minh](location) có cái [ti vi](device) mới tắt [mở](command) lên cho anh
+      - trong [phòng khách hoa sen](location) có cái [cửa cuốn số 19](device) đấy đừng đóng nữa cho ánh sáng nó vào
+      - [mở](command) [ti vi số 12](device) lên
+      - tôi muốn xem [ti vi](device) ở dưới [phòng truyền thống bình minh](location)
+      - [vặn](command) cho tôi cái [van nước](device) ra đi
+      - [khởi động](command) cái [máy mát xa số 2](device) ở trong [phòng](location) lên nhé, tôi muốn dùng ngay bây giờ
+      - này [chạy](command) cho anh cái [máy rửa bát](device) trong [phòng bếp](location) đi
+      - bạn trợ lý ơi [bật](command) giúp mình cái [ti vi số 12](device) nhé
+      - anh muốn [xem](command) [camera](device) trong [hầm rượu](location)
+      - tôi muốn [bật](command) cái [máy mát xa số 2](device) trong [phòng](location)
+      - [kích hoạt](command) giúp mình cái [máy rửa bát](device) trong [phòng bếp](location) nhé
+      - bắt đầu [chạy](command) cho anh cái [máy mát xa số 17](device) trong [phòng chung](location)
+      - [dùng](command) [máy sưởi](device) trong [nửa tiếng](duration)
+      - anh muốn xem [ti vi số 12](device) [mở](command) lên cho anh
+      - trợ lí ảo giúp mình [mở](command) [máy sưởi](device) trong vòng [nửa tiếng](duration) nhé
+      - em ơi [chạy](command) giúp anh cái [máy mát xa số 13](device) nhé, anh muốn thư giãn một chút vào lúc [13 giờ kém 39](time at) em nhé
+      - bây giờ cái [máy sưởi](device) nó đang chưa [mở](command) cho nó chạy khoảng [nửa tiếng](duration) đi em
+      - em ơi [chạy](command) giúp anh cái [máy nghe nhạc](device) ngoài [phòng sách](location) nhé
+      - [khởi động](command) [camera của vy](device)
+      - hãy [chạy](command) [camera](device) ở trong [hầm rượu](location) để xem nào
+      - [phát](command) nhạc bằng [máy nghe nhạc](device) ở [phòng sách](location) cho anh nhé
+      - [lên](command) cho anh cái [máy lạnh số 18](device) lúc [3 giờ rưỡi](time at) nhé
+      - [khởi động](command) [máy sưởi](device) trong [phòng giặt](location)
+      - [kéo](command) ra cho anh cái [màn cửa](device) [phòng giặt](location) nhé
+      - [kéo](command) mấy cái [màn cửa](device) ở [phòng giặt](location) ra nhớ
+      - hãy [mở](command) cái [máy mát xa số 13](device) vào lúc [13 giờ kém 39](time at)
+      - tôi muốn dùng cái [máy rửa bát](device) ở [phòng bếp](location) ngay bây giờ
+      - [chạy](command) giúp mình cái [máy rửa bát](device) vào lúc [22 giờ 10](time at) nhé
+      - [vặn](command) cái [van nước](device) ra cho tôi
+      - làm ấm  [phòng giặt](location) bằng [máy sưởi](device)
+      - trong [phòng sách](location) có cái [máy nghe nhạc](device) đấy chú [mở](command) lên cho anh tí nhạc nhé
+      - trong [phòng](location) có cái [máy mát xa số 2](device) đấy chú [mở](command) anh dùng
+      - [phòng truyền thống bình minh](location) có cái [ti vi](device) mới tắt [mở](command) lên cho anh
+      - trong [phòng khách hoa sen](location) có cái [cửa cuốn số 19](device) đấy đừng đóng nữa cho ánh sáng nó vào
+  - intent: đóng thiết bị
+    examples: |
+      - [đóng](command) giúp anh cái [màn cuốn số 2](device) để anh ngủ trưa cái
+      - [đóng](command) hộ cái [lò sưởi số 18](device)
+      - trời ơi nóng quá nóng quá, [đóng](command) hộ anh cái [lò sưởi số 18](device) nhá
+      - [đóng](command) hộ mình cái [màn cuốn số 2](device) nhớ
+      - [đóng](command) [màn cửa số 10](device)
+      - em ơi [đóng](command) cho anh cái [vòi nước số 5](device)
+      - em ơi [đóng](command) hộ mình cái [lò vi sóng số 2](device) vào [18 giờ 7 phút](time at) nhé
+      - [cửa cuốn số 19](device) đang mở em ơi [đóng](command) giúp anh với
+      - tôi muốn [đóng](command) cái [màn cửa số 10](device), bạn làm giúp tôi nhá
+      - em ơi tối rồi [đóng](command) giúp anh cái [màn cuốn số 2](device) đi
+      - [đóng](command) cho anh cái [lò vi sóng số 2](device) vào lúc [18 giờ 7 phút](time at) nhá
+      - tầm [6 giờ 13 phút](time at) [đóng](command) giúp anh nhé
+      - [đóng](command) cho mình cái [màn cửa số 10](device)với
+      - quên mất rồi [đóng](command) giúp tôi cái [cửa cuốn số 19](device) với
+      - [đóng](command) lúc [16 giờ 38 phút](time at) nhớ
+      - [đóng](command) lúc [6 giờ 13 phút](time at) nhá
+      - [18 giờ 7 phút](time at) thì [đóng](command) [lò vi sóng số 2](device) lại nhá
+      - [đóng](command) hộ mình [lò sưởi số 18](device)
+      - hơi sáng [đóng](command) hộ mình [màn cuốn số 2](device) với
+      - [đóng](command) giúp anh cái màn cuốn ở trong [phòng của long](location) em nhé
+      - bạn ơi [đóng](command) cho mình [màn cuốn số 2](device) nhé
+      - [đóng](command) giúp tôi cái [cửa cuốn số 19](device)
+      - lúc [18 giờ 7 phút](time at) [đóng](command) cho mình cái [lò vi sóng số 2](device) với
+      - em ơi [đóng](command) hộ anh cái [màn cuốn số 2](device)
+      - bạn trợ lý ơi [đóng](command) giúp mình cái [cửa cuốn số 19](device) nhớ
+      - em [đóng](command) hộ anh cái [màn cửa số 10](device) nhé
+      - [đóng](command) giúp mình cái [màn cuốn số 2](device) nhé
+      - [18 giờ 7 phút](time at) thì nướng xong, em [đóng](command) hộ anh cái [lò vi sóng số 2](device)
+      - [đóng](command) cho mình cái [màn cuốn số 2](device)với
+      - em [đóng](command) giúp anh cái [vòi nước số 5](device) với
+      - bạn có thể [đóng](command) giúp mình cái [màn cuốn số 2](device) được không
+      - bạn ơi, [đóng](command) giúp mình cái [màn cửa số 10](device),[màn cửa số 10](device) nhá
+      - em ơi [đóng](command) cái [lò sưởi số 18](device)
+      - ừ [đóng](command) cho anh lúc [15 giờ 38 phút](time at) nhá
+      - bạn ơi [đóng](command) cho mình cái [màn cửa số 10](device) nhá
+      - bạn [đóng](command) giúp tôi cái [màn cửa số 10](device) với
+      - tôi muốn [đóng](command) [cửa cuốn số 19](device) lại
+      - nóng quá rồi [đóng](command) giúp anh cái [lò sưởi số 18](device) nhé
+      - [đóng](command) giúp mình lúc [18 giờ 28 phút](time at)
+      - bạn ơi [đóng](command) giúp mình cái [lò sưởi số 18](device)
+      - đến [5 giờ 45 phút](time at) thì [đóng](command) giúp mình nhớ
+      - em ơi [đóng](command) cho anh cái [màn cửa số 10](device) với
+      - [đóng](command) [lò sưởi số 18](device)
+      - [đóng](command) cái [màn cửa số 10](device) giúp mình nha
+      - em [đóng](command) giùm anh cái [cửa cuốn số 19](device) với
+      - bạn ơi [đóng](command) hộ mình[lò sưởi số 18](device) đi nhé
+      - em ơi, đến [18 giờ 7 phút](time at) thì [đóng](command) cho anh cái [lò vi sóng số 2](device) vào nhé
+      - nắng quá [đóng](command) cho mình cái[màn cuốn số 2](device) với
+      - [đóng](command) lúc [5 giờ 45 phút](time at) nhá
+      - bạn [đóng](command) cho tớ cái [lò vi sóng số 2](device) vào lúc [18 giờ 7 phút](time at) nhé
+      - này trợ lý, [đóng](command) giúp anh cái [màn cuốn số 2](device) với
+      - [đóng](command) ở [phòng vệ sinh số 9](location) nhá
+      - [đóng](command) cái [lò sưởi số 18](device) vào đi em ơi
+      - có 10 cái màn mà sao không [đóng](command) hết thế hả em,[đóng](command) cái [màn cuốn số 2](device) đi nhá
+      - [đóng](command) giúp tôi cái [màn cửa số 10](device)
+      - bạn ơi [đóng](command) giúp mình cái [màn cuốn số 2](device) với
+      - [đóng](command) cho anh [cửa cuốn số 19](device) lại!
+      - bạn ơi, [đóng](command) giúp mình cái [vòi nước số 5](device) nhá,[đóng](command)[vòi nước số 5](device) lúc [16 giờ 38 phút](time at) giúp mình nhá
+      - [đóng](command) cho mình vào lúc [18 giờ 28 phút](time at) nhé
+      - em ơi [đóng](command) cho anh cái [cửa cuốn số 19](device)
+      - em ơi, [đóng](command) giúp anh [cánh cửa chính](device) với
+      - đúng [5 giờ 45 phút](time at) thì em [đóng](command) cho anh nhé
+      - khoảng [18 giờ 7 phút](time at) thì [đóng](command) giúp mình cái [lò vi sóng số 2](device)
+      - [đóng](command) [cửa cuốn số 19](device) lại
+      - [đóng](command) cho anh vào [6 giờ 13 phút](time at) nhé
+      - [đóng](command) [màn cửa số 10](device) cho mình với
+      - [đóng](command) ở [phòng của long](location) giúp mình nha
+      - [đóng](command) [cửa cuốn số 19](device)
+      - mình nướng thịt xong rồi, [đóng](command) cho mình cái [lò vi sóng số 2](device) với
+      - em ơi, [đóng](command) hộ anh cái [màn cửa số 10](device)
+      - [đóng](command) giúp tôi [lò sưởi số 18](device) nhé
+      - [đóng](command) cho mình vào [16 giờ 38 phút](time at) bạn nhé
+      - [đóng](command) vào lúc [5 giờ 45 phút](time at) em nhé
+      - bạn ơi [đóng](command) hộ mình [lò sưởi số 18](device) với
+      - em ơi, [đóng](command) giúp anh cái[cửa cuốn số 19](device) nhé
+      - khi nào tới [18 giờ 7 phút](time at) thì [đóng](command) cho tôi cái [lò vi sóng số 2](device) nhé
+      - em ơi [đóng](command) [vòi nước số 5](device) vào lúc [16 giờ 38 phút](time at) nhé
+      - bạn ơi [đóng](command) hộ mình cái [lò sưởi số 18](device) với
+      - hãy [đóng](command) vào lúc [5 giờ 45 phút](time at) nhá em
+      - cậu ơi giúp mình [đóng](command) [màn cửa số 10](device)
+      - bạn ơi [đóng](command) giúp mình cái [vòi nước số 5](device) cái
+      - vào lúc [18 giờ 7 phút](time at) [đóng](command) giúp anh cái [lò vi sóng số 2](device)
+      - [đóng](command) cho mình cái [màn cửa số 10](device) vào với bạn ơi
+      - nắng quá [đóng](command) cho anh cái [màn cuốn số 2](device) đi em
+      - đủ ấm rồi, [đóng](command) [lò sưởi số 18](device) cho mình
+      - cái [màn cuốn số 2](device) đang mở á, bạn [đóng](command) hộ mình nha
+      - bạn ơi [đóng](command) cho mình cái [cửa cuốn số 19](device) vào
+      - chói quá [đóng](command) cho mình cái [màn cửa số 10](device)
+      - [đóng](command) [màn cuốn số 2](device) cho anh
+      - tí nữa nướng xong bánh thì em [đóng](command) giúp anh cái [lò vi sóng số 2](device) vào nhé tầm [18 giờ 7 phút](time at)
+      - anh ơi [đóng](command) [cửa cuốn số 19](device) hộ em với
+      - [đóng](command) giúp mình cái [màn cửa số 10](device)
+      - lúc [18 giờ 7 phút](time at) [đóng](command) hộ anh cái [lò vi sóng số 2](device) nhớ
+      - [đóng](command) vào lúc [18 giờ 28 phút](time at) cho anh nhá
+      - cái [màn cuốn số 2](device) [đóng](command) giúp anh với
+      - cậu ơi hình như đồ ăn chín rồi, [đóng](command) cho mình cái [lò vi sóng số 2](device) với
+      - [đóng](command) giúp anh cái [màn cuốn số 2](device) ở trước nhà với
+      - bạn ơi [18 giờ 7 phút](time at) thì [đóng](command) cho tôi các [lò vi sóng số 2](device) nhá
+      - phòng chói quá em ơi [đóng](command) giúp anh cái [màn cửa số 10](device) với
+      - em ơi [đóng](command) giùm chị cái [màn cửa số 10](device) với
+      - [đóng](command) giúp tôi [màn cuốn số 2](device) với
+      - em ơi [đóng](command) cho anh cái [cửa cuốn số 19](device)
+      - [đóng](command) cho mình [lò vi sóng số 2](device) với
+      - bạn ơi [đóng](command) cho mình [màn cửa số 10](device) nhé
+      - em ơi [đóng](command) cho chị cái [màn cuốn số 2](device) với
+      - em ơi [đóng](command) giúp chị cái [vòi nước số 5](device) nhé
+      - bạn ơi [đóng](command) giùm mình cái [lò vi sóng số 2](device) với
+      - cậu ơi [đóng](command) hộ mình cái [màn cửa số 10](device)
+      - [đóng](command) giúp mình cái [vòi nước số 5](device) nhé
+      - [đóng](command) hộ mình lúc [18 giờ 7 phút](time at) nhé
+      - trợ lý ngôi nhà ơi giúp mình [đóng](command) [màn cuốn số 2](device) nhá
+      - tôi lười ra khỏi giường quá, [đóng](command) giúp tôi cái [màn cuốn số 2](device) với
+      - bạn trợ lý ơi [đóng](command) giúp mình cái [lò vi sóng số 2](device) với
+      - trợ lý, [đóng](command) cho chị cái [màn cuốn số 2](device)
+      - [đóng](command) vào lúc [5 giờ 45 phút](time at) nhá
+      - bạn ơi, [đóng](command) cho mình cái [lò sưởi số 18](device) với
+      - [đóng](command) cho mình tầm [5 giờ 45 phút](time at) nha bạn
+      - [đóng](command) giúp mình cái [vòi nước số 5](device) vào lúc [16 giờ 38 phút](time at) nhé
+      - [đóng](command) giúp mình vào lúc [18 giờ 28 phút](time at)
+      - [đóng](command) [vòi nước số 5](device)lúc[16 giờ 38 phút](time at)
+      - [đóng](command) cái [lò vi sóng số 2](device) đi em
+      - trợ lí ơi [đóng](command) cái [cửa cuốn số 19](device) vào nhá
+      - hình như nãy mình quên hay sao ý [đóng](command) cho mình cái [cửa cuốn số 19](device) với
+      - [đóng](command) trong [phòng của long](location)
+      - [đóng](command) lúc [16 giờ 38 phút](time at) nhé
+      - [đóng](command) cho tôi cái [vòi nước số 5](device) lúc [16 giờ 38 phút](time at)
+      - anh muốn [khóa](command) cái [vòi nước](device) chỗ [sân của long](location) ý
+      - [khép](command) hẳn cái [màn cửa số 11](device) vào
+      - bạn ơi [kéo](command) giúp mình cái [màn cửa](device) trong [phòng](location) xuống nhé
+      - giúp mình [gập](command) cái [màn cửa số 4](device) vào nhé
+      - bạn trợ lý giúp mình [ngắt](command) [van nước số 8](device) trong [8 tiếng 7 phút](duration) nhé
+      - giúp mình [gập](command) cái [màn cuốn số 18](device) xuống nhé
+      - [ngắt](command) cho anh cái [vòi nước số 10](device) trong vòng [15 tiếng 23 phút](duration) đi
+      - bạn trợ lý giúp mình [khép](command) cái [màn cửa](device) trong [phòng](location) xuống nhé
+      - bạn trợ lý giúp mình [đóng](command) cái [màn cửa số 11](device) xuống nhé
+      - bạn trợ lý giúp mình [hạ](command) cái [màn cuốn](device) trong [phòng thờ](location) xuống nhé
+      - cái [van nước số 8](device) [khóa](command) ngay lại trong [8 tiếng 7 phút](duration)
+      - cái [van nước](device) trong [nhà vệ sinh](location) [đóng](command) lại cho anh
+      - đừng để [vòi nước](device) ở [sân của long](location) chảy nữa [đóng](command) nó lại
+      - em ơi [tắt](command) cho anh cái [màn cuốn số 18](device) nhé
+      - bạn trợ lí giúp mình [ngắt](command) [vòi nước](device) ở ngoài [sân của long](location) nhé
+      - bên ngoài trời nắng lắm em [khép](command) hẳn cái [màn cuốn số 18](device) lại cho anh
+      - bạn gì ơi [ngắt](command) giúp mình cái [vòi nước số 10](device) trong vòng [15 tiếng 23 phút](duration) nhé
+      - em ơi [sập](command) cho anh cái [cửa cuốn](device) xuống nhé ở trong [phòng truyền thống số 5](location)
+      - em ơi [gập](command) cho anh cái [màn cuốn](device) trong [phòng giặt của hân](location) nhé
+      - [ngắt](command) cho anh cái [vòi nước](device) ở [sân của long](location) nhé
+      - [hạ](command) [cửa cuốn](device) trong [phòng truyền thống số 5](location) xuống nhé
+      - [dừng](command) [lò sưởi số 11](device) lại
+      - không cần dùng [lò sưởi số 11](device) nữa nhé
+      - [ngắt](command) cho anh cái [vòi nước](device) ở trong [phòng vệ sinh](location)
+      - [ngắt](command) cho anh cái [van nước](device) ở trong [nhà vệ sinh](location) nhé
+      - [dừng](command) [van nước](device) trong [nhà vệ sinh](location)
+      - [đóng](command) [màn cuốn](device) trên [phòng thờ](location)
+      - tạm [ngưng](command) [van nước số 8](device) trong [8 tiếng 7 phút](duration) cho anh nhé
+      - [vặn](command) cái [vòi nước](device) ở trong [sân của long](location) lại
+      - cái [màn cửa](device) ở trong [phòng](location) đừng để mở nữa để đóng đi
+      - [kéo](command) [màn cuốn](device) [phòng thờ](location) lên nhé
+      - [ngắt](command) cái [vòi nước số 10](device) trong vòng [15 tiếng 23 phút](duration)
+      - [thu](command) cái [màn cuốn](device) ở [phòng giặt của hân](location) lại cho anh
+      - [vặn](command) cái [van nước](device) ở trong [nhà vệ sinh bên phải](location) lại cho anh
+      - bạn trợ lý ơi [khóa](command) giúp mình cái [van nước số 8](device) trong vòng [8 tiếng 7 phút](duration) nhé
+      - ở [nhà vệ sinh](location) có cái [van nước](device) mở [đóng](command) nó lại nhé
+      - anh muốn [khóa](command) cái [vòi nước](device) chỗ [sân của long](location) ý
+      - [khép](command) hẳn cái [màn cửa số 11](device) vào
+      - bạn ơi [kéo](command) giúp mình cái [màn cửa](device) trong [phòng](location) xuống nhé
+      - giúp mình [gập](command) cái [màn cửa số 4](device) vào nhé
+      - bạn trợ lý giúp mình [ngắt](command) [van nước số 8](device) trong [8 tiếng 7 phút](duration) nhé
+      - giúp mình [gập](command) cái [màn cuốn số 18](device) xuống nhé
+      - [ngắt](command) cho anh cái [vòi nước số 10](device) trong vòng [15 tiếng 23 phút](duration) đi
+      - bạn trợ lý giúp mình [khép](command) cái [màn cửa](device) trong [phòng](location) xuống nhé
+      - bạn trợ lý giúp mình [đóng](command) cái [màn cửa số 11](device) xuống nhé
+      - bạn trợ lý giúp mình [hạ](command) cái [màn cuốn](device) trong [phòng thờ](location) xuống nhé
+      - cái [van nước số 8](device) [khóa](command) ngay lại trong [8 tiếng 7 phút](duration)
+      - cái [van nước](device) trong [nhà vệ sinh](location) [đóng](command) lại cho anh
+      - đừng để [vòi nước](device) ở [sân của long](location) chảy nữa [đóng](command) nó lại
+      - em ơi [tắt](command) cho anh cái [màn cuốn số 18](device) nhé
+      - bạn trợ lí giúp mình [ngắt](command) [vòi nước](device) ở ngoài [sân của long](location) nhé
+      - bên ngoài trời nắng lắm em [khép](command) hẳn cái [màn cuốn số 18](device) lại cho anh
+      - bạn gì ơi [ngắt](command) giúp mình cái [vòi nước số 10](device) trong vòng [15 tiếng 23 phút](duration) nhé
+      - em ơi [sập](command) cho anh cái [cửa cuốn](device) xuống nhé ở trong [phòng truyền thống số 5](location)
+      - em ơi [gập](command) cho anh cái [màn cuốn](device) trong [phòng giặt của hân](location) nhé
+      - [ngắt](command) cho anh cái [vòi nước](device) ở [sân của long](location) nhé
+      - [hạ](command) [cửa cuốn](device) trong [phòng truyền thống số 5](location) xuống nhé
+      - [dừng](command) [lò sưởi số 11](device) lại
+      - không cần dùng [lò sưởi số 11](device) nữa nhé
+      - [ngắt](command) cho anh cái [vòi nước](device) ở trong [phòng vệ sinh](location)
+      - [ngắt](command) cho anh cái [van nước](device) ở trong [nhà vệ sinh](location) nhé
+      - [dừng](command) [van nước](device) trong [nhà vệ sinh](location)
+      - [đóng](command) [màn cuốn](device) trên [phòng thờ](location)
+      - tạm [ngưng](command) [van nước số 8](device) trong [8 tiếng 7 phút](duration) cho anh nhé
+      - [vặn](command) cái [vòi nước](device) ở trong [sân của long](location) lại
+      - cái [màn cửa](device) ở trong [phòng](location) đừng để mở nữa để đóng đi
+      - [kéo](command) [màn cuốn](device) [phòng thờ](location) lên nhé
+      - [ngắt](command) cái [vòi nước số 10](device) trong vòng [15 tiếng 23 phút](duration)
+      - [thu](command) cái [màn cuốn](device) ở [phòng giặt của hân](location) lại cho anh
+      - [vặn](command) cái [van nước](device) ở trong [nhà vệ sinh bên phải](location) lại cho anh
+      - bạn trợ lý ơi [khóa](command) giúp mình cái [van nước số 8](device) trong vòng [8 tiếng 7 phút](duration) nhé
+      - ở [nhà vệ sinh](location) có cái [van nước](device) mở [đóng](command) nó lại nhé
+  - intent: giảm độ sáng của thiết bị
+    examples: |
+      - [giảm](command) xuống [22%](target number) lúc [18 giờ 48 phút](time at) nhá
+      - bạn ơi [giảm](command) giúp mình cái [đèn huỳnh quang](device) xuống nhé
+      - [giảm](command) cho mình đến [35%](target number) nhé, trong [7 tiếng 18 phút](duration) thôi
+      - hơi chói nhở, [giảm](command) cái [đèn huỳnh quang](device) xuống đi em
+      - [giảm](command) cho anh đi [4%](changing value) em nhớ
+      - [giảm](command) xuống [61%](target number) trong vòng [16 tiếng 40 phút](duration)
+      - [giảm](command) khoảng [34%](changing value) hộ mình
+      - [giảm](command) cho anh cái [bóng hắt](device) xuống [35%](target number)
+      - [giảm](command) [bóng hắt](device) ở [phòng xem phim](location) đi [4%](changing value) nha
+      - [giảm](command) cho anh[33%](changing value) nhé
+      - trợ lý ơi, [giảm](command) [đèn rủ](device) giùm tôi đi
+      - anh yêu ơi anh [giảm](command) cho em cái [đèn tranh số 7](device) đến [92%](target number) anh nha!
+      - [giảm](command) đi [34%](changing value) thôi
+      - sáng quá, [giảm](command) cái [đèn tranh số 7](device) xuống mức [92%](target number) nhớ
+      - cái [đèn trần](device) chói thế nhỉ [giảm](command) cho mình đi bạn
+      - [giảm](command) cho anh cái [bóng hắt](device) ở trong [phòng xem phim](location) xuống đi nào, để anh còn xem phim nữa
+      - [giảm](command) xuống [84%](target number) cho anh nhá
+      - này trợ lý ảo, bạn có thể [giảm](command) giúp mình cái [đèn tranh số 7](device) xuống còn [92%](target number) được không
+      - [giảm](command) xuống [4%](target number) nhé
+      - nhớ là [giảm](command) cho anh về mức [29%](target number) vào lúc [5 giờ 16 phút](time at) nhớ
+      - [giảm](command) cái [đèn tranh số 7](device) xuống [92%](target number) cho chị nhé
+      - [giảm](command) xuống còn [22%](target number) nhớ
+      - lại [giảm](command) hộ chị cái[bóng sợi đốt](device) với
+      - [giảm](command) cho tôi cái [đèn trần](device) về mức [17%](target number)
+      - [giảm](command) cho mình[53%](changing value), trong vòng [22 tiếng 52 phút](duration)
+      - [giảm](command) hộ [24%](changing value) độ sáng trong [0 giờ 34 phút](duration) nhớ
+      - [giảm](command) xuống đến [61%](target number) nha
+      - [giảm](command) cho tôi cái [bóng hắt](device) ở [phòng xem phim](location) với
+      - [giảm](command) cho tôi cái [đèn huỳnh quang](device) xuống một chút, khoảng [92%](changing value) nhá
+      - [giảm](command) xuống mức [65%](target number) nhé
+      - [giảm](command) cái trong [phòng giặt ủi của nhi](location) xuống [65%](target number)
+      - [giảm](command) cho mình xuống [92%](target number) nhớ
+      - [giảm](command) cho mình xuống [59%](target number) nhé
+      - em ơi chói quá, [giảm](command) hộ anh cái [đèn hắt](device) với
+      - hãy [giảm](command) xuống [65%](target number) giúp tôi
+      - à [giảm](command) [4%](changing value) thôi nhé
+      - bây giờ là[18 giờ 48 phút](time at) rồi, cũng hơi tối rồi, nên chắc [giảm](command) còn [22%](target number) thôi là vừa
+      - [giảm](command) cho mình xuống [87%](target number), trong khoảng [22 tiếng 55 phút](duration) nha
+      - [giảm](command) cho anh xuống [29%](target number) trong vòng [16 tiếng 28 phút](duration) được không
+      - [giảm](command) cho tôi [24%](changing value) vào lúc [0 giờ 34 phút](time at) bạn nhé
+      - em ơi [giảm](command) giúp anh [35%](changing value) trong vòng [13 tiếng 34 phút](duration) nhé
+      - em ơi, [giảm](command) cho chị cái [bóng sợi đốt](device) khoảng [16%](changing value) nhớ
+      - ê, [giảm](command) cái [đèn hắt](device) cho anh được không
+      - ok, [giảm](command) xuống khoảng tầm [33%](changing value) bạn nhé
+      - [giảm](command) còn [54%](target number) và vào[10 giờ 38 phút](time at)nhớ
+      - [giảm](command) xuống khoảng [16%](changing value) đi
+      - [giảm](command) xuống giúp mình [2%](changing value) thôi bạn nhé
+      - [giảm](command) [đèn hắt](device) cho tôi nhé
+      - em ơi [giảm](command) cái [đèn trần](device) xuống còn [17%](target number) thôi nhá, à nhớ là[giảm](command) cho anh vào [8 giờ 52 phút](time at)
+      - [giảm](command) đi [16%](changing value) nhé, trong khoảng [10 tiếng 8 phút](duration) cho anh
+      - [giảm](command) cho về [61%](target number) với [giảm](command) trong [16 tiếng 40 phút](duration) tính từ bây giờ
+      - bạn [giảm](command) giúp mình đèn sợi đốt ở [nhà để xe](location) và [giảm](command) [13%](changing value) nhé
+      - [giảm](command) xuống mức [39%](target number) nhá
+      - [giảm](command) xuống [76%](target number) nhé
+      - [giảm](command) cái [bóng để bàn](device) hộ tôi nhé
+      - [giảm](command) giúp tớ xuống mức [35%](target number) nhé
+      - [giảm](command) cho anh cái [đèn rủ](device) xuống nhé
+      - [giảm](command) cái [đèn bếp](device) đến [38%](target number) hộ mình
+      - [giảm](command) [16%](changing value), bắt đầu từ [23 giờ 5 phút](time at) và kéo dài trong [10 tiếng 8 phút](duration) nhé
+      - [giảm](command) đi [34%](changing value) là đủ rồi nhớ
+      - [giảm](command) xuống [29%](target number) em nhé
+      - em ơi chói quá, [giảm](command) cho anh cái độ sáng [đèn trần](device) với
+      - [giảm](command) đi [38%](changing value) lúc [5 giờ 34 phút](time at) nhé
+      - này trợ lý, [giảm](command) cái [đèn trần](device) giúp tôi xuống [17%](target number) nhé
+      - [giảm](command) khoảng [39%](changing value)
+      - [giảm](command) cho tôi [bóng để bàn](device) [53%](changing value) [22 tiếng 52 phút](duration)
+      - [giảm](command) cho mình [95%](changing value)độ sáng nhé thời gian là [2 tiếng 42 phút](duration)
+      - [giảm](command) cho anh[33%](changing value) nhé
+      - em ơi, [giảm](command) giúp anh cái [bóng sợi đốt](device) với
+      - bạn ơi [giảm](command) cái [đèn tranh số 7](device) xuống [92%](target number) nhá để vậy thôi là được rồi
+      - [giảm](command) xuống còn [87%](target number) thôi, trong vòng [22 tiếng 55 phút](duration) đi
+      - [giảm](command) xuống [54%](target number) vào lúc [10 giờ 38 phút](time at) nhé
+      - [giảm](command) cho mình cái[bóng để bàn](device) với sáng quá
+      - em [giảm](command) giúp anh xuống [65%](target number) thôi, chắc là đủ rồi
+      - em ơi [giảm](command) giúp anh cái [bóng để bàn](device) với. sáng quá
+      - ở [phòng xem phim](location) ấy [giảm](command) khoảng [4%](changing value) cho mình nhé
+      - [giảm](command) đi [4%](changing value) nhé
+      - em [giảm](command) xuống còn [47%](target number) trong [21 tiếng 14 phút](duration) nhé
+      - bạn ơi [giảm](command) cho mình cái [đèn huỳnh quang](device) nhé
+      - [đèn bếp](device) chói quá [giảm](command) giúp mình với
+      - [giảm](command) cho mình khoảng [84%](changing value), trong khoảng [12 tiếng 9 phút](duration)
+      - bạn [giảm](command) cho mình đi khoảng [4%](changing value) nhé
+      - lúc [5 giờ 16 phút](time at)em [giảm](command) xuống [29%](target number) cho anh
+      - [giảm](command) xuống còn [29%](target number) trợ lý nhé
+      - [giảm](command) [2%](changing value) thôi bạn ơi
+      - làm ơn hãy [giảm](command) [đèn rủ](device) xuống còn [29%](target number)
+      - hãy [giảm](command) cho tôi [đèn hắt](device) xuống [22%](target number) nhá
+      - [giảm](command) cho mình xuống [65%](target number) nhé
+      - [giảm](command) cho anh [50%](changing value) nha
+      - bạn ơi [giảm](command) cho mình cái [đèn rủ](device)
+      - [giảm](command) cho anh khoảng '[36%](changing value) nhớ
+      - [giảm](command) cho mình cái [đèn huỳnh quang](device)[92%](changing value)
+      - em [giảm](command) về mức [35%](target number) với lại trong khoảng thời gian là [7 tiếng 18 phút](duration) anh nhá
+      - [giảm](command) đi [33%](changing value) nhé
+      - [giảm](command) [đèn bếp](device) xuống [38%](target number) vào lúc[1 giờ 51 phút](time at) giúp tôi nhé
+      - cậu ơi, tốn điện quá, [giảm](command) cho mình cái [đèn rủ](device) với
+      - [giảm](command) xuống [22%](target number) cho chị nhớ
+      - cái [bóng hắt](device) chói quá bạn [giảm](command) cho mình đi
+      - [giảm](command) xuống [29%](target number)
+      - trợ lý ơi, [giảm](command) giúp chị cái [đèn tranh số 7](device) với
+      - bạn ơi, lát [giảm](command) giúp mình cái [đèn bếp](device) nhá
+      - [giảm](command) xuống [77%](target number) thôi
+      - [giảm](command) đi [50%](changing value)
+      - [giảm](command) giúp mình khoảng[36%](changing value) bạn nhé
+      - [giảm](command) [đèn tranh số 7](device) xuống [92%](target number)
+      - em ơi [giảm](command) giúp anh cái [bóng hắt](device) trong [phòng xem phim](location)
+      - [giảm](command) cho tôi cái [đèn huỳnh quang](device) đi [92%](changing value) bạn nhé
+      - [giảm](command) hộ tôi cái [đèn trần](device) về mức [17%](target number)
+      - [giảm](command) xuống [8%](target number) cho anh nhá
+      - [giảm](command) cho mình cái [bóng hắt](device) ở [phòng xem phim](location) với nhé
+      - [giảm](command) đi [4%](changing value) là đủ rồi nhé
+      - bạn [giảm](command) cho mình đi [4%](changing value) nhé
+      - [giảm](command) xuống khoảng [13%](changing value) trong [21 tiếng 15 phút](duration)
+      - so với ban đầu thì [giảm](command) [64%](changing value) em nhé
+      - [giảm](command) xuống mức [39%](target number) nhé
+      - em [giảm](command) xuống mức [85%](target number) giúp anh
+      - ờ [giảm](command) [71%](changing value) là được nhé
+      - [giảm](command) xuống [65%](target number) bạn nhé
+      - [giảm](command) đi [53%](changing value) và [giảm](command) trong [22 tiếng 52 phút](duration)
+      - [giảm](command) trong tầm [12 tiếng 9 phút](duration) [giảm](command) khoảng [84%](changing value) thôi nhé
+      - ờm [giảm](command) xuống tầm [76%](target number) nhớ em
+      - [giảm](command) xuống [35%](target number) nhớ
+      - chói quá [giảm](command) hộ anh cái [đèn bếp](device) với
+      - hãy [giảm](command) cho tôi cái [đèn bếp](device) ở mức [38%](target number) vào lúc [1 giờ 51 phút](time at)
+      - [giảm](command) cho anh xuống mức [54%](target number) vào lúc [10 giờ 38 phút](time at) nhé
+      - chị giúp em [giảm](command) xuống [47%](target number) trong [21 tiếng 14 phút](duration) nhé
+      - em ơi [giảm](command) cho anh cái [bóng hắt](device) trong [phòng xem phim](location) với
+      - bạn ơi [giảm](command) cái [đèn bếp](device) đến [38%](target number)giúp mình với
+      - bạn [giảm](command) còn [84%](target number) giúp mình
+      - [giảm](command) cho anh xuống đến [4%](target number) nhá
+      - [giảm](command) độ sáng [đèn bếp](device) xuống [38%](target number) giúp tôi với
+      - [đèn tranh số 7](device) đang sáng quá, [giảm](command) xuống một chút cho mình với
+      - [giảm](command) [35%](changing value) trong [13 tiếng 34 phút](duration) nhá
+      - bạn [giảm](command) cái [bóng hắt](device) ở [phòng xem phim](location) đi [4%](changing value) bạn nhé
+      - ở [phòng vệ sinh](location) nhé, [giảm](command) xuống còn [54%](target number)
+      - lúc [1 giờ 51 phút](time at) thì [giảm](command) [đèn bếp](device) cho mình nhé
+      - em ơi sáng quá [giảm](command) giúp anh cái [đèn trần](device) xuống với
+      - sáng thế nhỉ, bạn ơi bạn [giảm](command) cho mình cái [bóng hắt](device) ở [phòng xem phim](location) đi nhé
+      - [giảm](command) xuống mức [65%](target number) độ sáng cho tôi
+      - [giảm](command) xuống cho tôi khoảng [65%](target number) nhé
+      - [giảm](command) xuống [65%](target number) nhé
+      - [giảm](command) giùm mình đến [35%](target number) nhá chắc là trong khoảng [7 tiếng 18 phút](duration) thôi
+      - [giảm](command) đi [16%](changing value) nhé
+      - à giúp chị [giảm](command) xuống [47%](target number) trong [21 tiếng 14 phút](duration) nhé
+      - [giảm](command) xuống [87%](target number) cho anh nhớ trong [22 tiếng 55 phút](duration) cho anh
+      - [giảm](command) bớt [40%](changing value) nhé,[giảm](command) vào lúc [22 giờ 34 phút](time at)
+      - em [giảm](command) cho anh cái [đèn trần](device) xuống [17%](target number) đi nhé
+      - [giảm](command) cho anh ở [nhà xe của huy](location),[giảm](command) xuống [4%](target number)
+      - em [giảm](command) xuống mức [29%](target number) vào [12 giờ 38 phút](time at) trong [16 tiếng 28 phút](duration) nhé
+      - em ơi [giảm](command) cho anh cái [đèn tranh số 7](device) xuống còn [92%](target number) thôi nhá, sáng quá
+      - [giảm](command) đến [65%](target number) nhé
+      - mình muốn [giảm](command) xuống [4%](target number), ở trong [nhà xe của huy](location) nhé
+      - anh muốn [giảm](command) vào [0 giờ 34 phút](time at), khoảng [24%](changing value) nhớ
+      - chắc là [giảm](command) khoảng [39%](changing value) thôi
+      - này em ơi, lúc [23 giờ 5 phút](time at) ý, [giảm](command) cho anh cái [bóng sợi đốt](device) với
+      - [giảm](command) cho anh [13%](changing value) đi
+      - [giảm](command) giúp mình cái [bóng sợi đốt](device) với
+      - [giảm](command) cho mình cái [đèn tranh số 7](device) nhớ
+      - [giảm](command) [95%](changing value) trong [2 tiếng 42 phút](duration) hộ tôi
+      - [giảm](command) đi [34%](changing value) nha
+      - [giảm](command) xuống [92%](target number) em nhá
+      - tôi muốn [giảm](command) lúc [22 giờ 34 phút](time at) và [40%](changing value)
+      - cái ở [nhà để xe](location) ý [giảm](command) đến tầm [13%](target number) thôi
+      - em giúp chị [giảm](command) xuống [58%](target number) trong vòng [5 tiếng 31 phút](duration) nhé
+      - [giảm](command) xuống [58%](target number) trong khoảng [5 tiếng 31 phút](duration) nhé
+      - [giảm](command) xuống [39%](target number) được không
+      - em ơi [giảm](command) cho anh cái [đèn huỳnh quang](device) xuống [92%](target number) với
+      - [giảm](command) xuống [53%](target number) em nhá, trong [22 tiếng 52 phút](duration)
+      - [giảm](command) tầm [35%](changing value) nha, trong khoảng [7 tiếng 18 phút](duration)
+      - [giảm](command) cho anh cái [đèn huỳnh quang](device) xuống [92%](target number) với
+      - [giảm](command) hộ anh xuống [33%](target number) nhá
+      - bạn ơi [giảm](command) giúp mình cái [bóng để bàn](device) xuống mức [53%](target number) trong vòng [22 tiếng 52 phút](duration) được không
+      - mình muốn [giảm](command) xuống [39%](target number) nhớ
+      - [giảm](command) trong [2 tiếng 42 phút](duration) nhé, để tôi ngủ. và [giảm](command) xuống [95%](target number)
+      - vẫn sáng em ạ, em [giảm](command) xuống [73%](target number) đi em
+      - [giảm](command) xuống [33%](target number) nhé
+      - [giảm](command) xuống [37%](target number) trong [5 tiếng 47 phút](duration) cho anh
+      - nhớ [giảm](command) về mức [16%](target number) nhé
+      - [giảm](command) [bóng để bàn](device) đến [53%](target number) hộ anh
+      - em ơi [giảm](command) cái [đèn trần](device) xuống giúp chị với
+      - em ơi [giảm](command) giúp anh cái [đèn hắt](device) đi [22%](changing value)
+      - [giảm](command) giúp tôi xuống [37%](target number) trong vòng [5 tiếng 47 phút](duration)
+      - [giảm](command) xuống [4%](target number)
+      - [giảm](command) giúp mình xuống [6%](target number) vào lúc [13 giờ 24 phút](time at) nhé
+      - [giảm](command) cho anh khoảng [65%](changing value) em nhé
+      - [giảm](command) đến [28%](target number) giúp mình nhá vào lúc [22 giờ 14 phút](time at)
+      - [giảm](command) xuống [35%](target number) trong vòng [13 tiếng 34 phút](duration)
+      - [giảm](command) xuống mức [24%](target number) trong vòng [0 giờ 34 phút](time at) nhé
+      - [giảm](command) [bóng sợi đốt](device) xuống [16%](target number)
+      - [giảm](command) cho chị lúc [0 giờ 34 phút](time at) xuống [24%](target number) em nhé
+      - [giảm](command) xuống cho chị [29%](changing value) vào lúc [5 giờ 16 phút](time at) em nhá
+      - ok, [giảm](command) hộ mình xuống còn [45%](target number) nhé
+      - [giảm](command) xuống [35%](target number) trong [13 tiếng 34 phút](duration) nhé
+      - [giảm](command) đến [53%](target number) nhá trong khoảng [22 tiếng 52 phút](duration)
+      - nhớ [giảm](command) xuống[71%](target number) nhé
+      - [giảm](command) xuống [37%](target number) cho anh, trong khoảng [5 tiếng 47 phút](duration) nhá
+      - [giảm](command) xuống [33%](target number)
+      - lúc [0 giờ 34 phút](time at) [giảm](command) xuống còn [24%](target number) cho tôi
+      - [giảm](command) xuống [95%](target number) và trong [2 tiếng 42 phút](duration)
+      - đèn hơi sáng rồi, [giảm](command) [đèn trần](device) xuống [17%](target number) cho mình với
+      - [giảm](command) xuống mức [64%](target number) trong thời gian [14 tiếng 12 phút](duration) giúp tôi
+      - em [giảm](command) cho anh đến [33%](target number) nhá
+      - [giảm](command) đến [73%](target number) nhé
+      - bạn [giảm](command) giúp mình đến [28%](target number) vào lúc [14 giờ 51 phút](time at) nhá
+      - [giảm](command) đến khoảng [17%](changing value) vào lúc [8 giờ 52 phút](time at) giúp chị nhá
+      - [giảm](command) xuống [24%](target number) lúc [0 giờ 34 phút](time at) nhá
+      - [giảm](command) giúp mình xuống [37%](target number) nhớ
+      - ở dưới [phòng giặt ủi của nhi](location) đấy, [giảm](command) đi [65%](changing value) nhá
+      - [giảm](command) độ sáng xuống còn [28%](target number) em nhé
+      - em ơi [giảm](command) [đèn bếp](device) cho anh [38%](changing value) vào lúc [1 giờ 51 phút](time at) với
+      - [giảm](command) xuống còn [33%](target number) em nhé
+      - [giảm](command) xuống [33%](target number) cho tôi nhá
+      - [giảm](command) xuống [64%](target number) trong [14 tiếng 12 phút](duration) nhá
+      - em [giảm](command) xuống [95%](target number), trong [2 tiếng 42 phút](duration) giúp mình nhá
+      - [giảm](command) xuống [28%](target number) nhé
+      - [giảm](command) cho anh cái [đèn huỳnh quang](device) xuống [92%](target number) cho đỡ tốn điện
+      - [giảm](command) còn [50%](target number) thôi em nhé
+      - [chỉnh](command) độ sáng cái [đèn rủ](device) ở dưới [garage](location) xuống giúp tôi nhớ
+      - cho cái [bóng hắt](device) tối đi [37%](changing value)
+      - em ơi [hạ](command) giúp anh ánh sáng của [đèn hắt trần](device) xuống [31%](target number)
+      - [hạ](command) giúp tôi ánh sáng của [bóng huỳnh quang](device) trên [cầu thang](location) xuống [4%](target number)
+      - cho giúp tôi độ sáng cái [đèn hắt](device) xuống [40%](target number) ở trong phòng [garage mùa đông](location) ấy
+      - để độ sáng cái [đèn hắt](device) ở trong [garage mùa đông](location) xuống mức [40%](target number)
+      - [chỉnh](command) độ sáng của cái [bóng huỳnh quang](device) ở trên [cầu thang](location) về mức [4%](target number)
+      - [bớt](command) độ sáng của cái [bóng hắt](device) đi [37%](changing value) nhé
+      - [chỉnh](command) độ sáng cái [đèn rủ](device) ở dưới [garage](location) xuống giúp tôi nhớ
+      - cho cái [bóng hắt](device) tối đi [37%](changing value)
+      - em ơi [hạ](command) giúp anh ánh sáng của [đèn hắt trần](device) xuống [31%](target number)
+      - [hạ](command) giúp tôi ánh sáng của [bóng huỳnh quang](device) trên [cầu thang](location) xuống [4%](target number)
+      - cho giúp tôi độ sáng cái [đèn hắt](device) xuống [40%](target number) ở trong phòng [garage mùa đông](location) ấy
+      - để độ sáng cái [đèn hắt](device) ở trong [garage mùa đông](location) xuống mức [40%](target number)
+      - [chỉnh](command) độ sáng của cái [bóng huỳnh quang](device) ở trên [cầu thang](location) về mức [4%](target number)
+      - [bớt](command) độ sáng của cái [bóng hắt](device) đi [37%](changing value) nhé
+  - intent: tăng mức độ của thiết bị
+    examples: |
+      - [tăng](command) giúp mình cái [quạt trần](device) với nhé
+      - trời hơi nóng. em [tăng](command) giúp anh cái [quạt](device) với
+      - [tăng](command) thêm [4](changing value) em nhé
+      - trợ lí ơi, hơi nóng, [tăng](command) [quạt](device) lên mức [2](target number) nhá
+      - bạn ơi, [tăng](command) hộ mình cái [quạt trần](device) được không
+      - [tăng](command) cái [quạt](device) lên mức [2](target number) cho anh nhá
+      - [tăng](command) [quạt trần](device) lên [2](target number) trong [18 tiếng 54 phút](duration) nhé
+      - [tăng](command) cho mình thêm [4](changing value) đi
+      - nóng quá [tăng](command) cái [quạt](device) lên số [2](target number) cho mình đi nhớ
+      - bạn ơi bạn [tăng](command) hộ mình cái [quạt trần](device) lên với
+      - [tăng](command) thêm [2](changing value) nhớ
+      - nóng ghê ấy, trợ lý ơi [tăng](command) giúp chị cái [quạt trần](device) lên số [2](target number) với
+      - [tăng](command) cái [quạt trần](device) lên mức [2](target number) giúp mình nhé, khoảng [18 tiếng 54 phút](duration) nữa thì tắt đi giúp mình
+      - [tăng](command) lên số [2](target number) bạn nhớ
+      - trong này nóng quá, bạn [tăng](command) [quạt](device) lên mức [2](target number) giúp tôi nhé
+      - [tăng](command) hộ mình cái [quạt](device) lên [2](target number)
+      - [tăng](command) cho mình lên mức [2](target number) đi với cả [tăng](command) trong vòng [18 tiếng 54 phút](duration) nhé
+      - bạn ơi [tăng](command) giúp mình cái [quạt](device) lên mức [2](target number) với
+      - em ơi, [tăng](command) cho anh cái [quạt trần](device) lên mức [2](target number) với
+      - [tăng](command) lên số [2](target number) em nhé
+      - em ơi anh vẫn thấy nóng hãy [tăng](command) [quạt trần](device) lên số [2](target number) giúp anh
+      - [tăng](command) lên [3](target number) lúc [23 giờ 40 phút](time at) cho anh nhá
+      - nóng quá, [tăng](command) cho anh cái [quạt](device)lên số [2](target number)với
+      - mình muốn [tăng](command) cái [quạt trần](device) này trong vòng [18 tiếng 54 phút](duration), bạn giúp mình với
+      - nóng quá [tăng](command) cho anh cái [quạt](device) lên mức [2](target number) nhé
+      - [tăng](command) [quạt](device) lên [2](target number) em nhé
+      - à anh đang ở trong [phòng vệ sinh hoàng hôn](location) [tăng](command) giúp anh lên [82 độ c](target number) em nhé
+      - [tăng](command) lên [64 độ c](target number) trong [0 giờ 10 phút](duration) cho anh nhá
+      - [tăng](command) lên [64 độ c](target number) cho anh nhá, lúc [0 giờ 10 phút](time at), để anh về anh tắm
+      - để xem nào chắc [tăng](command) lên tầm [82 độ c](target number) là hợp lí
+      - [tăng](command) lên mức [64 độ c](target number) cho anh nhé
+      - lúc [0 giờ 10 phút](time at) nhá, [tăng](command) lên [64 độ c](target number) cho anh
+      - [tăng](command) lên [3](target number)và vào lúc [23 giờ 40 phút](time at) cậu ơi
+      - [tăng](command) lên mức [2](target number), và vào lúc [4 giờ 54 phút](time at) bạn nhé
+      - hãy [tăng](command) cái [quạt trần](device) lên mức [4](target number)
+      - [tăng](command) lên mức [8](target number) và [tăng](command) trong [21 tiếng 28 phút](duration) nhé
+      - [tăng](command) lên mức [2](target number) trong thời gian [4 giờ 54 phút](time at)
+      - [tăng](command) lên số [4](target number) em nha
+      - [tăng](command) giúp mình cái [quạt](device) lên [2](changing value) mức với
+      - [tăng](command) cho mình lên mức [4](target number)
+      - [tăng](command) cho tôi ở mức [2](target number) vào lúc [4 giờ 54 phút](time at)
+      - [tăng](command) lên nấc [2](target number) đi
+      - chị muốn [tăng](command) lên [30 độ c](target number) em nhé
+      - bạn giúp mình cho to cái [quạt](device) trong [hầm rượu](location) lên [3](target number) nhé
+      - cho cái [quạt](device) ở dưới [hầm rượu](location) mạnh thêm [ 3](changing value) số
+      - bạn trợ lý ơi [nâng](command) cho mình cái [quạt](device) ngoài [sân](location) lên [2](target number) nhé
+      - bạn ơi [nâng](command) giúp mình cái [quạt trần](device) trong [phòng giặt là của thảo](location) lên [3](target number) nhé
+      - bạn ơi [tăng](command) giúp mình cái [quạt](device) ở [sân sau](location) lên [4](target number) nhé
+      - để cái [quạt](device) ở [sân sau](location) lên số [4](target number) giúp tôi
+      - bạn giúp mình cho to cái [quạt](device) trong [hầm rượu](location) lên [3](target number) nhé
+      - cho cái [quạt](device) ở dưới [hầm rượu](location) mạnh thêm [ 3](changing value) số
+      - bạn trợ lý ơi [nâng](command) cho mình cái [quạt](device) ngoài [sân](location) lên [2](target number) nhé
+      - bạn ơi [nâng](command) giúp mình cái [quạt trần](device) trong [phòng giặt là của thảo](location) lên [3](target number) nhé
+      - bạn ơi [tăng](command) giúp mình cái [quạt](device) ở [sân sau](location) lên [4](target number) nhé
+      - để cái [quạt](device) ở [sân sau](location) lên số [4](target number) giúp tôi
+  - intent: tăng độ sáng của thiết bị
+    examples: |
+      - [tăng](command) đến [76%](target number) nhá, lúc [14 giờ 4 phút](time at)
+      - [tăng](command) [12%](changing value) trong [11 tiếng 53 phút](duration) nhá
+      - [tăng](command) giúp mình cái độ sáng [đèn bếp](device) lên nhá
+      - [tăng](command) giúp mình cái [bóng để bàn](device) ở [garage](location) với
+      - [tăng](command) cho anh lên [83%](target number) nhé
+      - chưa đủ sáng thì phải em [tăng](command) cái [bóng để bàn](device) cho anh nhá
+      - [tăng](command) [đèn hắt](device) lên [8%](target number) hộ anh nhé
+      - em ơi, [tăng](command) giúp anh cái[bóng để bàn](device)lên với
+      - ui em ơi, trời tối quá, [tăng](command) giúp anh cái [đèn hắt](device) lên nhé
+      - [tăng](command) hộ anh lên [41%](target number) nhá với cả để trong vòng [7 tiếng 25 phút](duration)
+      - [tăng](command) thêm [31%](changing value) em nhé
+      - [tăng](command) cho nó lên [36%](target number) nhé
+      - em ơi, [tăng](command) hộ anh cái [đèn bếp](device) với, tối quá
+      - trợ lí ơi [tăng](command) cái [đèn treo tường](device) lên cho anh
+      - bạn ơi, [tăng](command) cho mình cây [đèn bếp](device) ở trong [garage](location) lên tầm [44%](target number) nhé
+      - [tăng](command) hộ anh cái [đèn ốp trần số 5](device) nhé, trời hình như hơi tối rồi
+      - hãy [tăng](command) lên [96%](target number) vào lúc [20 giờ 45 phút](time at)
+      - [tăng](command) lên [41%](target number) em nhé trong khoảng [7 tiếng 25 phút](duration)
+      - hãy [tăng](command) lên mức [76%](target number) và vào lúc [14 giờ 4 phút](time at) em nhé
+      - giúp mình [tăng](command) cái [đèn bếp](device) thêm [34%](changing value) nhá
+      - lúc [16 giờ 53 phút](time at) em nhé à với lại [tăng](command) lên[64%](target number) cho anh
+      - tối quá [tăng](command) cho anh cái [bóng huỳnh quang](device) lên [21%](target number)
+      - bạn [tăng](command) lên [44%](target number) giúp mình nhá, lúc [10 giờ 23 phút](time at)
+      - [tăng](command) cho mình cái [đèn hắt](device) lên với bạn ơi
+      - cậu ơi [tăng](command) [đèn rủ](device) ở [hiên sau](location) giúp mình nhé
+      - [tăng](command) đến [38%](target number) và trong [4 tiếng 44 phút](duration) nhớ
+      - bạn [tăng](command) thêm giúp mình [66%](changing value) nhé
+      - sao phòng tối thế này, [tăng](command) cho anh cái [đèn hắt](device) đi
+      - tối quá [tăng](command) cho anh cái [bóng để bàn](device) [99%](changing value) với
+      - [tăng](command) cho anh đến [72%](target number) thôi nhé
+      - [tăng](command) ở mức [27%](target number) em nhá
+      - [tăng](command) cho anh thêm [28%](changing value) đi, lúc [14 giờ 51 phút](time at) nhé
+      - [tăng](command) độ sáng của cái [đèn rủ](device) ở phía [hiên sau](location) lên khoảng [10%](changing value) giúp chị
+      - [tăng](command) giúp mình lên [62%](target number) nhé
+      - giúp tôi [tăng](command) [đèn ốp trần số 5](device) thêm [14%](changing value) trong [3 tiếng 39 phút](duration)
+      - xin lỗi em, [tăng](command) lên [8%](target number) cho anh nhá
+      - [tăng](command) hộ anh cái [đèn bếp](device) lên nhé
+      - [tăng](command) [78%](changing value) nhé cậu
+      - ở [phòng thờ](location) và [tăng](command) lên [3%](target number)
+      - à [tăng](command) giúp tôi lên [27%](target number) và để nó trong [6 tiếng 25 phút](duration) nhé
+      - cậu [tăng](command) hộ tớ cái [đèn compact số 14](device) ở [sân sau](location) lên với
+      - ở [hiên sau](location) [tăng](command) thêm [18%](changing value) và vào lúc [6 giờ 7 phút](time at) nhé
+      - [tăng](command) thêm [78%](changing value) nhé, trời tối quá
+      - [tăng](command) khoảng [39%](changing value) nhớ
+      - [tăng](command) giúp tôi cái [đèn huỳnh quang](device) với
+      - trợ lý ơi [tăng](command) cho anh cái [đèn hắt](device) lên khoảng [8%](target number) nhé
+      - [tăng](command) lên [8%](target number) bạn nhé
+      - [tăng](command) cho anh lên mức [78%](target number) nhé
+      - em ơi, tầm [20 giờ 45 phút](time at), em [tăng](command) giúp anh cái [đèn huỳnh quang](device) lên nhé
+      - em ơi [tăng](command) [đèn compact số 14](device) ở [sân sau](location) lên [75%](target number) nhé
+      - bạn ơi tí nữa [tăng](command) cho mình cái [đèn treo tường](device) với nhá tối quá
+      - [tăng](command) đến [71%](target number) em nhé
+      - [tăng](command) lên [41%](target number) trong [7 tiếng 25 phút](duration) nhá
+      - [tăng](command) cho anh đến [83%](target number) lúc [4 giờ 12 phút](time at) trong khoảng [14 tiếng 13 phút](duration) nhé
+      - [tăng](command) lên khoảng [20%](changing value) cho anh nhá
+      - [tăng](command) lên [15%](target number) [tăng](command) trong [18 tiếng 27 phút](duration) nhá
+      - [tăng](command) giúp tôi cái [đèn treo tường](device) lên[76%](target number) nhớ
+      - [tăng](command) lên khoảng [13%](target number) trong [14 tiếng 42 phút](duration) nhá
+      - à anh quên mất không nhắc [tăng](command) lên [13%](target number) ở [hành lang trường sa](location) nhớ
+      - [tăng](command) giúp anh đến [97%](target number) nhớ
+      - à [tăng](command) [18%](changing value) nha. bắt đầu từ [6 giờ 7 phút](time at)
+      - [tăng](command) lên [31%](target number) giúp tôi
+      - phòng tối quá, [tăng](command) độ sáng[bóng để bàn](device) giúp anh với
+      - tí nữa [tăng](command) giúp anh cái [đèn treo tường](device) lên một chút nhá
+      - [tăng](command) cho mình [9%](changing value) thôi nhé
+      - em [tăng](command) lên [96%](target number), lúc [20 giờ 45 phút](time at) cho mình nhá
+      - [tăng](command) cho anh lên [88%](target number) em nhé
+      - [tăng](command) ở [sân sau](location) ý em nhé lên [75%](target number) cho anh
+      - em [tăng](command) cho anh cái [đèn compact số 14](device) ở [sân sau](location) lên đi nhé
+      - [tăng](command) lên [9%](changing value) nữa nha em
+      - để xem nào hãy bắt đầu từ lúc [4 giờ 12 phút](time at) và [tăng](command) ở mức [83%](target number) nhá
+      - [tăng](command) lên mức [47%](target number)
+      - [tăng](command) lên [27%](target number) trong [6 tiếng 25 phút](duration) nhé
+      - [đèn hắt](device) đang quá tối, hãy [tăng](command) cho tôi lên[8%](target number)
+      - [tăng](command) lên [3%](target number) nhé
+      - bạn ơi [tăng](command) hộ mình cái [bóng compact số 8](device) lên [64%](target number) nhé
+      - tầm [10 giờ 23 phút](time at) thì [tăng](command) giúp chị cái [đèn bếp](device) ở trong [garage](location) lên khoảng [44%](target number)
+      - em ơi [tăng](command) [bóng huỳnh quang](device) cho anh lên [21%](target number) vào lúc [5 giờ 14 phút](time at)
+      - [tăng](command) lên [31%](target number) nhé
+      - [tăng](command) thêm hẳn [99%](changing value) nữa đi
+      - bạn [tăng](command) lên[36%](target number) giúp mình nhá
+      - cái bóng nằm ở [cầu thang](location) , [tăng](command) lên khoảng [41%](target number) trong [7 tiếng 25 phút](duration)
+      - cái [đèn rủ](device) ở [hiên sau](location) ấy, [tăng](command) thêm [10%](changing value) giúp anh nhé 
+      - tối quá [tăng](command) cho mình cái [đèn ốp trần số 5](device) với
+      - [tăng](command) hộ anh cái [bóng để bàn](device) trong [garage](location) [66%](changing value)
+      - làm ơn [tăng](command) độ sáng của [bóng huỳnh quang](device) lên đi
+      - bạn ơi bạn có thể giúp mình [tăng](command) cái [đèn hắt](device) được không
+      - lúc [20 giờ 45 phút](time at) được không cô, [tăng](command) giúp cháu lên [96%](target number)
+      - [tăng](command) lên cho mình [41%](target number) trong [7 tiếng 25 phút](duration) nhé
+      - em [tăng](command) hộ anh cái [đèn huỳnh quang](device) lên [96%](target number) phát
+      - [tăng](command) lên đến [36%](target number) nhớ
+      - bạn ơi, bạn ơi bạn, [tăng](command) giúp mình cái [đèn bếp](device) nhá, ở [garage](location) nhá, ở[garage](location)
+      - đúng rồi em, [tăng](command) lên [36%](target number) nhá
+      - [tăng](command) lên [47%](target number) em nhé
+      - [tăng](command) giúp tôi lên [36%](target number)
+      - vào lúc [16 giờ 53 phút](time at), hãy [tăng](command) độ sáng của [bóng compact số 8](device) lên mức [64%](target number)
+      - [tăng](command) [đèn rủ](device) ở [hiên sau](location) cho tôi nhé
+      - ờ [tăng](command) đến [11%](target number) vào [17 giờ 15 phút](time at) nhá
+      - [64%](target number), [16 giờ 53 phút](time at) thì [tăng](command) lên cho anh nhá
+      - em ơi [tăng](command) cho anh cái [đèn ốp trần](device) ở [hiên sau](location) nhé
+      - ờ [14 giờ 4 phút](time at) hôm nay anh cần dùng cái [đèn treo tường](device) nhá, em [tăng](command) lên đến [76%](target number) cho anh
+      - [tăng](command) đến [13%](target number) bạn nhé
+      - [tăng](command) lên [27%](target number) trong [6 tiếng 25 phút](duration)
+      - [tăng](command) lên [44%](target number) vào lúc [10 giờ 23 phút](time at)
+      - [tăng](command) lên [72%](target number) em nhé
+      - [tăng](command) cái [đèn rủ](device) hộ mình
+      - tối quá em ạ [tăng](command) giúp anh cái [đèn hắt](device) lên với
+      - [tăng](command) cho mình [88%](changing value)
+      - em [tăng](command) giúp mình cái [đèn bếp](device) lên nhá,[tăng](command) thêm [34%](changing value) nhá
+      - em ơi [hè sau](location) có vẻ tối nhỉ ? [tăng](command) cho anh cái [đèn hắt](device) với
+      - em ơi [tăng](command) cái [đèn treo tường](device) lên [76%](target number) đi
+      - [tăng](command) cho mình thêm [38%](changing value) đi, vào lúc [5 giờ 34 phút](time at) nhé
+      - ở [hiên sau](location) ấy [tăng](command) giúp anh [10%](changing value) em nhé
+      - trời tối quá , [tăng](command) [đèn bếp](device) ở [garage](location) giúp anh với
+      - [tăng](command) lên [88%](target number) cho anh em nhá
+      - tối quá [tăng](command) giúp mình cái [bóng để bàn](device) với
+      - [tăng](command) cho mình cái [đèn rủ](device) lên [92%](target number) với
+      - [tăng](command) cho mình thêm [14%](changing value) nhé và trong [3 tiếng 39 phút](duration)
+      - [tăng](command) giúp tôi cái [đèn treo tường](device) ở phòng ngủ lên [76%](target number) vào lúc [14 giờ 4 phút](time at)
+      - bạn ơi [tăng](command) cho mình cái [bóng để bàn](device) ở [garage](location) với
+      - [tăng](command) [39%](changing value) em nhá
+      - [tăng](command) cho chị cái [đèn compact số 14](device) ở [sân sau](location) lên khoảng [75%](target number)
+      - [tăng](command) lên [13%](target number) cho anh nha, [tăng](command) trong khoảng[14 tiếng 42 phút](duration)
+      - em ơi hãy [tăng](command) giúp anh cái [đèn rủ](device) ở [hiên sau](location) nhé
+      - em ơi có vẻ hơi tối đấy, [tăng](command) hộ anh cái [đèn bếp](device) lên nhé
+      - phòng tối quá, [tăng](command) giúp anh cái [đèn rủ](device) lên với
+      - nó ở [phòng thay đồ số 2](location) ý, [tăng](command) lên [38%](target number) cho anh nhá, trong khoảng [4 tiếng 44 phút](duration)
+      - [tăng](command) giúp tôi cái [đèn hắt](device) ở [hè sau](location) với
+      - [tăng](command) cho mình lên [38%](target number) trong [4 tiếng 44 phút](duration)nhé
+      - bạn trợ lí ơi [tăng](command) giúp mình cái [đèn rủ](device) lên nhé
+      - [tăng](command) lên [83%](target number) lúc [4 giờ 12 phút](time at) trong [14 tiếng 13 phút](duration) nhé
+      - tối quá, [tăng](command) cho mình cái[đèn hắt](device) ở [hè sau](location) đi
+      - [tăng](command) đến [72%](target number) cho anh
+      - [đèn ốp trần số 5](device) [tăng](command) giúp mình lên một chút nhé
+      - [tăng](command) cho tôi [đèn compact số 14](device) ở [sân sau](location) xuống [75%](target number)
+      - [tăng](command) lên mức [11%](target number)
+      - [17 giờ 15 phút](time at) thì [tăng](command) lên [11%](target number) cho anh
+      - tối thế [tăng](command) giúp mình cái [đèn rủ](device) lên đi
+      - [tăng](command) lên [71%](target number) trong [26 phút](duration) nhé
+      - bạn ơi [tăng](command) cái [đèn rủ](device) lên [92%](target number) cái
+      - [tăng](command) giúp mình lên khoảng 30% đi, à thôi, [36%](target number) đi
+      - em ơi [tăng](command) giúp chị cái [bóng huỳnh quang](device) lên với
+      - xem nào [tăng](command) [42%](changing value) từ lúc [4 giờ 4 phút](time at) nhớ
+      - em [tăng](command) hộ anh đến [44%](target number) nhé
+      - [tăng](command) thêm [6%](changing value) em nhé
+      - khoảng [5 giờ 14 phút](time at) thì em [tăng](command) cái [bóng huỳnh quang](device) lên mức [21%](target number) hộ anh nhé
+      - [tăng](command) lên [27%](target number) trong [6 tiếng 25 phút](duration)
+      - này, [tăng](command) [đèn rủ](device) hộ tôi được không
+      - tối quá [tăng](command) hộ anh cái [đèn hắt](device) ở [hè sau](location) nhé
+      - bạn [tăng](command) lên [15%](target number), trong [18 tiếng 27 phút](duration) giúp mình nhá
+      - [tăng](command) lên khoảng [36%](target number) nhé
+      - [tăng](command) thêm khoảng [39%](changing value) cho anh
+      - [tăng](command) lên khoảng[35%](changing value) nha
+      - [tăng](command) [đèn ốp trần](device) ở [hiên sau](location) giúp tôi với
+      - em ơi [tăng](command) cho anh cái [bóng huỳnh quang](device) lên mức [21%](target number) nhé
+      - cô ơi cháu phải học [tăng](command) hộ cháu cái [đèn huỳnh quang](device) với
+      - [tăng](command) thêm [31%](changing value) đi
+      - [tăng](command) lên [36%](target number)
+      - [tăng](command) lên [11%](target number) vào lúc [17 giờ 15 phút](time at) nhé
+      - [tăng](command) cho tôi lên khoảng [15%](target number) và trong khoảng [18 tiếng 27 phút](duration)
+      - em ơi [tăng](command) cho anh cái [đèn compact số 14](device)
+      - [tăng](command) đến [31%](target number) nhé
+      - [tăng](command) cho mình lên khoảng [83%](target number) nhớ, và vào lúc [4 giờ 12 phút](time at), [tăng](command) trong vòng [14 tiếng 13 phút](duration) luôn nhớ
+      - [tăng](command) giúp tôi cái [đèn hắt](device) ở [hè sau](location) [42%](changing value) vào lúc [4 giờ 4 phút](time at)
+      - phòng tối quá hãy [tăng](command) [đèn huỳnh quang](device) lên
+      - [tăng](command) lên [18%](changing value) vào lúc [6 giờ 7 phút](time at) cho tôi với
+      - em ơi [tăng](command) cho anh cái[bóng huỳnh quang](device) lên với
+      - [tăng](command) giúp anh lên [9%](target number) em nhé
+      - em ơi [tăng](command) độ sáng cái [bóng huỳnh quang](device) lên cho anh đi
+      - anh muốn [tăng](command) lên mức [83%](target number) và trong vòng [14 tiếng 13 phút](duration) nha
+      - [tăng](command) cho em thêm [20%](changing value) nhé
+      - em ơi [tăng](command) độ sáng cái [đèn rủ](device) giúp anh với
+      - [tăng](command) cho mình cái [đèn compact số 14](device) ở [sân sau](location) lên [75%](target number) bạn nhé
+      - em [tăng](command) giúp anh lên [6%](target number) nhá với lại [tăng](command) trong vòng [2 tiếng 56 phút](duration) nhá
+      - [tăng](command) cái [đèn hắt](device) lên [8%](target number) giúp tôi với
+      - cái [đèn bếp](device) trong [garage](location) yếu quá bạn [tăng](command) lên cho mình đi
+      - [tăng](command) lên [41%](target number) trong [7 tiếng 25 phút](duration) cho anh
+      - [tăng](command) lên [38%](target number) trong [4 tiếng 44 phút](duration) nhá
+      - cái ở chỗ [hành lang](location) ấy [tăng](command) lên [72%](target number) nhé
+      - [tăng](command) lên mức [71%](target number) trong [26 phút](duration) nhá
+      - hãy [tăng](command) lên mức [97%](target number) cho tôi
+      - [tăng](command) lên mức cao nhất luôn đi, à thôi, [99%](target number) thôi nhé
+      - [tăng](command) thêm [6%](changing value) và trong [2 tiếng 56 phút](duration) nhá
+      - [tăng](command) [88%](changing value) bạn nhé
+      - vào lúc [4 giờ 12 phút](time at) em nhé, [tăng](command) cho anh lên mức [83%](target number) trong suốt [14 tiếng 13 phút](duration)
+      - [tăng](command) giúp mình lên [13%](target number) và vào lúc [13 giờ 9 phút](time at) khoảng [14 tiếng 42 phút](duration) nhé
+      - [tăng](command) đến[71%](target number) trong khoảng [26 phút](duration) em nhớ
+      - [tăng](command) cho mình [15%](changing value) nhá, trong vòng [18 tiếng 27 phút](duration)
+      - [tăng](command) lên ở mức [71%](target number) trong suốt [26 phút](duration) chị nhé
+      - em ơi [tăng](command) [đèn ốp trần số 5](device) lên [14%](target number) trong [3 tiếng 39 phút](duration) giúp chị nhá
+      - [tăng](command) cái ở [thư viện](location) nhá [tăng](command) đến [36%](target number)
+      - [tăng](command) cho mình cái [đèn ốp trần số 5](device) thêm [14%](changing value) nhé
+      - [tăng](command) lên [51%](target number) cho anh nhá
+      - [tăng](command) cho mình lên [31%](target number) và [tăng](command) vào lúc [11 giờ 27 phút](time at) bạn nhé
+      - em ơi [tăng](command) hộ anh cái [bóng để bàn](device) lên mức [99%](target number) với
+      - [tăng](command) [đèn ốp trần số 5](device) lên [14%](target number) trong [3 tiếng 39 phút](duration) em nhé
+      - [tăng](command) lên khoảng [92%](changing value) nhá
+      - [tăng](command) giúp mình cái [đèn bếp](device) lên [34%](target number) nhá
+      - [tăng](command) lên [99%](target number) nhớ
+      - [tăng](command) lên [51%](target number) cho mình nhé
+      - bạn ơi [tăng](command) cái [đèn ốp trần](device) ở [hiên sau](location) lên [18%](target number) vào lúc [6 giờ 7 phút](time at) nhá
+      - [tăng](command) đến [41%](target number) nha, khoảng [7 tiếng 25 phút](duration) nữa thì bạn tắt hộ mình
+      - [tăng](command) lên [ target number: 66% ]
+      - mình muốn [tăng](command) lên [99%](target number)
+      - tối quá. [tăng](command) [đèn ốp trần số 5](device) lên [14%](target number) cho tôi được không
+      - ở [garage](location), [tăng](command) lên [66%](target number) nhé
+      - vào lúc [4 giờ 12 phút](time at) [tăng](command) cho tôi thêm [83%](changing value) nhé
+      - [tăng](command) [41%](changing value) trong vòng [7 tiếng 25 phút](duration) nhớ
+      - [tăng](command) lên [35%](target number) nhớ
+      - [tăng](command) lên [18%](target number) và vào [6 giờ 7 phút](time at) nhé
+      - [tăng](command) lên [11%](target number) lúc [17 giờ 15 phút](time at) nhé
+      - [tăng](command) [đèn rủ](device) [92%](changing value)
+      - [tăng](command) cho mình cái [bóng để bàn](device) lên mức [99%](target number) nhé
+      - em ơi [tăng](command) cho anh cái [đèn hắt](device) [8%](changing value) em nhé
+      - sao phòng tối thế nhỉ em ơi [tăng](command) giúp anh cái [bóng để bàn](device) với[tăng](command) lên [99%](target number) luôn nhé
+      - bạn ơi [tăng](command) cho mình cái [đèn compact số 14](device) lên mức [75%](target number) đê
+      - [tăng](command) lên giúp tôi [29%](changing value) nhá
+      - [tăng](command) lên [10%](target number) nhé cậu
+      - cháu ơi [tăng](command) giúp cô cái [đèn bếp](device) lên [34%](target number) nhé
+      - em ơi, [tăng](command) giúp anh cái [đèn ốp trần](device) ở [hiên sau](location) lên [18%](target number) nhé
+      - hãy [tăng](command) giúp tôi lên mức [66%](target number) nhé
+      - [tăng](command) cho anh lên mức [10%](target number) em nhé
+      - cái bóng để bàn ở [garage](location) ấy. [tăng](command) đến [66%](target number)
+      - [tăng](command) [13%](changing value) cho anh
+      - ngoài đấy tối thế, [tăng](command) giúp anh cái [đèn ốp trần](device) ở [hiên sau](location)với
+      - bạn ơi, [tăng](command) cho mình cái [đèn ốp trần số 5](device) lên [14%](target number) trong khoảng [3 tiếng 39 phút](duration) với
+      - [tăng](command) cho anh [64%](changing value) vào lúc [16 giờ 53 phút](time at) nhé
+      - [tăng](command) giúp mình đến [12%](target number) nhá trong khoảng [11 tiếng 53 phút](duration)
+      - em [tăng](command) giúp chị lên [14%](target number) trong [3 tiếng 39 phút](duration) nhá
+      - à ở [hiên sau](location) ấy chị, chị [tăng](command) giúp em lên [10%](target number) nhé chị
+      - tối quá [tăng](command) cho mình cái [bóng để bàn](device) lên [99%](target number) nhá
+      - cái bóng chỗ [cầu thang](location) ý [tăng](command) tầm [41%](changing value) thôi
+      - bạn ơi, [tăng](command) hộ mình cái [đèn ốp trần số 5](device)lên [14%](target number) nhé
+      - bạn [tăng](command) cho mình thành [36%](target number) nhớ
+      - cái đèn bàn ở [thư viện](location), [tăng](command) [36%](changing value) nha
+      - [tăng](command) cho mình [96%](changing value) vào lúc [20 giờ 45 phút](time at) nhé
+      - bên ngoài tối quá [tăng](command) hộ tôi cái [đèn rủ](device)
+      - vào lúc [17 giờ 15 phút](time at) nhá, [tăng](command) lên [11%](target number) giúp anh
+      - bạn [tăng](command) lên mức [89%](target number) nhé
+      - [tăng](command) lên [88%](target number) nhá
+      - [tăng](command) giúp chị đến [39%](target number) nhá
+      - [chỉnh](command) cho tôi cái [bóng compact số 11](device) ở dưới [nhà giữ đồ](location) lên mức [38%](target number) nhé
+      - ngoài trời tối quá, bạn [tăng](command) giúp mình cái [đèn hắt số 19](device) lên [51%](target number) được không
+      - này cho cái [bóng để bàn số 8](device) sáng hơn một chút sáng ở mức [34%](target number) ấy chỗ trong [garage đoàn tụ](location)
+      - anh muốn cái [bóng compact số 11](device) trong [nhà giữ đồ](location) phải sáng hơn nữa, sáng lên mức [38%](target number) đi
+      - [nâng](command) giúp anh ánh sáng [bóng huỳnh quang](device) ở [cầu thang](location) lên [74%](target number) nhé
+      - [điều chỉnh](command) cái [bóng treo tường](device) lên mức [12%](target number) trong vòng [10 tiếng 21 phút](duration)
+      - cho [đèn tranh số 7](device) sáng lên [52%](target number)
+      - [chỉnh](command) độ sáng [đèn treo tường số 15](device) lên mức [89%](target number) trong vòng [13 tiếng 48 phút](duration)
+      - [chỉnh](command) độ sáng của cái [bóng huỳnh quang](device) thêm [74%](changing value), ở [cầu thang](location) ấy
+      - cho giúp anh độ sáng của cái [bóng hắt](device) lên mức [73%](target number)
+      - [đèn trần](device) sao lại tối thế kia cho nó sáng lên [95%](target number) luôn cho anh
+      - [chỉnh](command) cho tôi cái [bóng compact số 11](device) ở dưới [nhà giữ đồ](location) lên mức [38%](target number) nhé
+      - ngoài trời tối quá, bạn [tăng](command) giúp mình cái [đèn hắt số 19](device) lên [51%](target number) được không
+      - này cho cái [bóng để bàn số 8](device) sáng hơn một chút sáng ở mức [34%](target number) ấy chỗ trong [garage đoàn tụ](location)
+      - anh muốn cái [bóng compact số 11](device) trong [nhà giữ đồ](location) phải sáng hơn nữa, sáng lên mức [38%](target number) đi
+      - [nâng](command) giúp anh ánh sáng [bóng huỳnh quang](device) ở [cầu thang](location) lên [74%](target number) nhé
+      - [điều chỉnh](command) cái [bóng treo tường](device) lên mức [12%](target number) trong vòng [10 tiếng 21 phút](duration)
+      - cho [đèn tranh số 7](device) sáng lên [52%](target number)
+      - [chỉnh](command) độ sáng [đèn treo tường số 15](device) lên mức [89%](target number) trong vòng [13 tiếng 48 phút](duration)
+      - [chỉnh](command) độ sáng của cái [bóng huỳnh quang](device) thêm [74%](changing value), ở [cầu thang](location) ấy
+      - cho giúp anh độ sáng của cái [bóng hắt](device) lên mức [73%](target number)
+      - [đèn trần](device) sao lại tối thế kia cho nó sáng lên [95%](target number) luôn cho anh
+  - intent: tắt thiết bị
+    examples: |
+      - [tắt](command) ở [phòng tập gym](location) nhé [tắt](command) vào [19 giờ 43 phút](time at)
+      - [tắt](command) [đèn treo tường](device) đi nhé trợ lý
+      - bạn có thể [tắt](command) [đèn ốp trần](device) hộ mình được không
+      - [tắt](command) [máy tính để bàn](device) trong [phòng chơi game của quân](location)
+      - [tắt](command) cho mình [van nước số 1](device) nhé
+      - em ơi [tắt](command) [camera của huy](device) giúp chị nhá
+      - [tắt](command) vào lúc [16 giờ 21 phút](time at) nhé
+      - ở [nhà để xe của duy](location) [tắt](command) [bóng để bàn](device) giúp tôi với
+      - em ơi anh thấy phòng đang sáng hãy [tắt](command) [đèn huỳnh quang](device) nhá
+      - [tắt](command) cho tôi cái [van nước số 1](device)
+      - [tắt](command) cho tôi [camera của huy](device)
+      - bạn [tắt](command) lúc [2 giờ 51 phút](time at) giúp mình nhé
+      - chói quá [tắt](command) [đèn treo tường](device) đi em
+      - em [tắt](command) cho anh cái [đèn trần](device) vào lúc [11 giờ 47 phút](time at) nhé
+      - [tắt](command) cho chị cái [đèn sưởi](device) nhé
+      - em ơi [tắt](command) giúp anh cái [máy chơi game của long](device) nhá
+      - [tắt](command) hộ anh vào lúc [10 giờ 3 phút](time at) nhá
+      - lát nữa nhớ [tắt](command) cho mình cái [đèn trần](device) với nhá lúc [11 giờ 47 phút](time at) ấy lúc đấy mình ra ngoài rồi
+      - [tắt](command) hộ anh lúc [21 giờ 57 phút](time at) nhá
+      - em ơi [tắt](command) cho anh cái [van nước số 1](device) với
+      - này em ơi [tắt](command) cho anh cái [bóng sưởi](device)
+      - [tắt](command) giúp mình [máy chơi game của long](device) với
+      - em [tắt](command) cho anh cái [đèn trần](device) vào lúc [11 giờ 47 phút](time at) nhé
+      - [tắt](command) hộ mình cái [máy tính xách tay của hân](device) được không
+      - em [tắt](command) trong [22 tiếng 52 phút](duration)cho anh nhá
+      - [tắt](command) vào lúc [16 giờ 21 phút](time at)
+      - [tắt](command) vào lúc [16 giờ 21 phút](time at) ý
+      - à , [tắt](command) lúc [11 giờ 47 phút](time at) nhé
+      - bạn ơi [tắt](command) hộ mình cái [đèn hắt](device) với
+      - [tắt](command) hộ tôi [máy pha cafe số 10](device)
+      - [tắt](command) cho tôi cái [máy tính để bàn](device) trong [phòng chơi game của quân](location)
+      - mình đi vội quá nên quên mất, [tắt](command) [bếp](device) cho mình với
+      - [tắt](command) cho chị cái [bóng sợi đốt](device)
+      - [tắt](command) lúc [21 giờ 57 phút](time at) nhé
+      - [tắt](command) vào lúc [13 giờ 59 phút](time at)
+      - chị đi ngủ đây [tắt](command) giúp chị cái [đèn treo tường](device) nha
+      - em [tắt](command) trong [3 tiếng 16 phút](duration) giúp mình nhá
+      - em ơi [tắt](command) cho anh cái [bếp](device)
+      - em ơi [tắt](command) giúp anh cái [bóng sợi đốt](device) nhé phòng sáng quá
+      - [tắt](command) cho mình trong tầm [10 tiếng 33 phút](duration) đi
+      - em ơi tí nữa [tắt](command) cái [đèn trần](device) đi nhé
+      - em ơi em có thể giúp anh [tắt](command) cái [bóng để bàn](device) ở [nhà để xe của duy](location) được không
+      - em ơi ồn ào quá, [tắt](command) cho anh cái [máy tính để bàn](device) ở [phòng chơi game của quân](location) đi nhá
+      - [tắt](command) giúp anh cái [camera của huy](device) với
+      - [tắt](command) cho anh trong vòng [1 tiếng 41 phút](duration) nhé
+      - hãy [tắt](command) [bóng để bàn](device) trong [nhà để xe của duy](location)
+      - cái [máy tính để bàn](device) ở trong [phòng chơi game của quân](location) ý, [tắt](command) hộ tôi với
+      - bạn ơi mình cần đi ngủ, [tắt](command) cho mình cái [đèn trần](device) với
+      - [tắt](command) giúp mình cái [đèn huỳnh quang](device)
+      - [tắt](command) từ '[14 giờ 55 phút](time at) và [tắt](command) trong '[20 tiếng 26 phút](duration)
+      - bạn [tắt](command) cái [van nước số 1](device) giúp mình với
+      - anh em [tắt](command) giúp tôi cái [camera của huy](device)
+      - [tắt](command) hộ chị vào lúc [14 giờ 55 phút](time at) nhé
+      - [tắt](command) hẳn cho mình [17 tiếng 30 phút](duration) đi
+      - bạn ơi [tắt](command) giúp mình cái [đèn huỳnh quang](device) với
+      - bạn gì ơi [tắt](command) giúp anh cái thiết bị này với
+      - [tắt](command) [bóng huỳnh quang](device)
+      - [tắt](command) hộ anh cái [máy chơi game của long](device) đi
+      - em ơi [tắt](command) hộ anh cái [máy tính để bàn](device) chứ không tốn điện lắm
+      - hãy [tắt](command) cái [camera của huy](device) đi
+      - à vào lúc [14 giờ 55 phút](time at). em [tắt](command) trong [20 tiếng 26 phút](duration) nha
+      - em ơi [tắt](command) giúp anh cái [máy tính xách tay của hân](device) đi, nãy nó quên đấy
+      - em ơi [tắt](command) hộ anh cái [đèn huỳnh quang](device) với
+      - [phòng chơi game của quân](location) không còn ai nữa rồi [tắt](command) giúp mình cái [máy tính để bàn](device) đi bạn
+      - [tắt](command) cho mình cái [bóng sưởi](device)
+      - trời sáng rồi, em ơi, [tắt](command) cho anh cái [bóng huỳnh quang](device) với
+      - bạn ơi, [tắt](command) giúp mình cái [máy tính để bàn](device), ở [phòng chơi game của quân](location) nhá, ở[phòng chơi game của quân](location) okei nhá
+      - bạn có thể [tắt](command) giúp mình cái [van nước số 1](device) được không
+      - giờ anh phải ra ngoài em [tắt](command) cho anh cái [máy tính để bàn](device) đi với
+      - [tắt](command) giúp anh cái [máy tính để bàn](device) trong [phòng chơi game của quân](location) nhé
+      - [tắt](command) hộ anh cái [đèn hắt](device) đi nhé
+      - cậu ơi cậu, tối rồi, [tắt](command) cho mình cái [bóng để bàn](device) với
+      - giúp mình [tắt](command) cái [đèn trần](device) lúc [11 giờ 47 phút](time at) nhá
+      - [tắt](command) cho mình cái [bóng sợi đốt](device)
+      - alo em ơi [tắt](command) cho anh cái [camera của huy](device)
+      - [tắt](command) cho tôi vào lúc [14 giờ 55 phút](time at) và trong [20 tiếng 26 phút](duration), hơi lâu một tí
+      - [tắt](command) cho anh cái [bóng để bàn](device) với
+      - đủ nước rồi [tắt](command) [van nước số 1](device)
+      - [21 giờ 57 phút](time at) hẵng [tắt](command) em nhé
+      - hẹn giờ [tắt](command) [đèn trần](device) giúp tôi vào lúc [11 giờ 47 phút](time at)
+      - chói quá [tắt](command) cho anh cái [bóng sợi đốt](device)
+      - bạn ơi, [tắt](command) cái [camera của huy](device) hộ tôi với
+      - [tắt](command) giúp mình vào [22 giờ 28 phút](time at) nhé
+      - em ơi, [tắt](command) hộ anh cái [camera của huy](device) với
+      - [tắt](command) vào [16 giờ 21 phút](time at) bạn nha
+      - [tắt](command) giúp mình lúc [16 giờ 21 phút](time at) nhé
+      - [tắt](command) vào lúc [9 giờ 22 phút](time at) trong vòng[3 tiếng 16 phút](duration)
+      - [tắt](command) [lò sưởi số 18](device)
+      - ôi chết, sao camera vẫn bật, [tắt](command) cho mình cái [camera của huy](device) với
+      - nước chảy to quá, hãy [tắt](command) cho tôi [van nước số 1](device)
+      - này trợ lý, [tắt](command) giúp anh cái [camera của huy](device) nhá
+      - làm ơn hãy [tắt](command) [van nước số 1](device)
+      - bạn ơi,[tắt](command) hộ mình cái [máy chơi game của long](device) cái
+      - bạn ơi, [tắt](command) cho tôi cái [bóng để bàn](device) với
+      - quân ra ngoài rồi, [tắt](command) [máy tính để bàn](device) ở [phòng chơi game của quân](location) nhé
+      - em ơi [tắt](command) cho anh cái [bếp](device) với sắp cháy rồi kìa
+      - nước chảy ra rồi kìa [tắt](command) giúp mình cái [van nước số 1](device) đi với
+      - [tắt](command) giúp anh cái [bóng sợi đốt](device) nhé
+      - cái [van nước số 1](device) đang mở, bạn [tắt](command) giúp mình với
+      - [tắt](command) lúc [10 giờ 3 phút](time at) nhé em
+      - [tắt](command) ở trong '[nhà xe tình yêu](location)' ấy
+      - em ơi [tắt](command) cho anh cái [máy tính xách tay của hân](device) với
+      - em ơi tí [tắt](command) cho anh cái [máy pha cafe số 10](device) với nhá
+      - [tắt](command) hộ mình cái [đèn hắt](device) đi với
+      - [tắt](command) [bếp](device)cho mình với
+      - [tắt](command) cho anh cái[đèn hắt](device) với
+      - [tắt](command) cho anh cái [máy tính xách tay của hân](device) với
+      - [tắt](command) trong [1 tiếng 33 phút](duration) nhé
+      - em ơi [tắt](command) giúp anh cái [máy tính xách tay của hân](device) đi với
+      - [tắt](command) cái [đèn huỳnh quang](device) cho anh cái
+      - [tắt](command) cho anh cái [bóng sợi đốt](device) đi em mọi người đi ngủ cả rồi
+      - [tắt](command) cái [máy tính xách tay của hân](device) hộ mình với
+      - em [tắt](command) ngay cho anh cái [camera của huy](device) đi với
+      - [tắt](command) lúc [16 giờ 21 phút](time at) nhá
+      - em ơi [tắt](command) cho anh cái [camera của huy](device) với
+      - [tắt](command) ở [hè trước](location) cho anh nhé
+      - [tắt](command) giúp anh cái [bóng sợi đốt](device) cái
+      - [tắt](command) cho anh lúc [9 giờ 22 phút](time at) và trong thời gian là [3 tiếng 16 phút](duration) nhé
+      - [tắt](command) trong [18 tiếng 7 phút](duration) nhá
+      - [tắt](command) hộ tôi cái [máy tính xách tay của hân](device)
+      - [tắt](command) khoảng [20 tiếng 26 phút](duration) nhé
+      - trời sáng rồi, [tắt](command) cho mình cái [đèn treo tường](device) nhé
+      - bạn ơi [tắt](command) cho mình [camera của huy](device)
+      - em ơi [tắt](command) cho anh cái [đèn huỳnh quang](device) đi nhé
+      - mình muốn [tắt](command) trong vòng [17 tiếng 30 phút](duration)
+      - [tắt](command) cho tôi cái [van nước số 1](device)
+      - [tắt](command) cho mình lúc [9 giờ 22 phút](time at), trong khoảng [3 tiếng 16 phút](duration) nhớ
+      - [tắt](command) chiếc [bóng sưởi](device) giúp mình với
+      - [tắt](command) giúp tôi cái [van nước số 1](device)
+      - em [tắt](command) cho chị cái [đèn hắt](device) đi nhá
+      - bạn [tắt](command) hộ mình trong [17 tiếng 30 phút](duration)
+      - bạn [tắt](command) giúp mình cái [bóng sợi đốt](device) nhớ
+      - [tắt](command) trong [22 tiếng 52 phút](duration) nhá
+      - em [tắt](command) cho anh cái [camera của huy](device) với
+      - bạn ơi [tắt](command) giúp mình cái [máy tính để bàn](device) ở [phòng chơi game của quân](location) với
+      - [tắt](command) giúp mình cái [máy chơi game của long](device) với
+      - em [tắt](command) cho anh cái [đèn treo tường](device) đi với
+      - trợ lý ơi hỗ trợ mình [tắt](command) cái [đèn treo tường](device) này với
+      - bạn ơi, [tắt](command) cho mình cái [đèn hắt trần](device) với
+      - [tắt](command) cho anh cái [đèn hắt](device) đi anh đi ngủ đây
+      - [tắt](command) hộ anh cái [đèn treo tường](device)
+      - trong [1 tiếng 33 phút](duration) nữa [tắt](command) cho mình cái [đèn ốp trần](device)
+      - [tắt](command) lúc [11 giờ 47 phút](time at) nhá
+      - [tắt](command) vào [13 giờ 59 phút](time at) nhé
+      - em ơi [tắt](command) cho anh cái [van nước số 1](device)
+      - [tắt](command) giúp mình cái [bóng sợi đốt](device) với
+      - ôi chết, [tắt](command) cho mình cái [bếp](device) với
+      - [tắt](command) hộ tôi cái [bóng để bàn](device) trong [nhà để xe của duy](location)
+      - à [tắt](command) [1 tiếng 41 phút](duration) thôi, tý lại bật lên nhá
+      - em ơi, [tắt](command) cái [camera của huy](device) cho anh với
+      - quên mất [tắt](command) giúp mình cái [đèn sưởi](device) với
+      - [tắt](command) trong [1 tiếng 41 phút](duration) nhá
+      - [tắt](command) cho tôi cái [máy chơi game của long](device)
+      - hãy [tắt](command) [đèn sưởi](device) lúc [10 giờ 3 phút](time at) nhé
+      - [tắt](command) cho mình cái [đèn sưởi](device) với
+      - đến lúc tiết kiệm điện rồi, [tắt](command) giúp anh cái [bóng sưởi](device) trong vòng[22 tiếng 52 phút](duration) đi
+      - [tắt](command) cho tôi [máy tính xách tay của hân](device)
+      - hãy [tắt](command) cái [máy chơi game của long](device) đi
+      - em ơi [tắt](command) cho mình cái [đèn trần](device) đi nhá
+      - con lại [tắt](command) cái [máy chơi game của long](device), cho nó học bài đi
+      - ồn quá, [tắt](command) cái [máy chơi game của long](device) đi nhá
+      - [tắt](command) lúc [16 giờ 21 phút](time at) nhé
+      - em ơi [tắt](command) [đèn ốp trần](device) cho anh
+      - em có thể [tắt](command) cái [bếp](device) giúp chị không
+      - [tắt](command) giúp mình cái [đèn treo tường](device) đi
+      - [tắt](command) cái [bóng sợi đốt](device) cho tôi
+      - em ơi [tắt](command) cho anh cái [bóng để bàn](device) với
+      - à, [tắt](command) trong vòng [18 tiếng 7 phút](duration) nhé
+      - em ơi, [tắt](command) giúp anh cái [máy pha cafe số 10](device)
+      - [tắt](command) lúc [14 giờ 55 phút](time at) trong [20 tiếng 26 phút](duration) nhé
+      - bạn ơi, [tắt](command) hộ mình [máy pha cafe số 10](device)
+      - [tắt](command) [đèn huỳnh quang](device) cho tôi
+      - [tắt](command) cho anh cái [máy tính xách tay của hân](device) với
+      - hãy [tắt](command) trong suốt [1 tiếng 33 phút](duration) cái [đèn ốp trần](device) ây
+      - [tắt](command) cho mình lúc [11 giờ 47 phút](time at)
+      - em trợ lí ơi [tắt](command) giúp anh cái [máy tính để bàn](device) trong [phòng chơi game của quân](location) với
+      - [tắt](command) giúp chị cái [bóng để bàn](device) ở trong [nhà để xe của duy](location)
+      - [tắt](command) trong khoảng [3 tiếng 16 phút](duration) nhá
+      - anh ơi [tắt](command) cho em cái [đèn sưởi](device) với
+      - làm ơn hãy chạy vào kia và [tắt](command) cho tôi cái [camera của huy](device)
+      - bạn ơi, [tắt](command) hộ mình cái [máy tính để bàn](device) với, hình như mình quên chưa[tắt](command) nó hay sao ý
+      - em cứ thế mà [tắt](command) à, không hỏi chị[tắt](command) trong bao lâu à
+      - [tắt](command) hộ tôi cái [camera của huy](device)
+      - giúp tôi [tắt](command) [đèn trần](device) lúc [11 giờ 47 phút](time at)
+      - hãy [tắt](command) cho tôi cái [bóng huỳnh quang](device)!
+      - cậu ơi [tắt](command) [bóng để bàn](device) ở [nhà để xe của duy](location) giúp mình nhé
+      - chị ơi [tắt](command) giúp em cái [bóng sợi đốt](device)
+      - à, [tắt](command) lúc [11 giờ 47 phút](time at) đi nhé
+      - bạn nhớ [tắt](command) cho mình lúc [9 giờ 22 phút](time at) đồng thời để cho mình [3 tiếng 16 phút](duration) nhé
+      - trời sáng rồi, [tắt](command) cho anh cái [đèn treo tường](device) với
+      - bạn ơi [tắt](command) giúp mình cái [máy chơi game của long](device)
+      - em [tắt](command) cho anh cái [máy tính xách tay của hân](device) đi với
+      - [tắt](command) giúp mình [máy pha cafe số 10](device)
+      - cái [đèn treo tường](device) ý, [tắt](command) giúp mình với nhé
+      - [tắt](command) cho tớ cái [bóng huỳnh quang](device) với
+      - hãy [tắt](command) thiết bị [camera của huy](device)
+      - em ơi [tắt](command) cho anh cái [máy chơi game của long](device) đi, nó lại để quên rồi
+      - bạn trợ lí ơi [tắt](command) giúp mình cái [đèn sưởi](device) ở lúc [10 giờ 3 phút](time at) nhé
+      - em ơi, [tắt](command) cho anh cái [đèn trần](device) với
+      - [tắt](command) cho anh cái [máy pha cafe số 10](device)
+      - này trợ lý ảo [tắt](command) cho mình cái [bóng sưởi](device) trong [22 tiếng 52 phút](duration) nhé
+      - [tắt](command) hộ anh cái [máy chơi game của long](device) trong phòng khách đi em
+      - [tắt](command) cho anh vào lúc [14 giờ 55 phút](time at) trong khoảng [20 tiếng 26 phút](duration) nhé
+      - trời cũng đã bớt lạnh rồi đấy hãy [tắt](command) giúp mình cái [bóng sưởi](device) đi nhé
+      - [tắt](command) vào khoảng[16 giờ 21 phút](time at) chiều nhé
+      - em [tắt](command) ngay cho anh cái [bóng sưởi](device) nhé, trong vòng [22 tiếng 52 phút](duration) đi
+      - hãy [tắt](command) cho anh cái [đèn huỳnh quang](device) đi
+      - [tắt](command) trong khoảng [20 tiếng 26 phút](duration) từ [14 giờ 55 phút](time at) em nhá
+      - [tắt](command) cho anh cái [bóng huỳnh quang](device) với
+      - [tắt](command) cho anh lúc[13 giờ 59 phút](time at) nhá
+      - [tắt](command) đến tối mai luôn trong [22 tiếng 52 phút](duration)
+      - em ơi [tắt](command) hộ anh cái [máy tính để bàn](device) với
+      - bạn ơi [tắt](command) cho mình cái [bóng sưởi](device) trong khoảng [22 tiếng 52 phút](duration)nhớ
+      - anh dùng xong rồi [tắt](command) cho anh cái [bếp](device) đi nhé
+      - em ơi, [tắt](command) giúp anh cái [đèn trần](device)đi
+      - bạn ơi [tắt](command) cho mình cái [bếp](device)
+      - em ơi [tắt](command) giúp chị cái [máy tính để bàn](device)
+      - em ơi chói quá [tắt](command) [đèn treo tường](device) đi
+      - em ơi anh học xong rồi em [tắt](command) giúp anh cái [bóng sợi đốt](device) đi với
+      - [ngắt](command) cái [đèn rủ](device) ở trong [garage](location) đi
+      - [dừng](command) hoạt động của cái [máy tính](device) đi anh không dùng nữa đâu
+      - bạn ơi [ngắt](command) giúp mình cái [máy tính để bàn](device) ở trong [phòng sinh hoạt chung](location) nhé
+      - trời tối rồi bạn giúp mình [tắt](command) cái [đèn bếp](device) trong [hè sau](location) nhé
+      - bạn trợ lý giúp mình [ngắt](command) cái [máy tính](device) nhé
+      - bạn giúp mình [ngắt](command) cái [máy tính để bàn](device) nhé
+      - bên ngoài kia sáng quá, giúp mình [tắt](command) cái [đèn hắt trần](device) trong khoảng [16 rưỡi](duration) nhé
+      - anh không dùng [laptop](device) trong [phòng chơi game sáng tạo](location) nữa đâu [ngắt](command) nó đi
+      - bạn ơi [tắt](command) nguồn cho mình cái [laptop](device) trong [phòng chơi game sáng tạo](location) nhé
+      - em ơi ngoài [hè trước](location) sáng quá, em [tắt](command) hộ anh cái [bóng hắt số 4](device) nhé
+      - bạn ơi [sập](command) nguồn cho mình cái[ laptop](device) bên trong [phòng chơi game sáng tạo](location) nhé
+      - bạn ơi giúp mình [sập](command) nguồn cái [máy chơi game](device) ở trong [thư viện của hân](location) nhé
+      - em ơi [ngắt](command) cho anh cái [đèn trần](device) ở [đầu hè ](location)nhé
+      - em ơi [dừng](command) cho anh cái [đèn trần](device) ở [đầu hè](location) nhé
+      - trợ lý giúp mình [ngắt](command) cái [đèn rủ](device) trong [garage](location) nhé
+      - [dừng](command) cho anh cái [máy tính xách tay](device) ở [thư viện](location)
+      - tôi không muốn bật [đèn rủ](device) nữa [ngắt](command) nó đi
+      - bạn ơi [ngắt](command) giúp tôi cái [laptop](device) trong [phòng chơi game sáng tạo](location) nhé
+      - [đèn hắt số 9](device) chói quá đừng bật nữa
+      - bạn ơi giúp tôi [sập](command) cái [máy chơi game](device) trong [thư viện của hân ](location)nhé
+      - bạn ơi [ngắt](command) giúp mình cái [máy tính để bàn](device) trong [phòng sinh hoạt chung](location) nhé
+      - [ngắt](command) giúp mình cái [đèn hắt trần](device) vào lúc[ 16 rưỡi ](time at)nhé
+      - [dừng](command) cái [bóng hắt số 4](device) ở [hè trước](location) xuống
+      - không cần để [đèn compact](device) nữa đâu em
+      - [ngắt](command) cho tôi cái [đèn rủ](device) ở trong [garage](location) đi
+      - [bỏ](command) [đèn bếp số 13](device)
+      - [ngắt](command) [đèn compact](device) đi cho anh
+      - [ngắt](command) hết tất cả [bóng hắt số 4](device) ở ngoài [hè trước](location) đi
+      - để cái [máy pha cafe](device) trong [bếp của khoa](location) [dừng](command) hẳn cho anh không ai dùng nữa đâu
+      - [dừng](command) cái [máy lạnh](device) lại cho anh nhớ
+      - bạn trợ lý [tắt](command) giúp mình cái [bóng sợi đốt số 13](device) nhé
+      - [ngưng](command) [máy tính để bàn](device)
+      - tôi không muốn xem [ti vi](device) nữa
+      - [ngắt](command) cho anh cái [đèn hắt trần](device) vào lúc [16 rưỡi](time at)
+      - trong [phòng chung của nhi](location) có cái [máy pha cafe](device) đang bật ý không dùng nữa đâu nhé
+      - bỏ đi không cần bật cái [đèn treo tường số 5](device) đâu
+      - [máy fax](device) trong [thư viện của nhi](location) ý nếu không ai dùng thì đừng cho nó chạy nữa nhé
+      - [ngắt](command) cái [đèn rủ](device) ở trong [garage](location) đi
+      - [dừng](command) hoạt động của cái [máy tính](device) đi anh không dùng nữa đâu
+      - bạn ơi [ngắt](command) giúp mình cái [máy tính để bàn](device) ở trong [phòng sinh hoạt chung](location) nhé
+      - trời tối rồi bạn giúp mình [tắt](command) cái [đèn bếp](device) trong [hè sau](location) nhé
+      - bạn trợ lý giúp mình [ngắt](command) cái [máy tính](device) nhé
+      - bạn giúp mình [ngắt](command) cái [máy tính để bàn](device) nhé
+      - bên ngoài kia sáng quá, giúp mình [tắt](command) cái [đèn hắt trần](device) trong khoảng [16 rưỡi](duration) nhé
+      - anh không dùng [laptop](device) trong [phòng chơi game sáng tạo](location) nữa đâu [ngắt](command) nó đi
+      - bạn ơi [tắt](command) nguồn cho mình cái [laptop](device) trong [phòng chơi game sáng tạo](location) nhé
+      - em ơi ngoài [hè trước](location) sáng quá, em [tắt](command) hộ anh cái [bóng hắt số 4](device) nhé
+      - bạn ơi [sập](command) nguồn cho mình cái[ laptop](device) bên trong [phòng chơi game sáng tạo](location) nhé
+      - bạn ơi giúp mình [sập](command) nguồn cái [máy chơi game](device) ở trong [thư viện của hân](location) nhé
+      - em ơi [ngắt](command) cho anh cái [đèn trần](device) ở [đầu hè ](location)nhé
+      - em ơi [dừng](command) cho anh cái [đèn trần](device) ở [đầu hè](location) nhé
+      - trợ lý giúp mình [ngắt](command) cái [đèn rủ](device) trong [garage](location) nhé
+      - [dừng](command) cho anh cái [máy tính xách tay](device) ở [thư viện](location)
+      - tôi không muốn bật [đèn rủ](device) nữa [ngắt](command) nó đi
+      - bạn ơi [ngắt](command) giúp tôi cái [laptop](device) trong [phòng chơi game sáng tạo](location) nhé
+      - [đèn hắt số 9](device) chói quá đừng bật nữa
+      - bạn ơi giúp tôi [sập](command) cái [máy chơi game](device) trong [thư viện của hân ](location)nhé
+      - bạn ơi [ngắt](command) giúp mình cái [máy tính để bàn](device) trong [phòng sinh hoạt chung](location) nhé
+      - [ngắt](command) giúp mình cái [đèn hắt trần](device) vào lúc[ 16 rưỡi ](time at)nhé
+      - [dừng](command) cái [bóng hắt số 4](device) ở [hè trước](location) xuống
+      - không cần để [đèn compact](device) nữa đâu em
+      - [ngắt](command) cho tôi cái [đèn rủ](device) ở trong [garage](location) đi
+      - [bỏ](command) [đèn bếp số 13](device)
+      - [ngắt](command) [đèn compact](device) đi cho anh
+      - [ngắt](command) hết tất cả [bóng hắt số 4](device) ở ngoài [hè trước](location) đi
+      - để cái [máy pha cafe](device) trong [bếp của khoa](location) [dừng](command) hẳn cho anh không ai dùng nữa đâu
+      - [dừng](command) cái [máy lạnh](device) lại cho anh nhớ
+      - bạn trợ lý [tắt](command) giúp mình cái [bóng sợi đốt số 13](device) nhé
+      - [ngưng](command) [máy tính để bàn](device)
+      - tôi không muốn xem [ti vi](device) nữa
+      - [ngắt](command) cho anh cái [đèn hắt trần](device) vào lúc [16 rưỡi](time at)
+      - trong [phòng chung của nhi](location) có cái [máy pha cafe](device) đang bật ý không dùng nữa đâu nhé
+      - bỏ đi không cần bật cái [đèn treo tường số 5](device) đâu
+      - [máy fax](device) trong [thư viện của nhi](location) ý nếu không ai dùng thì đừng cho nó chạy nữa nhé
+  - intent: tăng nhiệt độ của thiết bị
+    examples: |
+      - tí nữa vào lúc [10 giờ 3 phút](time at) [tăng](command) cái [bếp](device) ở trong [ location : phòng[bếp](device) mùa xuân ] hộ anh với
+      - nóng quá [tăng](command) hộ cái [máy lạnh](device) với bạn ơi
+      - [tăng](command) hộ tôi cái [máy lạnh](device)
+      - trời nóng quá em ơi [tăng](command) giúp anh cái [máy lạnh](device) nhé
+      - [tăng](command) cho mình cái [bếp](device) lên [2](target number) trong vòng [4 tiếng 3 phút](duration)
+      - vào lúc [10 giờ 3 phút](time at) em [tăng](command) [bếp](device) cho anh trong [ location : phòng[bếp](device) mùa xuân ] nhé
+      - mình muốn sử dụng cái [bếp](device) 1 chút, bạn có thể [tăng](command) số lên cho mình được không
+      - [tăng](command) [bếp](device) lên mức [2](target number) trong vòng [4 tiếng 3 phút](duration) giúp mình
+      - nóng quá em ơi [tăng](command) cho anh cái [máy lạnh](device) nhớ
+      - em ơi, [tăng](command) cho anh cái [bếp](device) ở [ location : phòng[bếp](device) mùa xuân ] nhé,[tăng](command) lên [8](target number) cho anh với
+      - em ơi [tăng](command) cái [máy lạnh](device) giúp anh với
+      - [tăng](command) giúp anh cái [máy lạnh](device) với
+      - em ơi [tăng](command) giúp anh cái [bếp](device) lên [2](target number) với
+      - em ơi [tăng](command) hộ anh cái [máy lạnh](device) với
+      - bạn ơi [tăng](command) giúp mình cái [bếp](device) ở [ location : phòng[bếp](device) mùa xuân ] với
+      - [tăng](command) cho tôi cái [máy lạnh](device) với
+      - em ơi [tăng](command) cho anh cái [bếp](device) lên [2](target number) trong [4 tiếng 3 phút](duration) nhá
+      - nóng thế, [tăng](command) cái [máy lạnh](device) lên cho anh
+      - [tăng](command) cho mình [bếp](device) ở [ location : phòng[bếp](device) mùa xuân ]
+      - trợ lý ơi, [tăng](command) giúp chị cái [máy lạnh](device) lên được không
+      - em ơi, [tăng](command) cái [bếp](device) lên [2](target number) mức cho chị nha
+      - [tăng](command) [bếp](device) lên mức [2](target number) sau [4 tiếng 3 phút](duration) nhớ
+      - [tăng](command) cho tôi cái [bếp](device) này lên mức [2](target number) nhá
+      - [điều chỉnh](command) cho anh cái [bếp](device) trong [phòng bếp của hân](location) lên mức [6](target number) nhé nhanh lên
+      - cho cái [đèn sưởi](device) trong [phòng giặt là](location) sáng thêm [29%](changing value) cho anh
+      - em ơi [nâng](command) cho anh [điều hòa số 8](device) lên[ 10 độ c](target number) vào lúc[ 7 rưỡi ](time at)nhé
+      - bạn trợ lý [nâng](command) cho  mình cái [lò vi sóng](device) trong [bếp](location) lên [84 độ c](target number) nhé
+      - [nâng](command) cho mình cái ánh sáng của [bóng sưởi](device) ở [hiên của bố mẹ](location) lên [57%](target number) nhé
+      - em ơi [nâng](command) giúp anh cái [điều hòa ](device)lên [9 độ c](target number) nhé
+      - cho nhiệt độ [lò vi sóng](device) lên [236 độ c](target number) cho anh nhé
+      - [tăng](command) nhiệt độ [lò sưởi](device) [phòng tập gym](location) lên [30 độ c](target number)
+      - [phòng nghỉ](location) lạnh quá cho [điều hòa số 9](device) lên [6 độ c](changing value) nữa nhé
+      - [chỉnh](command) cho tôi cái [bóng sưởi](device) lên mức [57%](target number) ở ngoài [hiên của bố mẹ](location) ấy
+      - [chỉnh](command) cái [điều hòa](device) thêm [9 độ c](changing value) nữa cho anh
+      - đúng [7 rưỡi](time at) thì cho cái [điều hòa số 8](device) to thêm [10 độ c](changing value) cho anh
+      - [điều chỉnh](command) cái [đèn sưởi](device) thêm [19%](changing value) nữa nhớ
+      - cho cái [bếp](device) ở trong [phòng bếp của hân](location) lên mức [6](target number)
+      - [lò sưởi](device) [phòng khách](location) thêm [28 độ c](changing value) nhé
+      - [điều chỉnh](command) cho tôi cái [bóng sưởi số 11](device) thêm [78%](changing value) nữa trong vòng [10 tiếng rưỡi](duration)
+      - [lò sưởi](device) trong [phòng tập gym](location) chưa đủ ấm đâu cho lên [30 độ c](target number) đi
+      - [điều chỉnh](command) cho anh cái [bếp](device) trong [phòng bếp của hân](location) lên mức [6](target number) nhé nhanh lên
+      - cho cái [đèn sưởi](device) trong [phòng giặt là](location) sáng thêm [29%](changing value) cho anh
+      - em ơi [nâng](command) cho anh [điều hòa số 8](device) lên[ 10 độ c](target number) vào lúc[ 7 rưỡi ](time at)nhé
+      - bạn trợ lý [nâng](command) cho  mình cái [lò vi sóng](device) trong [bếp](location) lên [84 độ c](target number) nhé
+      - [nâng](command) cho mình cái ánh sáng của [bóng sưởi](device) ở [hiên của bố mẹ](location) lên [57%](target number) nhé
+      - em ơi [nâng](command) giúp anh cái [điều hòa ](device)lên [9 độ c](target number) nhé
+      - cho nhiệt độ [lò vi sóng](device) lên [236 độ c](target number) cho anh nhé
+      - [tăng](command) nhiệt độ [lò sưởi](device) [phòng tập gym](location) lên [30 độ c](target number)
+      - [phòng nghỉ](location) lạnh quá cho [điều hòa số 9](device) lên [6 độ c](changing value) nữa nhé
+      - [chỉnh](command) cho tôi cái [bóng sưởi](device) lên mức [57%](target number) ở ngoài [hiên của bố mẹ](location) ấy
+      - [chỉnh](command) cái [điều hòa](device) thêm [9 độ c](changing value) nữa cho anh
+      - đúng [7 rưỡi](time at) thì cho cái [điều hòa số 8](device) to thêm [10 độ c](changing value) cho anh
+      - [điều chỉnh](command) cái [đèn sưởi](device) thêm [19%](changing value) nữa nhớ
+      - cho cái [bếp](device) ở trong [phòng bếp của hân](location) lên mức [6](target number)
+      - [lò sưởi](device) [phòng khách](location) thêm [28 độ c](changing value) nhé
+      - [điều chỉnh](command) cho tôi cái [bóng sưởi số 11](device) thêm [78%](changing value) nữa trong vòng [10 tiếng rưỡi](duration)
+      - [lò sưởi](device) trong [phòng tập gym](location) chưa đủ ấm đâu cho lên [30 độ c](target number) đi
+  - intent: giảm mức độ của thiết bị
+    examples: |
+      - anh đang trong [nhà vệ sinh](location) em nhé, [giảm](command) xuống mức[4](target number) nhé
+      - [giảm](command) xuống mức số [2](target number) là được rồi
+      - [giảm](command) về [4](target number) nha bạn
+      - anh đang trong [nhà vệ sinh](location) lạnh quá em [giảm](command) [quạt trần](device) xuống [4](target number) nhé
+      - [giảm](command) xuống mức [4](target number) đi, trong vòng [23 tiếng 22 phút](duration) nhé
+      - em ơi [giảm](command) cho anh [quạt trần](device) ở [nhà vệ sinh](location) xuống mức [4](target number) nhé
+      - [giảm](command) cho mình cái [quạt số 5](device) xuống còn mức [4](target number) thôi
+      - [giảm](command) cho mình cái [quạt](device) với
+      - em ơi [giảm](command) cho anh cái [quạt](device) về mức [3](target number) với
+      - [giảm](command) xuống mức [3](target number) nhé
+      - lạnh quá em [giảm](command) cho anh cái [quạt](device) đi với
+      - [giảm](command) cho tôi cái [quạt số 5](device) xuống mức [4](target number) nhá
+      - [giảm](command) [quạt](device) giúp mình với
+      - [giảm](command) xuống [4](target number) em nhá
+      - [giảm](command) hộ tôi cái [quạt](device) xuống mức [3](target number) nhé
+      - [giảm](command) xuống nấc [2](target number) nhé
+      - [giảm](command) cho mình về mức [2](target number) bạn nhé
+      - [giảm](command) cái [quạt số 5](device) xuống mức [4](target number) cho anh
+      - mức cần [giảm](command) là [4](target number) nhé
+      - [giảm](command) cho mình [quạt số 5](device) xuống mức độ [4](target number) thôi
+      - [giảm](command) cho anh xuống mức [4](target number)
+      - em ơi [giảm](command) [quạt trần](device) xuống hộ anh nhé lạnh quá
+      - [giảm](command) xuống mức [2](target number)
+      - [giảm](command) xuống mức [4](target number) nhá
+      - [giảm](command) xuống mức [4](target number) em nhé
+      - [giảm](command) cho anh cái [quạt trần](device), ở [nhà vệ sinh](location)ý
+      - [giảm](command) cho tôi [quạt trần](device) ở trong [nhà vệ sinh](location) xuống [4](target number)
+      - [giảm](command) cái [quạt](device) xuống số [3](target number) cho anh
+      - [giảm](command) xuống [2](target number)nhé
+      - [giảm](command) giúp anh cái [quạt](device) với
+      - em ơi [giảm](command) cho anh cái [quạt trần](device) trong [nhà vệ sinh](location) với
+      - [giảm](command) xuống [4](target number) nhé
+      - trợ lý [giảm](command) cho tôi cái [quạt trần](device) ở trong [nhà vệ sinh](location) đi với
+      - [giảm](command) giúp tôi cái [quạt trần](device) gần [nhà vệ sinh](location) xuống số [4](target number) cái
+      - quạt trần ở [nhà vệ sinh](location) em nhé, [giảm](command) giúp anh xuống mức [4](target number) đi
+      - bạn ơi [giảm](command) cho mình [quạt](device) xuống số [3](target number) đi nhé
+      - [giảm](command) cho tôi cái [quạt trần](device) trong [nhà vệ sinh](location) nhé
+      - [giảm](command) đi [3](changing value) nhớ
+      - em [giảm](command) giúp anh xuống mức [3](target number) nhé
+      - em gái [giảm](command) hộ anh cái [quạt số 5](device) xuống mức[4](target number) nhớ
+      - [giảm](command) cho mình cái [quạt](device) đi [3](changing value) lần
+      - trong khoảng [12 tiếng 57 phút](duration) nhé [giảm](command) xuống mức [3](target number) cho anh
+      - [giảm](command) xuống mức [3](target number)trong [12 tiếng 57 phút](duration) nhé
+      - cho giúp tôi cái [quạt trần số 9](device) xuống [4](changing value) mức vào lúc [5 giờ kém 46 phút](time at)
+      - bạn trợ lý giúp mình cho nhỏ [quạt trần](device) xuống [3](target number) nhé
+      - [hạ](command) cái [quạt trần](device) ở trong [bếp](location) xuống còn [3](target number) mức thôi
+      - quá lạnh cái [quạt trần](device) trong [hầm rượu](location) cho nó nhẹ đi [4](changing value) số nhanh lên
+      - bạn trợ lí ơi lạnh quá, [hạ](command) giúp mình cái [quạt trần số 9](device) xuống [4](target number) vào lúc [5 giờ kém 46 phút](time at) nhé
+      - để cho tôi cái số của [quạt trần](device) xuống mức [3](target number) nhớ
+      - cho cái [quạt số 5](device) xuống mức [2](target number) cho tôi
+      - để cái [quạt trần](device) ở [bếp](location) về mức [3](target number) ngay cho tôi
+      - cho giúp tôi cái [quạt trần số 9](device) xuống [4](changing value) mức vào lúc [5 giờ kém 46 phút](time at)
+      - bạn trợ lý giúp mình cho nhỏ [quạt trần](device) xuống [3](target number) nhé
+      - [hạ](command) cái [quạt trần](device) ở trong [bếp](location) xuống còn [3](target number) mức thôi
+      - quá lạnh cái [quạt trần](device) trong [hầm rượu](location) cho nó nhẹ đi [4](changing value) số nhanh lên
+      - bạn trợ lí ơi lạnh quá, [hạ](command) giúp mình cái [quạt trần số 9](device) xuống [4](target number) vào lúc [5 giờ kém 46 phút](time at) nhé
+      - để cho tôi cái số của [quạt trần](device) xuống mức [3](target number) nhớ
+      - cho cái [quạt số 5](device) xuống mức [2](target number) cho tôi
+      - để cái [quạt trần](device) ở [bếp](location) về mức [3](target number) ngay cho tôi
+  - intent: giảm âm lượng của thiết bị
+    examples: |
+      - vào lúc [3 giờ 46 phút](time at), [giảm](command) giúp anh cái [máy nghe nhạc](device)
+      - [giảm](command) cho anh cái [máy nghe nhạc](device) lúc [3 giờ 46 phút](time at)
+      - ồn quá em ơi [giảm](command) hộ chị cái [ti vi](device) với
+      - [giảm](command) cái [ti vi](device) nhá
+      - [giảm](command) [máy nghe nhạc](device) lúc [3 giờ 46 phút](time at) nhé
+      - trong phòng ồn quá, [giảm](command) giúp anh cái [ti vi](device) nhé
+      - bạn ơi [giảm](command) cho mình cái [ti vi](device) với
+      - lúc [3 giờ 46 phút](time at), [giảm](command) [máy nghe nhạc](device) đi giúp mình nhá
+      - [giảm](command) giúp tôi cái [radio](device)
+      - bạn [giảm](command) [máy nghe nhạc](device) lúc [3 giờ 46 phút](time at) cho mình nhé
+      - làm ơn hãy để ý, vào lúc [3 giờ 46 phút](time at) hãy [giảm](command) [máy nghe nhạc](device) xuống nhé
+      - em ơi [giảm](command) tiếng cái [ti vi](device) xuống cho anh đi
+      - em ơi [giảm](command) giúp anh cái [máy nghe nhạc](device) lúc [3 giờ 46 phút](time at) nhé
+      - cái [ti vi](device) hơi sáng, [giảm](command) giúp anh với
+      - bạn ơi [giảm](command) giúp mình cái[máy nghe nhạc](device) đi ồn quá
+      - em ơi [giảm](command) giúp anh cái [ti vi](device) với
+      - [điều chỉnh](command) giúp tôi âm lượng của cái máy [radio](device) ở trong [phòng truyền thống hừng đông](location) xuống khoảng [69%](changing value) nhé
+      - bạn trợ lý ơi giúp mình cho nhỏ [radio của như](device) xuống [14%](target number) nhé
+      - tiếng lớn quá [hạ](command) tiếng [radio](device) trong [phòng thay đồ](location) xuống [63%](target number) nhé
+      - cho cái [radio](device) trong [phòng](location) nhỏ đi [21%](changing value) cho anh
+      - [chỉnh](command) âm lượng của cái [radio](device) trong [phòng thay đồ](location) xuống mức [63%](target number)
+      - [điều chỉnh](command) giúp tôi âm lượng của cái máy [radio](device) ở trong [phòng truyền thống hừng đông](location) xuống khoảng [69%](changing value) nhé
+      - bạn trợ lý ơi giúp mình cho nhỏ [radio của như](device) xuống [14%](target number) nhé
+      - tiếng lớn quá [hạ](command) tiếng [radio](device) trong [phòng thay đồ](location) xuống [63%](target number) nhé
+      - cho cái [radio](device) trong [phòng](location) nhỏ đi [21%](changing value) cho anh
+      - [chỉnh](command) âm lượng của cái [radio](device) trong [phòng thay đồ](location) xuống mức [63%](target number)
+  - intent: tăng âm lượng của thiết bị
+    examples: |
+      - này trợ lý, [tăng](command) cho anh cái [radio](device) với
+      - chị cần xem camera, em [tăng](command) cái volume [ti vi](device) lên hộ chị với
+      - em ơi, tiếng [máy nghe nhạc](device) hơi bé, em [tăng](command) lên giúp anh với
+      - [tăng](command) cái [ti vi](device) lên cho anh được không
+      - [tăng](command) cái [ti vi](device) lên hộ mình nhớ chắc là trong tầm [23 tiếng 56 phút](duration) thôi
+      - trợ lý ơi [tăng](command) [ti vi](device) lên trong [23 tiếng 56 phút](duration)
+      - hãy [tăng](command) [máy nghe nhạc](device)
+      - em ơi [tăng](command) cho anh cái [ti vi](device) với
+      - em ơi [tăng](command) [máy nghe nhạc](device)
+      - em ơi anh chả nghe thấy gì cả [tăng](command) cho anh cái [radio](device) lên đi
+      - bạn [tăng](command) giúp mình cái [radio](device) vào lúc [11 giờ 27 phút](time at) nhé
+      - bạn ơi, tiếng nhỏ quá, [tăng](command) cho mình cái [máy nghe nhạc](device) với
+      - em ơi tiếng hơi bé [tăng](command) [ti vi](device) lên cho anh
+      - [tăng](command) [ti vi](device) lên trong [23 tiếng 56 phút](duration)
+      - em ơi [tăng](command) cho anh cái [radio](device) đến [31%](target number) vào lúc [11 giờ 27 phút](time at) với
+      - hơi nhỏ [tăng](command) [máy nghe nhạc](device) lên hộ mình nhớ
+      - [tăng](command) cho anh cái [radio](device) lên mức [31%](target number) nhé
+      - bạn trợ lý giúp mình [tăng](command) cái [radio](device) trong [phòng chơi game](location) lên [45%](target number) nhé
+      - [nâng](command) cái [radio số 10](device) lên mức [92%](target number)
+      - hãy để âm lượng của cái [radio](device) trong [phòng sách của huy](location) lên mức [20%](target number)
+      - bạn trợ lý giúp mình [tăng](command) cái [radio](device) trong [phòng chơi game](location) lên [45%](target number) nhé
+      - [nâng](command) cái [radio số 10](device) lên mức [92%](target number)
+      - hãy để âm lượng của cái [radio](device) trong [phòng sách của huy](location) lên mức [20%](target number)
+  - intent: giảm nhiệt độ của thiết bị
+    examples: |
+      - [giảm](command) cho anh cái [bóng sưởi](device) xuống [76%](target number) nhé trời bớt lạnh rồi
+      - giúp tôi [giảm](command) [bóng sưởi](device) xuống còn [76%](target number)
+      - [giảm](command) giúp mình cái [máy lạnh](device) cái
+      - [giảm](command) giúp anh cái [máy lạnh](device) ở trong [phòng giặt](location) với nhé
+      - [giảm](command) cho mình cái [máy lạnh](device) xuống
+      - bạn ơi [giảm](command) hộ mình cái [bóng sưởi](device) xuống [76%](target number) nhé
+      - bạn ơi [giảm](command) giúp tôi cái [bóng sưởi](device) với
+      - em ơi [giảm](command) anh cái [bóng sưởi](device) xuống [76%](target number) với nóng quá
+      - nóng quá. [giảm](command) [đèn sưởi](device) cho anh cái
+      - phòng ấm lên rồi, [giảm](command) [đèn sưởi](device) xuống 1 chút cho anh
+      - em ơi [giảm](command) giúp anh cái [máy lạnh](device) trong [phòng giặt](location)
+      - [giảm](command) cho chị cái [máy lạnh](device) cái
+      - [giảm](command) cho tôi cái [máy lạnh](device) ở trong [phòng giặt](location) với
+      - cái [máy lạnh](device) ở trong [phòng giặt](location) ấy nhớ, [giảm](command) lúc [17 giờ 9 phút](time at) cho tôi
+      - giúp tôi [giảm](command) cái [đèn sưởi](device) đi [84%](changing value) trong [12 tiếng 9 phút](duration)
+      - nóng quá [giảm](command) cho anh cái [đèn sưởi](device)với em ơi
+      - [giảm](command) cho tôi cái [bóng sưởi](device) ở mức [76%](target number)
+      - [phòng giặt](location) lạnh quá [giảm](command) hộ cái [máy lạnh](device) với em ơi
+      - làm ơn hãy [giảm](command) [bóng sưởi](device)xuống [76%](target number) giúp tôi
+      - em ơi [giảm](command) giúp anh cái [bóng sưởi](device) với
+      - lạnh quá, [giảm](command) hộ chị cái [bóng sưởi](device)
+      - lạnh quá [giảm](command) cho anh cái [máy lạnh](device) ở [phòng giặt](location) với
+      - cho nhỏ cái [đèn sưởi](device) ở trong [phòng giặt ủi số 7](location) xuống mức [52%](target number) đi nhé
+      - [hạ](command) nhiệt độ cái [điều hòa](device) trong [phòng thay đồ](location) xuống còn [23 độ c](target number) nhé
+      - bạn trợ lí ơi giúp mình [hạ](command) cái [bếp](device) trong [phòng bếp](location) xuống [2](target number) nhé
+      - này cái [bếp](device) ở trong [phòng bếp](location) ý [hạ](command) cho anh đi [2](changing value) mức
+      - bạn [giảm](command) cho  mình cái [đèn sưởi](device) ở [phòng giặt ủi số 7](location) xuống [52%](target number) nhé
+      - bỏ đi [91%](changing value) độ sáng của [bóng sưởi số 19](device) cho anh
+      - em ơi cái [ bóng sưởi](device) ở [hè sau](location) cho xuống [29%](target number) nhé
+      - cho nhỏ cái [lò vi sóng số 6](device) ở [bếp của linh](location) xuống [114 độ c](target number)
+      - trong [bếp của phát](location) ấy cho cái [lò vi sóng](device) nhỏ đi khoảng [56 độ c ](changing value)cho anh
+      - [hạ](command) [lò vi sóng số 1](device) xuống [296 độ c](target number) trong [2 tiếng rưỡi](duration) cho anh
+      - [hạ](command) bớt [39%](changing value) của cái [bóng sưởi](device) ở ngoài [hiên](location) nhé
+      - [phòng xem phim](location) nóng quá giảm [điều hòa](device) đi [7 độ c](changing value) cho anh nhé
+      - [hạ](command) [lò sưởi](device) xuống [22 độ c](target number) lúc [0 rưỡi](time at) nhé
+      - [hạ](command) [bếp](device) xuống mức [7](target number) vào lúc [7 rưỡi](time at)
+      - [hạ](command) nhiệt độ [lò sưởi](device) [phòng khách](location) xuống [33 độ c](target number)
+      - khi nào đến [3 giờ 31](time at) [chỉnh](command) cho mình cái [lò vi sóng](device) về mức [211 độ c](target number) nhớ
+      - [đưa](command) nhiệt độ của [lò vi sóng số 1](device) về mức [296 độ c](target number) trong vòng [2 tiếng rưỡi](duration)
+      - cái [lò sưởi](device) trong [phòng sách số 4](location) hơi nóng rồi để thấp xuống ở mức [33 độ c](target number) thôi
+      - [điều chỉnh](command) cái [bóng sưởi](device) bớt đi [6%](changing value) ở ngoài [hiên của em bé](location)
+      - [chỉnh](command) cái [đèn sưởi](device) ở [phòng vệ sinh](location) nhỏ bớt đi [64%](changing value) cho tôi
+      - cho nhỏ cái [đèn sưởi](device) ở trong [phòng giặt ủi số 7](location) xuống mức [52%](target number) đi nhé
+      - [hạ](command) nhiệt độ cái [điều hòa](device) trong [phòng thay đồ](location) xuống còn [23 độ c](target number) nhé
+      - bạn trợ lí ơi giúp mình [hạ](command) cái [bếp](device) trong [phòng bếp](location) xuống [2](target number) nhé
+      - này cái [bếp](device) ở trong [phòng bếp](location) ý [hạ](command) cho anh đi [2](changing value) mức
+      - bạn [giảm](command) cho  mình cái [đèn sưởi](device) ở [phòng giặt ủi số 7](location) xuống [52%](target number) nhé
+      - bỏ đi [91%](changing value) độ sáng của [bóng sưởi số 19](device) cho anh
+      - em ơi cái [ bóng sưởi](device) ở [hè sau](location) cho xuống [29%](target number) nhé
+      - cho nhỏ cái [lò vi sóng số 6](device) ở [bếp của linh](location) xuống [114 độ c](target number)
+      - trong [bếp của phát](location) ấy cho cái [lò vi sóng](device) nhỏ đi khoảng [56 độ c ](changing value)cho anh
+      - [hạ](command) [lò vi sóng số 1](device) xuống [296 độ c](target number) trong [2 tiếng rưỡi](duration) cho anh
+      - [hạ](command) bớt [39%](changing value) của cái [bóng sưởi](device) ở ngoài [hiên](location) nhé
+      - [phòng xem phim](location) nóng quá giảm [điều hòa](device) đi [7 độ c](changing value) cho anh nhé
+      - [hạ](command) [lò sưởi](device) xuống [22 độ c](target number) lúc [0 rưỡi](time at) nhé
+      - [hạ](command) [bếp](device) xuống mức [7](target number) vào lúc [7 rưỡi](time at)
+      - [hạ](command) nhiệt độ [lò sưởi](device) [phòng khách](location) xuống [33 độ c](target number)
+      - khi nào đến [3 giờ 31](time at) [chỉnh](command) cho mình cái [lò vi sóng](device) về mức [211 độ c](target number) nhớ
+      - [đưa](command) nhiệt độ của [lò vi sóng số 1](device) về mức [296 độ c](target number) trong vòng [2 tiếng rưỡi](duration)
+      - cái [lò sưởi](device) trong [phòng sách số 4](location) hơi nóng rồi để thấp xuống ở mức [33 độ c](target number) thôi
+      - [điều chỉnh](command) cái [bóng sưởi](device) bớt đi [6%](changing value) ở ngoài [hiên của em bé](location)
+      - [chỉnh](command) cái [đèn sưởi](device) ở [phòng vệ sinh](location) nhỏ bớt đi [64%](changing value) cho tôi
+  - intent: hủy hoạt cảnh
+    examples: |
+      - mình không [đi tắm](scene) nữa đâu nhá
+      - a lô tôi không muốn [thư giãn](scene) nữa
+      - em ơi quá trình [thư giãn](scene) ở trong [phòng nghỉ](location) của anh kết thúc rồi nhé
+      - không [tiệc tùng](scene) gì nữa
+      - hủy bỏ [tiệc tùng](scene) đi cho anh nhé, buổi tiệc kết thúc rồi
+      - a lô anh muốn ra khỏi [phòng nghỉ](location) và không muốn [thư giãn](scene) nữa
+      - anh không cần không gian [riêng tư](scene) nữa đâu em nhé
+      - tôi sẽ [đi ngủ](scene). bạn không cần phải làm gì nữa đâu
+      - tôi không muốn [thư giãn](scene) nữa nên tôi không muốn dùng [phòng nghỉ](location) nữa đâu
+      - em ơi anh không muốn [riêng tư](scene) nữa
+      - cho tôi chút náo nhiệt nào, bỏ chế độ [thư giãn](scene) đi 
+      - tôi không [đi tắm](scene) nữa đâu
+      - tôi không cần sự [riêng tư](scene)
+      - anh [đi tắm](scene) xong rồi
+      - a lô tắt cho anh cái không gian [lãng mạn](scene) này đi cái
+      - không cần chuẩn bị gì nữa đâu, mình không cần [thư giãn](scene) nữa
+      - thôi bây giờ anh không muốn [đi ngủ](scene) nữa
+      - a lô anh không muốn [đi ngủ](scene) nữa
+      - tôi sẽ không [đi ngủ](scene) nữa
+      - không có [tiệc tùng](scene) gì nữa đâu nhé
+      - anh vừa [thư giãn](scene) ở [phòng nghỉ](location) xong rồi nhé
+      - a lô anh không cần [riêng tư](scene) nữa đâu
+      - em ơi anh [thư giãn](scene) xong ở trong [phòng nghỉ](location) rồi nhé
+      - tôi không cần không gian [riêng tư](scene) nữa
+      - không cần sự [riêng tư](scene) gì đâu
+      - bây giờ tôi cần làm việc, không muốn [thư giãn](scene) nữa
+      - thôi nhớ tôi không vào [phòng vệ sinh](location) để [đi tắm](scene) nữa đâu
+      - hôm nay sẽ không có [tiệc tùng](scene) gì ở đây đâu nhớ
+      - không cần ở chế độ [riêng tư](scene) nữa nhớ
+      - anh không [đi tắm](scene) đâu anh vào [phòng vệ sinh](location) đây
+      - tôi sẽ không tổ chức [tiệc tùng](scene) tại nhà
+      - hãy dừng sự [lãng mạn](scene) này lại
+      - tôi không muốn [lãng mạn](scene)
+      - mình đang có chút việc bận nên thôi mình không muốn [đi ngủ](scene) nữa
+      - thôi không cần [lãng mạn](scene) nữa đâu em nhé
+      - anh không muốn [thư giãn](scene) nữa anh chuẩn bị đi làm đây
+      - thoải mái quá nhờ anh [thư giãn](scene) xong rồi nhé
+      - a lô anh không cần [riêng tư](scene) nữa nhé
+      - tôi muốn [đi tắm](scene)ngay bây giờ
+      - mình không cần [thư giãn](scene) ở [phòng nghỉ](location) nữa
+      - mình không cần không gian [riêng tư](scene) nữa đâu
+      - a lô anh không muốn [riêng tư](scene) nữa
+      - tôi định [đi ngủ](scene) trưa mà bị quá giấc mất rồi
+      - buổi [tiệc tùng](scene) ngoài [ban công](location) sẽ kết thúc vào lúc [11 giờ rưỡi](time at)
+      - trong vòng [2 tiếng 50 phút](duration) anh sẽ không [đi ngủ](scene) trong [phòng họp của phát](location)
+      - trong [phòng học](location) không cần phải [riêng tư](scene)
+      - ngưng chế độ [thư giãn](scene) trong [phòng xem phim mùa thu](location) đi
+      - bỏ chế độ [thư giãn](scene) ở dưới [phòng sinh hoạt chung vũ trụ](location) lúc [18 giờ kém 7](time at) nhé
+      - ngừng [thư giãn](scene) trong [phòng tắm xông hơi](location)
+      - trong vòng [2 tiếng 34 phút](duration) dừng hết sự [lãng mạn](scene) ở [hành lang hoa hồng](location) đi
+      - bỏ cái chế độ [thư giãn](scene) ở [phòng sinh hoạt chung vũ trụ](location) đi, lúc [18 giờ kém 7](time at)
+      - bỏ cho anh chế đô [riêng tư](scene) ở [phòng nghỉ ngơi](location) lúc [22 giờ kém 39](time at)
+      - lúc [14 giờ kém 58](time at) thì sẽ xong lúc đấy dừng hết [tiệc tùng](scene) ở [sân sau mùa hạ](location) cho anh
+      - bỏ chế độ [đi tắm](scene) vào lúc [9 giờ kém 25](time at) ở [nhà vệ sinh](location) nhé
+      - thiết lập lại cho anh [phòng tắm xông hơi](location) nhé hết giờ [thư giãn](scene) rồi
+      - [11 giờ rưỡi](time at) rồi hãy hủy bỏ [tiệc tùng](scene) ngoài [ban công](location)
+      - bỏ chế độ [đi ngủ](scene) vào lúc [9 giờ kém 59 phút](time at) tại [phòng chung số 2](location)
+      - tôi chán nhìn thấy cảnh [tiệc tùng](scene) rồi
+      - hủy bỏ chế độ [thư giãn](scene) ở trong [phòng xem phim mùa thu](location)
+      - lát nữa lúc mà có nhiều người vào thì không cần [riêng tư](scene) nữa đâu nhé
+      - buổi [tiệc tùng](scene) ngoài [ban công](location) sẽ kết thúc vào lúc [11 giờ rưỡi](time at)
+      - trong vòng [2 tiếng 50 phút](duration) anh sẽ không [đi ngủ](scene) trong [phòng họp của phát](location)
+      - trong [phòng học](location) không cần phải [riêng tư](scene)
+      - ngưng chế độ [thư giãn](scene) trong [phòng xem phim mùa thu](location) đi
+      - bỏ chế độ [thư giãn](scene) ở dưới [phòng sinh hoạt chung vũ trụ](location) lúc [18 giờ kém 7](time at) nhé
+      - ngừng [thư giãn](scene) trong [phòng tắm xông hơi](location)
+      - trong vòng [2 tiếng 34 phút](duration) dừng hết sự [lãng mạn](scene) ở [hành lang hoa hồng](location) đi
+      - bỏ cái chế độ [thư giãn](scene) ở [phòng sinh hoạt chung vũ trụ](location) đi, lúc [18 giờ kém 7](time at)
+      - bỏ cho anh chế đô [riêng tư](scene) ở [phòng nghỉ ngơi](location) lúc [22 giờ kém 39](time at)
+      - lúc [14 giờ kém 58](time at) thì sẽ xong lúc đấy dừng hết [tiệc tùng](scene) ở [sân sau mùa hạ](location) cho anh
+      - bỏ chế độ [đi tắm](scene) vào lúc [9 giờ kém 25](time at) ở [nhà vệ sinh](location) nhé
+      - thiết lập lại cho anh [phòng tắm xông hơi](location) nhé hết giờ [thư giãn](scene) rồi
+      - [11 giờ rưỡi](time at) rồi hãy hủy bỏ [tiệc tùng](scene) ngoài [ban công](location)
+      - bỏ chế độ [đi ngủ](scene) vào lúc [9 giờ kém 59 phút](time at) tại [phòng chung số 2](location)
+      - tôi chán nhìn thấy cảnh [tiệc tùng](scene) rồi
+      - hủy bỏ chế độ [thư giãn](scene) ở trong [phòng xem phim mùa thu](location)
+      - lát nữa lúc mà có nhiều người vào thì không cần [riêng tư](scene) nữa đâu nhé
+  - intent: kích hoạt cảnh
+    examples: |
+      - lát sẽ có [khách tới nhà](scene) đấy em, lúc [17 giờ 46 phút](time at) ấy
+      - tí nữa anh muốn [ra ngoài](scene) trong [4 tiếng 15 phút](duration)
+      - giờ tôi [ra khỏi phòng](scene) nha
+      - tối nay chị [về nhà](scene) vào lúc [18 giờ 59 phút](time at) nha
+      - bây giờ anh muốn [đi tắm](scene) ở [nhà vệ sinh](location) nhé
+      - em ơi anh sắp '[về nhà](scene) trong '[3 tiếng 11 phút](duration) nhé
+      - tôi[ra ngoài](scene)đây
+      - sau [2 tiếng 14 phút](duration) nữa tôi sẽ [ra ngoài](scene)
+      - tôi muốn [ra ngoài](scene)
+      - hãy [ra khỏi phòng](scene) ngay lập tức
+      - bây giờ tôi sẽ [về nhà](scene) trong khoảng [3 tiếng 11 phút](duration)
+      - em ơi cho anh một chút [lãng mạn](scene) nhé
+      - chị đang [về nhà](scene) rồi nhé, trong vòng [1 tiếng 55 phút](duration) nữa thôi
+      - tôi muốn vào [phòng sách](location) để [thư giãn](scene)
+      - vào [nhà vệ sinh](location) xong rồi anh [đi tắm](scene) nhé
+      - tôi sẽ [đi tắm](scene). bạn hãy chuẩn bị nước ở [phòng vệ sinh](location)
+      - cho tôi chế độ [khách tới nhà](scene) trong vòng [5 tiếng 26 phút](duration) đi nhé
+      - [khách tới nhà](scene) rồi em ơi
+      - tôi cần [ra ngoài](scene) trong [5 tiếng 57 phút](duration)
+      - em ơi nay anh có mời [khách tới nhà](scene) lúc [9 giờ 53 phút](time at) nhé
+      - em ơi anh sẽ đi '[ra ngoài](scene) bây giờ nhé
+      - đúng [2 tiếng 47 phút](duration) sau tôi sẽ [ra ngoài](scene)
+      - tí nữa chị sẽ [ra ngoài](scene) trong [4 tiếng 15 phút](duration) nhá
+      - tý anh [ra ngoài](scene) khoảng [4 tiếng 15 phút](duration) em nhớ tắt điện nhé
+      - tôi sẽ [đi tắm](scene)
+      - trợ lý ơi, trong vòng [3 tiếng 11 phút](duration) nữa tôi sẽ [về nhà](scene) nhá
+      - mình sẽ [về nhà](scene) vào lúc [18 giờ 59 phút](time at)
+      - tôi sẽ [ra ngoài](scene). bạn hãy tắt hết điện cho tôi
+      - anh muốn [đi tắm](scene) ngay nhé
+      - [khách tới nhà](scene) trong vòng [5 tiếng 26 phút](duration)
+      - a lô em ơi [khách tới nhà](scene) lúc [9 giờ 53 phút](time at) nhé
+      - tí anh sẽ [về nhà](scene) trong [2 tiếng 12 phút](duration)
+      - tôi muốn một không gian [tiệc tùng](scene)
+      - tôi có việc bận, tôi [ra khỏi phòng](scene) nhé
+      - sau [3 tiếng 11 phút](duration) nữa, tôi sẽ [về nhà](scene). hãy chuẩn bị phòng tắm cho tôi
+      - mình sẽ [về nhà](scene) trong [4 tiếng 7 phút](duration) nữa
+      - anh ơi[5 tiếng 39 phút](duration) nữa [khách tới nhà](scene)
+      - tôi muốn [thư giãn](scene)
+      - sau [5 tiếng 26 phút](duration) nữa, [khách tới nhà](scene). bạn hãy chuẩn bị cái gì đó cho tôi nhé
+      - anh muốn chế độ [khách tới nhà](scene) trong vòng [5 tiếng 26 phút](duration) để anh có thể tiếp khách
+      - tôi muốn [lãng mạn](scene)
+      - anh sẽ [ra ngoài](scene) trong [2 tiếng 14 phút](duration)
+      - tôi sắp [về nhà](scene) rồi
+      - tôi chuẩn bị [đi tắm](scene). bạn hãy chuẩn bị nước ở [phòng vệ sinh](location) cho tôi nhé
+      - em [ra ngoài](scene) đi cho anh làm việc
+      - tôi chuẩn bị [đi tắm](scene). bạn hãy chuẩn bị nước ở [nhà vệ sinh](location) cho tôi nhé
+      - tạo bầu không khí [lãng mạn](scene) cho tôi lúc [2 giờ 22 phút](time at)
+      - bây giờ chị sẽ [ra ngoài](scene) [2 tiếng 14 phút](duration) nha
+      - em ơi, lát anh [ra ngoài](scene) trong [5 tiếng 57 phút](duration) nha
+      - giờ mình muốn [thư giãn](scene) trong [phòng sách](location) một chút
+      - chuẩn bị có [khách tới nhà](scene) và họ ở lại trong [5 tiếng 39 phút](duration)
+      - bây giờ em sẽ [ra ngoài](scene), [6 tiếng 22 phút](duration)nữa em sẽ quay lại
+      - cho tôi chế độ [khách tới nhà](scene) trong vòng [5 tiếng 26 phút](duration) em nhé
+      - chuẩn bị có [khách tới nhà](scene), chuẩn bị nhanh lên
+      - anh muốn được [thư giãn](scene)
+      - bây giờ tôi đi [ra ngoài](scene) nhé
+      - anh cần ít sự [riêng tư](scene) em nhé
+      - anh ơi [khách tới nhà](scene) vào lúc [9 giờ 53 phút](time at)
+      - chuẩn bị có [tiệc tùng](scene) em nhé
+      - chút nữa anh [ra ngoài](scene) rồi
+      - tôi sẽ [ra ngoài](scene) sau [4 tiếng 15 phút](duration) nữa nhé
+      - nhớ trông nhà nhé anh chuẩn bị [ra ngoài](scene) đây
+      - tôi cần phải đi [ra ngoài](scene) trong vòng [2 tiếng 47 phút](duration) đó nhé
+      - đến lúc [2 giờ 22 phút](time at) thì cho anh một chút [lãng mạn](scene) nhớ
+      - em ơi nay anh có [khách tới nhà](scene) nhé
+      - cho anh một chút [lãng mạn](scene) đi nào
+      - chút nữa anh [ra ngoài](scene) đi chuẩn bị nhé
+      - tắt đèn đi em anh muốn [thư giãn](scene) chút
+      - anh muốn [đi tắm](scene) ở trong [nhà vệ sinh](location) ngay và luôn
+      - tôi cần sự [riêng tư](scene)
+      - hãy [ra khỏi phòng](scene) ngay bây giờ
+      - a lô em ơi [khách tới nhà](scene) lúc [9 giờ 53 phút](time at) nhé
+      - tắt điện đi giờ tôi muốn [thư giãn](scene) chút
+      - tôi muốn [đi tắm](scene) ở [nhà vệ sinh](location)
+      - ờ chị '[đi tắm](scene)' đây nhé
+      - anh ơi [khách tới nhà](scene) vào lúc [9 giờ 53 phút](time at)
+      - em ơi, chuẩn bị có [khách tới nhà](scene) trong [5 tiếng 39 phút](duration) nhé
+      - tôi sẽ [về nhà](scene) ngay bây giờ
+      - chị cần [riêng tư](scene)
+      - tối nay làm [tiệc tùng](scene) ở ngoài sân nhé
+      - tôi sẽ vào [phòng nghỉ](location) [thư giãn](scene)
+      - tôi muốn [thư giãn](scene) trong [phòng sách](location)
+      - em ơi anh chuẩn bị [ra ngoài](scene) trong [2 tiếng 14 phút](duration) nhé
+      - trong vòng [5 tiếng 26 phút](duration) nữa sẽ có [khách tới nhà](scene) đấy
+      - tôi muốn [tiệc tùng](scene) ở [phòng sinh hoạt chung](location)
+      - trong vòng [nửa tiếng](duration) tôi sẽ [ra khỏi phòng](scene) không ở trong [phòng thay đồ số 8](location) nữa
+      - tí nữa lúc [22 giờ kém 1](time at) thì anh muốn [đi tắm](scene) trong [nhà tắm của như](location)
+      - tôi sẽ [về nhà](scene) trong vòng [1 tiếng 36 phút](duration)
+      - lát nữa tôi [ra ngoài](scene) trong vòng [1 tiếng 36 phút](duration)
+      - tôi [về nhà](scene) rồi
+      - bây giờ tôi sẽ [ra khỏi phòng](scene)
+      - anh sẽ [về nhà](scene) trong vòng [1 tiếng 36 phút](duration) đi chuẩn bị đi
+      - tôi sắp [về nhà](scene)
+      - cho anh chút [riêng tư](scene) trong [phòng xem phim](location) đi
+      - trong vòng [1 tiếng 36 phút](duration) nữa thì tôi sẽ [về nhà](scene)
+      - anh chuẩn bị [ra ngoài](scene) rồi nhé
+      - chuẩn bị nhé anh sắp [về nhà](scene) rồi đấy
+      - alo tôi sẽ [về nhà ](scene)vào lúc [9 giờ 43 phút](time at) nhé
+      - chuẩn bị [tiệc tùng](scene) ở trên [sân thượng](location) nhé
+      - chuẩn bị [đi tắm](scene) vào lúc [24 giờ kém 44](time at) ở [phòng tắm của quân](location) nhé
+      - căng thẳng quá anh cần [thư giãn](scene) chút
+      - chuẩn bị [tiệc tùng](scene) trên [sân thượng](location) em nhé
+      - chuẩn bị cho tôi [đi tắm](scene) vào lúc [22 giờ kém 1](time at) ở [nhà tắm của như](location) nhé
+      - tôi cần tiếp [khách tới nhà](scene) chơi trong vòng [6 tiếng 18 phút](duration)
+      - tôi [về nhà](scene) rồi nhưng mà [17 phút](duration) nữa tôi sẽ lại phải ra ngoài
+      - chuẩn bị[ tiệc tùng](scene) trong [1 tiếng 14 phút](duration) ở [sân số 6](location) nhé
+      - anh cần [đi ngủ](scene) ở [phòng khách](location) ngay bây giờ
+      - anh sẽ [về nhà](scene) trong vòng [1 tiếng 36 phút](duration)
+      - anh sẽ chỉ [về nhà](scene) trong vòng [17 phút](duration) và sẽ ra ngoài ngay lập tức
+      - làm thế nào để trông xung quanh đây nó [lãng mạn](scene) hơn đi
+      - tôi cần [đi tắm](scene) ở trong [phòng vệ sinh](location) lúc [21 giờ rưỡi](time at)
+      - trong vòng [nửa tiếng](duration) tôi sẽ [ra khỏi phòng](scene) không ở trong [phòng thay đồ số 8](location) nữa
+      - tí nữa lúc [22 giờ kém 1](time at) thì anh muốn [đi tắm](scene) trong [nhà tắm của như](location)
+      - tôi sẽ [về nhà](scene) trong vòng [1 tiếng 36 phút](duration)
+      - lát nữa tôi [ra ngoài](scene) trong vòng [1 tiếng 36 phút](duration)
+      - tôi [về nhà](scene) rồi
+      - bây giờ tôi sẽ [ra khỏi phòng](scene)
+      - anh sẽ [về nhà](scene) trong vòng [1 tiếng 36 phút](duration) đi chuẩn bị đi
+      - tôi sắp [về nhà](scene)
+      - cho anh chút [riêng tư](scene) trong [phòng xem phim](location) đi
+      - trong vòng [1 tiếng 36 phút](duration) nữa thì tôi sẽ [về nhà](scene)
+      - anh chuẩn bị [ra ngoài](scene) rồi nhé
+      - chuẩn bị nhé anh sắp [về nhà](scene) rồi đấy
+      - alo tôi sẽ [về nhà ](scene)vào lúc [9 giờ 43 phút](time at) nhé
+      - chuẩn bị [tiệc tùng](scene) ở trên [sân thượng](location) nhé
+      - chuẩn bị [đi tắm](scene) vào lúc [24 giờ kém 44](time at) ở [phòng tắm của quân](location) nhé
+      - căng thẳng quá anh cần [thư giãn](scene) chút
+      - chuẩn bị [tiệc tùng](scene) trên [sân thượng](location) em nhé
+      - chuẩn bị cho tôi [đi tắm](scene) vào lúc [22 giờ kém 1](time at) ở [nhà tắm của như](location) nhé
+      - tôi cần tiếp [khách tới nhà](scene) chơi trong vòng [6 tiếng 18 phút](duration)
+      - tôi [về nhà](scene) rồi nhưng mà [17 phút](duration) nữa tôi sẽ lại phải ra ngoài
+      - chuẩn bị[ tiệc tùng](scene) trong [1 tiếng 14 phút](duration) ở [sân số 6](location) nhé
+      - anh cần [đi ngủ](scene) ở [phòng khách](location) ngay bây giờ
+      - anh sẽ [về nhà](scene) trong vòng [1 tiếng 36 phút](duration)
+      - anh sẽ chỉ [về nhà](scene) trong vòng [17 phút](duration) và sẽ ra ngoài ngay lập tức
+      - làm thế nào để trông xung quanh đây nó [lãng mạn](scene) hơn đi
+      - tôi cần [đi tắm](scene) ở trong [phòng vệ sinh](location) lúc [21 giờ rưỡi](time at)

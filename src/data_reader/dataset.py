@@ -95,7 +95,7 @@ if __name__ == "__main__":
     from transformers import AutoTokenizer
 
     files = ["dataset/nlu_QnA_converted.yml", "dataset/nlu_QnA_converted.yml"]
-    tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
+    tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
 
     df, entities_list, intents_list, synonym_dict = make_dataframe(files)
     dataset = DIETClassifierDataset(dataframe=df, tokenizer=tokenizer, entities=entities_list, intents=intents_list)

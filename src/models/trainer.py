@@ -66,17 +66,17 @@ if __name__ == '__main__':
     device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cpu")
 
     files = ["dataset/nlu_QnA_converted.yml", "dataset/nlu_QnA_converted.yml"]
-    tokenizer = AutoTokenizer.from_pretrained("dslim/bert-base-NER")
+    tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
 
     df, entities_list, intents_list, synonym_dict = make_dataframe(files)
     entities_list = [entity for entity in entities_list if entity != "number"]
     print(f"ENTITIES_LIST: {entities_list}")
     dataset = DIETClassifierDataset(dataframe=df, tokenizer=tokenizer, entities=entities_list, intents=intents_list)
 
-    config = DIETClassifierConfig(model="dslim/bert-base-NER", entities=entities_list, intents=intents_list)
+    config = DIETClassifierConfig(model="vinai/phobert-base-v2", entities=entities_list, intents=intents_list)
     model = DIETClassifier(config=config)
 
-    sentences = ["What if I'm late"]
+    sentences = ["tôi không muốn xem ti vi nữa"]
 
     inputs = tokenizer(sentences, return_tensors="pt", padding="max_length", max_length=512)
 
